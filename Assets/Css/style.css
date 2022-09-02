@@ -1,0 +1,302 @@
+/* poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root {
+    /* colors */
+    --color-black: #000;
+    --color-white: #fff;
+    --border-color: #707070;
+    --button-primary: #2E7CD8;
+    --hero-text: #E8D32E;
+
+    /* box shadows */
+    --text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    --box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold-medium: 600;
+    --font-weight-bold: 700;
+    --input-border-radius: 12px;
+}
+
+/* border colors for getting the landscape of div */
+.red {
+    border: 1px solid red;
+}
+
+.black {
+    border: 1px solid black;
+}
+
+.green {
+    border: 1px solid green;
+}
+
+.blue {
+    border: 1px solid blue;
+}
+
+.yellow {
+    border: 1px solid yellow;
+}
+
+/* body */
+body {
+    background: #F8F8F8;
+    font-family: Poppins;
+}
+
+
+/* custom define tages and classes */
+h3 {
+    font-size: 24px;
+    font-weight: var(--font-weight-medium);
+}
+
+h4 {
+    font-size: 18px;
+    font-weight: var(--font-weight-regular);
+}
+
+/* top navigations bar in all pages*/
+.top a {
+    font-weight: var(--font-weight-regular);
+    font-size: 20px;
+    color: var(--color-black);
+}
+
+.top .navbar-nav a {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+    margin-right: 16px;
+}
+
+.top .top-search {
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+
+.top .top-search::placeholder {
+    font-size: 12px;
+}
+
+/* user profile */
+#avatar-left {
+    display: none;
+}
+
+/* all body section */
+#body-section .main-section {
+    padding-bottom: 20px;
+}
+
+/* herosection in all pages */
+.hero-section {
+    height: 350px;
+    background: url("../Images/hero-img.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.hero-section-text {
+    color: #E8D32E;
+    font-size: 100px;
+    font-weight: var(--font-weight-bold);
+    text-shadow: var(--text-shadow);
+}
+
+/* side bar in all pages */
+
+.sidebar {
+    /* height: calc(100vh - 405px); */
+    height: 100%;
+    width: 20px;
+    border-radius: 0px 20px 20px 0px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: var(--color-white);
+    overflow-x: hidden;
+    transition: .5s;
+    padding-top: 60px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    left: 70%;
+    font-size: 36px;
+    /* margin-left: 50px; */
+}
+
+.sidebar a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    width: 250px;
+    text-transform: uppercase;
+    color: var(--color-black);
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar a:hover {
+    color: var(--button-primary);
+}
+
+#nav-btn {
+    background: var(--color-white);
+    border: none;
+}
+
+#dots-3 {
+    display: flex;
+    flex-direction: column;
+}
+
+#dots-3 span {
+    height: 10px;
+    width: 10px;
+    margin-bottom: 1px;
+    border-radius: 50%;
+    background-color: var(--button-primary);
+}
+
+#mySidebar div {
+    padding-right: 2px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+}
+
+
+
+/* **************
+
+    Login page
+
+ ************************ */
+/* login page */
+#login-main .login-title {
+    margin: 140px 0 65px 0;
+}
+
+#login-form input:not([type=checkbox]) {
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+
+#login-form .links {
+    color: var(--color-black);
+    font-size: 16px;
+    font: var(--font-weight-regular);
+}
+
+#login-form p {
+    margin: 0;
+}
+
+#login-form .forget-email {
+    text-decoration: none;
+}
+
+/* login button */
+#login-form button {
+    padding: 5px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: var(--font-weight-regular);
+    background-color: var(--button-primary);
+    border: none;
+}
+
+/* *************** 
+    Dashboard Page
+
+********** */
+/* left section */
+/* top welcome professor */
+.welcome-title {
+    font-weight: var(--font-weight-regular);
+    font-size: 20px;
+}
+
+/* courses card section */
+#courses-section .card {
+    margin-left: 16px;
+    width: 160px;
+    border-radius: 12px;
+    background-color: #fff;
+    text-transform: uppercase;
+    box-shadow: var(--box-shadow);
+    transition: all 0.5s;
+}
+
+#courses-section .card:hover {
+    box-shadow: none;
+}
+
+#courses-section .card-body {
+    padding: 24px 0;
+}
+
+#courses-section .card-text {
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+}
+
+
+/* right section */
+#right-calender-section .classes-time {
+    width: 100%;
+    background: var(--color-white);
+    font-size: 14px;
+    margin-bottom: 10px;
+    padding: 8px;
+    border: 1px solid var(--border-color);
+    font-weight: var(--font-weight-regular);
+    border-radius: var(--input-border-radius);
+}
+
+
+
+/* for laptop screens 1366 */
+
+@media only screen and (max-width:1366px) {
+
+    /* login page */
+    #login-main .login-title {
+        margin: 100px 0 45px 0;
+    }
+}
+
+/* for tablets screen 768px*/
+@media only screen and (max-width:768px) {
+    #avatar-right {
+        display: none;
+    }
+
+    #avatar-left {
+        display: block;
+    }
+
+    #courses-section .card {
+        margin-bottom: 16px;
+    }
+}
+
+
+/* for mobiles screen 425px*/
+@media only screen and (max-width:425px) {
+
+    /* all pages search */
+    #search {
+        display: none;
+    }
+
+    #courses-section .card {
+        margin: 4px;
+    }
+}

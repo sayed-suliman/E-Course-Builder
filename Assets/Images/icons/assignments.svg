@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48.01" viewBox="0 0 48 48.01">
+  <g id="Layer_1" data-name="Layer 1" transform="translate(0 0.01)">
+    <g id="study_desk" data-name="study desk">
+      <path id="Path_87" data-name="Path 87" d="M1.74,44.03H3.23" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_88" data-name="Path 88" d="M8.42,44.03h8.16" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_89" data-name="Path 89" d="M5.45,24.74l3.71,14.1" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_90" data-name="Path 90" d="M7.68,18.06,20.29,9.9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle id="Ellipse_8" data-name="Ellipse 8" cx="3.71" cy="3.71" r="3.71" transform="translate(1 17.32)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_91" data-name="Path 91" d="M1,47a8.16,8.16,0,1,1,16.32,0" fill="none" stroke="#000" stroke-linecap="square" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_92" data-name="Path 92" d="M22.16,12.39,20.42,8.18A5.19,5.19,0,0,1,23.23,1.4h0A5.19,5.19,0,0,1,30,4.21l1.77,4.27" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_93" data-name="Path 93" d="M21,25.1a11.14,11.14,0,0,1,3.69-15m7.1-1.62a11,11,0,0,1,9.62,8.16M21,25.1a11.08,11.08,0,0,0,1,1.5c1.91.84,6.19.22,10.77-1.71,4.73-2,8.27-4.76,8.87-6.74a11.05,11.05,0,0,0-.3-1.52" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_94" data-name="Path 94" d="M41.41,16.64c-1.07-1.1-4.23-1-8,.07a31.8,31.8,0,0,0-6.81,2.9c-3.27,1.87-5.43,4-5.53,5.5" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <path id="Path_95" data-name="Path 95" d="M33.38,16.71a3.7,3.7,0,0,1-6.81,2.9M47,39.58H27.71a3.71,3.71,0,1,0,0,7.42H47S43.69,44,47,39.58Zm-3,0H22.52a3.71,3.71,0,0,1-3.71-3.71h0a3.71,3.71,0,0,1,3.71-3.71H44C40.56,36.61,44,39.58,44,39.58Z" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

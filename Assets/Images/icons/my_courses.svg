@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="47.853" viewBox="0 0 48 47.853">
+  <g id="Layer_2" transform="translate(0 -0.047)">
+    <g id="Layer_1-2">
+      <g id="university">
+        <path id="Path_55" data-name="Path 55" d="M31.1,22.4v15l-2.3,2.4H19.2l-2.3-2.4v-15" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_56" data-name="Path 56" d="M9.7,20V40.6l5.6,6.3H32.7l5.6-6.3V37.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_57" data-name="Path 57" d="M24,8.1l15.4,4.7a3.872,3.872,0,0,1,2.8,3.8v2.6" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+        <circle id="Ellipse_6" data-name="Ellipse 6" cx="2.4" cy="2.4" r="2.4" transform="translate(39.8 19.1)" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_58" data-name="Path 58" d="M43.8,23.9l2.1,7.7a.8.8,0,0,1-.6,1H42.8L43,31l-1.8,1.6h-2a.789.789,0,0,1-.8-.8v-.2l2.1-7.7" fill="none" stroke="#000" stroke-linejoin="round" stroke-width="2"/>
+        <path id="Path_59" data-name="Path 59" d="M46.2,12.3l.8-.2V9.4a1.02,1.02,0,0,0-.5-.8L24.8,1.2a1.95,1.95,0,0,0-1.5,0L1.5,8.7a.752.752,0,0,0-.5.7v2a.76.76,0,0,0,.6.8l21.8,6a2.854,2.854,0,0,0,1.3,0l16-4.6" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      </g>
+    </g>
+  </g>
+</svg>
