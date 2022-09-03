@@ -14,28 +14,30 @@
 
 <body>
     <header id="dashboard-top" class="top-nav">
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-xl bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="../Assets/Images/Group 21.svg" alt="" width="30" height="20"
                         class="d-inline-block align-text-center">
                     ECOURSE BUILDER
                 </a>
-                <div class="col-6 col-xxl-6 ms-xl-5" id="search">
+                <div class="col-6 col-lg-6 ms-xl-5" id="search">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2 shadow-none top-search" type="search"
                             placeholder="Search for anything" aria-label="Search">
                     </form>
                 </div>
-                <div id="avatar-left">
-                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
-                        alt="Black and White Portrait of a Man" />
+                <div class="d-flex">
+                    <div id="avatar-left" class="me-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
+                            alt="Black and White Portrait of a Man" />
+                    </div>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -89,15 +91,15 @@
             </div>
             <div class="container">
                 <div class="heading">
-                    <div class="back-btn">
+                    <div class="back-btn ms-4 ms-md-0">
                         <a href="./dashboard.html"><span class="pe-3"><img src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a href="./dashboard.html">
                     </div>
-                    <div class="title mt-2 ms-4" style="padding-left: 10px;">
+                    <div class="title mt-2 ms-4">
                         <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
-                        <a href="#" class="btn btn-primary rounded-pill d-inline-block float-end" style="margin-top:-15px">+ Add Course</a>
+                        <a href="#" class="btn btn-primary rounded-pill d-inline-block float-end">+ Add Course</a>
                     </div>
                 </div>
-                <div class="bg-white mt-4 p-2">
+                <div class="bg-white mt-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
                     <table class="table">
                         <thead>
                           <tr>

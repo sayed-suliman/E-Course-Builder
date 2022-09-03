@@ -58,6 +58,10 @@ body {
 
 
 /* custom define tages and classes */
+h2 {
+    font-size: 26px;
+    font-weight: var(--font-weight-regular);
+}
 h3 {
     font-size: 24px;
     font-weight: var(--font-weight-medium);
@@ -105,7 +109,10 @@ h4 {
 #avatar-left {
     display: none;
 }
-
+input[type=checkbox]:checked{
+    border-color: var(--color-primary)!important;
+    background-color: var(--color-primary);
+}
 /************** 
     END
  TOP NAVBAR
@@ -230,10 +237,6 @@ GLOBAL
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
 }
-#login-form input[type=checkbox]:checked{
-    border-color: var(--color-primary)!important;
-    background-color: var(--color-primary);
-}
 
 #login-form .links {
     color: var(--color-black);
@@ -283,10 +286,16 @@ GLOBAL
     transition: all 0.5s;
 }
 
+#courses-section .card:hover a{
+    color: #fff!important;
+}
+#courses-section .card:hover a img{
+    filter: invert(93%) sepia(0%) saturate(7448%) hue-rotate(31deg) brightness(113%) contrast(99%);
+}
 #courses-section .card:hover {
     box-shadow: none;
+    background-color: var(--button-primary-hover);
 }
-
 #courses-section .card-body {
     padding: 24px 0;
 }
@@ -320,8 +329,14 @@ GLOBAL
     transition: margin 200ms ease-in-out;
 }
 
-.instructor .back-btn a:hover{
+.instructor .heading .back-btn a:hover{
     margin-left: -5px!important;
+}
+.instructor .heading .title a{
+    margin-top: -15px;
+}
+.instructor .heading .title{
+    padding-left: 10px;
 }
 .instructor :is(tbody, td, tfoot, th, thead, tr) {
     border-style: none!important;
@@ -338,33 +353,69 @@ GLOBAL
     #login-main .login-title {
         margin: 100px 0 45px 0;
     }
-}
-
-/* for tablets screen 768px*/
-@media only screen and (max-width:768px) {
     #avatar-right {
         display: none;
     }
-
     #avatar-left {
         display: block;
     }
-
     #courses-section .card {
         margin-bottom: 16px;
     }
 }
 
+/* for tablets screen 768px*/
+@media only screen and (max-width:768px) {
+    /* .sidebar{
+        height: 400px;
+    } */
+    .instructor .table-container{
+        overflow: auto;
+    }
+    .instructor .table{
+        min-width: 940px!important;
+    }
+    
+    
+}
 
 /* for mobiles screen 425px*/
 @media only screen and (max-width:425px) {
-
+    
     /* all pages search */
     #search {
         display: none;
     }
-
+    .hero-section{
+        height: 200px;
+    }
+    #courses-section {
+        margin: 0;
+    }
     #courses-section .card {
         margin: 4px;
+    }
+    .instructor .heading .title{
+        padding-left: 0px;
+    }
+    .instructor .heading .title a{
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .top-nav .navbar-brand{
+        font-size: 16px;
+    }
+    .top-nav #avatar-left{
+        margin-right: 5px!important;
+    }
+    .instructor .heading .title {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 0;
+    }
+    .instructor .heading .title a{
+        margin-top: 0px;
     }
 }

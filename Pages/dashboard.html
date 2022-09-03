@@ -14,28 +14,30 @@
 
 <body>
     <header id="dashboard-top" class="top-nav">
-        <nav class="navbar navbar-expand-lg bg-light">
+        <nav class="navbar navbar-expand-xl bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
                     <img src="../Assets/Images/Group 21.svg" alt="" width="30" height="20"
                         class="d-inline-block align-text-center">
                     ECOURSE BUILDER
                 </a>
-                <div class="col-6 col-xxl-6 ms-xl-5" id="search">
+                <div class="col-6 col-lg-6 ms-xl-5" id="search">
                     <form class="d-flex" role="search">
                         <input class="form-control me-2 shadow-none top-search" type="search"
                             placeholder="Search for anything" aria-label="Search">
                     </form>
                 </div>
-                <div id="avatar-left">
-                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
-                        alt="Black and White Portrait of a Man" />
+                <div class="d-flex">
+                    <div id="avatar-left" class="me-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
+                            alt="Black and White Portrait of a Man" />
+                    </div>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
                 </div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
@@ -94,9 +96,9 @@
                         <p class="welcome-title">Welcome, Professor Bina.</p>
                         <!-- all courses card -->
                         <!-- 1st row -->
-                        <div class="row" id="courses-section">
-                            <div class="card  text-center border-0">
-                                <a href="./instructor.html" class="text">
+                        <div class="row " id="courses-section">
+                            <div class="card text-center border-0">
+                                <a href="./instructor.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../Assets/Images/icons/my_courses.svg" alt="">
                                         <p class="card-text pt-3">my courses</p>
@@ -104,61 +106,77 @@
                                 </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/students.svg" alt="">
-                                    <p class="card-text pt-3">students</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/students.svg" alt="">
+                                        <p class="card-text pt-3">students</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/gradebook.svg" alt="">
-                                    <p class="card-text pt-3">gradebook</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/gradebook.svg" alt="">
+                                        <p class="card-text pt-3">gradebook</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/assignments.svg" alt="">
-                                    <p class="card-text pt-3">assignment</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/assignments.svg" alt="">
+                                        <p class="card-text pt-3">assignment</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <!-- 2nd row -->
                         <div class="mt-lg-5 row" id="courses-section">
                             <div class="card  text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/white-board.svg" alt="">
-                                    <p class="card-text pt-3">whiteboard</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/white-board.svg" alt="">
+                                        <p class="card-text pt-3">whiteboard</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/byetalk.svg" alt="">
-                                    <p class="card-text pt-3">byetalk</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/byetalk.svg" alt="">
+                                        <p class="card-text pt-3">byetalk</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/drive.svg" alt="">
-                                    <p class="card-text pt-3">drive</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/drive.svg" alt="">
+                                        <p class="card-text pt-3">drive</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/e-doc-editor.svg" alt="">
-                                    <p class="card-text pt-3">e-doc editor</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/e-doc-editor.svg" alt="">
+                                        <p class="card-text pt-3">e-doc editor</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/+.svg" alt="">
-                                    <p class="card-text pt-3">add application</p>
-                                </div>
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/+.svg" alt="">
+                                        <p class="card-text pt-3">add application</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
 
                     </div>
                     <!-- right section -->
-                    <div class="col-lg-3 col-xxl-3 mt-5 m-md-0  p-0" id="right-calender-section">
+                    <div class="col-lg-3 col-xxl-3 mt-5 m-lg-0 p-lg-0" id="right-calender-section">
                         <h4>CALENDAR</h4>
                         <div class="calender">
                             <p class="small">Today is Monday, August 1,2022.</p>
