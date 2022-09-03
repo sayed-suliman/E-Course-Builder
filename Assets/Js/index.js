@@ -7,12 +7,12 @@ function openNav() {
         bool = false
     }
      else {
-        document.getElementById("mySidebar").style.width = "20px";
+        document.getElementById("mySidebar").style.width = "24px";
         bool = true
     }
 }
 function closeNav() {
-    document.getElementById("mySidebar").style.width = "20px";
+    document.getElementById("mySidebar").style.width = "24px";
     bool = true
 }
 // document.body.addEventListener('click', function(e){

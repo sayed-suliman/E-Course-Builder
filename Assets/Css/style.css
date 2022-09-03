@@ -3,10 +3,15 @@
 
 :root {
     /* colors */
+    --color-red:#ff0202;
+    --color-green:#009D24;
+    --color-primary:#2E7CD8;
+    --color-grey:#989898;
     --color-black: #000;
     --color-white: #fff;
     --border-color: #707070;
-    --button-primary: #2E7CD8;
+    --button-primary: var(--color-primary);
+    --button-primary-hover: #4789d4;
     --hero-text: #E8D32E;
 
     /* box shadows */
@@ -40,6 +45,10 @@
 .yellow {
     border: 1px solid yellow;
 }
+/************** 
+START CSS
+GLOBAL
+***************/
 
 /* body */
 body {
@@ -58,33 +67,49 @@ h4 {
     font-size: 18px;
     font-weight: var(--font-weight-regular);
 }
+.text-green{
+    color: var(--color-green);
+}
+.text-red{
+    color: var(--color-red);
+}
+.main-section{
+    min-height: 500px;
+}
+/************** 
+    START
+ TOP NAVBAR
+***************/
 
-/* top navigations bar in all pages*/
-.top a {
+.top-nav a {
     font-weight: var(--font-weight-regular);
     font-size: 20px;
     color: var(--color-black);
 }
 
-.top .navbar-nav a {
+.top-nav .navbar-nav a {
     font-size: 16px;
     font-weight: var(--font-weight-regular);
     margin-right: 16px;
 }
 
-.top .top-search {
+.top-nav .top-search {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
 }
 
-.top .top-search::placeholder {
+.top-nav .top-search::placeholder {
     font-size: 12px;
 }
-
 /* user profile */
 #avatar-left {
     display: none;
 }
+
+/************** 
+    END
+ TOP NAVBAR
+***************/
 
 /* all body section */
 #body-section .main-section {
@@ -107,12 +132,14 @@ h4 {
     text-shadow: var(--text-shadow);
 }
 
-/* side bar in all pages */
+/******************** 
+side bar in all pages 
+*********************/
 
 .sidebar {
     /* height: calc(100vh - 405px); */
     height: 100%;
-    width: 20px;
+    width: 24px;
     border-radius: 0px 20px 20px 0px;
     position: absolute;
     z-index: 1;
@@ -163,14 +190,30 @@ h4 {
     border-radius: 50%;
     background-color: var(--button-primary);
 }
-
-#mySidebar div {
+.sidebar .toggle {
     padding-right: 2px;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
 }
-
+.active{
+    color: var(--color-primary)!important;
+}
+.btn-primary{
+    background-color: var(--button-primary);
+    border-color: var(--button-primary);
+}
+.btn-primary:hover{
+    background-color: var(--button-primary-hover);
+    border-color: var(--button-primary-hover);
+}
+/************** 
+END CSS
+GLOBAL
+***************/
 
 
 /* **************
@@ -186,6 +229,10 @@ h4 {
 #login-form input:not([type=checkbox]) {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
+}
+#login-form input[type=checkbox]:checked{
+    border-color: var(--color-primary)!important;
+    background-color: var(--color-primary);
 }
 
 #login-form .links {
@@ -203,7 +250,7 @@ h4 {
 }
 
 /* login button */
-#login-form button {
+#login-form button[type=submit] {
     padding: 5px 50px;
     border-radius: 50px;
     font-size: 20px;
@@ -211,10 +258,12 @@ h4 {
     background-color: var(--button-primary);
     border: none;
 }
+#login-form button[type=submit]:hover{
+    background-color:var(--button-primary-hover);
+}
 
 /* *************** 
     Dashboard Page
-
 ********** */
 /* left section */
 /* top welcome professor */
@@ -261,6 +310,25 @@ h4 {
 }
 
 
+
+/*********************************************
+                Instructor Page
+***********************************************/
+.instructor .back-btn a{
+    text-decoration: none;
+    color: var(--color-black);
+    transition: margin 200ms ease-in-out;
+}
+
+.instructor .back-btn a:hover{
+    margin-left: -5px!important;
+}
+.instructor :is(tbody, td, tfoot, th, thead, tr) {
+    border-style: none!important;
+}
+.instructor .table thead tr{
+    text-decoration: underline;
+}
 
 /* for laptop screens 1366 */
 

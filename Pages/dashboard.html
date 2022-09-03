@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <header id="dashboard-top" class="top">
+    <header id="dashboard-top" class="top-nav">
         <nav class="navbar navbar-expand-lg bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">
@@ -39,7 +39,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
                     <ul class="navbar-nav  mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#">DASHBOARD</a>
+                            <a class="nav-link active" aria-current="page" href="#">DASHBOARD</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">MESSAGES</a>
@@ -68,7 +68,7 @@
 
         <section style="position: relative" class="main-section pt-4">
             <div id="mySidebar" class="sidebar">
-                <div>
+                <div class="toggle">
                     <button onclick="openNav()" id="nav-btn" class="slider-tab">
                         <div id="dots-3">
                             <span></span>
@@ -78,7 +78,7 @@
                     </button>
                 </div>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">my courses</a>
+                <a href="./instructor.html" class="active">my courses</a>
                 <a href="#">students</a>
                 <a href="#">gradebook</a>
                 <a href="#">assignments</a>
@@ -96,10 +96,12 @@
                         <!-- 1st row -->
                         <div class="row" id="courses-section">
                             <div class="card  text-center border-0">
-                                <div class="card-body">
-                                    <img src="../Assets/Images/icons/my_courses.svg" alt="">
-                                    <p class="card-text pt-3">my courses</p>
-                                </div>
+                                <a href="./instructor.html" class="text">
+                                    <div class="card-body">
+                                        <img src="../Assets/Images/icons/my_courses.svg" alt="">
+                                        <p class="card-text pt-3">my courses</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="card text-center border-0">
                                 <div class="card-body">
@@ -177,19 +179,6 @@
                     </div>
                 </div>
             </div>
-            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
-                aria-controls="offcanvasScrolling">Enable body scrolling</button>
-    
-            <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
-                id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Offcanvas with body scrolling</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <p>Try scrolling the rest of the page to see this option in action.</p>
-                </div>
-            </div> -->
         </section>
     </main>
 
