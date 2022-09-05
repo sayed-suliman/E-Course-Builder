@@ -27,23 +27,23 @@
 
 /* border colors for getting the landscape of div */
 .red {
-    border: 1px solid red;
+    outline: 1px solid red;
 }
 
 .black {
-    border: 1px solid black;
+    outline: 1px solid black;
 }
 
 .green {
-    border: 1px solid green;
+    outline: 1px solid green;
 }
 
 .blue {
-    border: 1px solid blue;
+    outline: 1px solid blue;
 }
 
 .yellow {
-    border: 1px solid yellow;
+    outline: 1px solid yellow;
 }
 /************** 
 START CSS
@@ -128,7 +128,6 @@ input[type=checkbox]:checked{
     border-color: var(--color-primary)!important;
     background-color: var(--color-primary);
 }
-
 /************** 
     END
  TOP NAVBAR
@@ -299,13 +298,19 @@ GLOBAL
     background-color: #fff;
     text-transform: uppercase;
     box-shadow: var(--box-shadow);
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
+#courses-section .card:hover a{
+    color: #fff!important;
+}
+#courses-section .card:hover a img{
+    filter: invert(93%) sepia(0%) saturate(7448%) hue-rotate(31deg) brightness(113%) contrast(99%);
+}
 #courses-section .card:hover {
     box-shadow: none;
+    background-color: var(--button-primary-hover);
 }
-
 #courses-section .card-body {
     padding: 24px 0;
 }
@@ -331,21 +336,33 @@ GLOBAL
 
 
 /*********************************************
-                Instructor Page
+                Instructor  Page
 ***********************************************/
-.instructor .back-btn a{
+.instructor .heading .back-btn a,
+.instructor .heading .back-btn a{
     text-decoration: none;
     color: var(--color-black);
     transition: margin 200ms ease-in-out;
 }
 
-.instructor .back-btn a:hover{
+.instructor .heading .back-btn a:hover,
+.instructor .heading .back-btn a:hover{
     margin-left: -5px!important;
 }
-.instructor :is(tbody, td, tfoot, th, thead, tr) {
+.instructor.courses .heading .title a,
+.instructor.students .heading .title a{
+    margin-top: -15px;
+}
+.instructor.courses .heading .title,
+.instructor.students .heading .title{
+    padding-left: 10px;
+}
+.instructor.courses :is(tbody, td, tfoot, th, thead, tr) ,
+.instructor.students :is(tbody, td, tfoot, th, thead, tr) {
     border-style: none!important;
 }
-.instructor .table thead tr{
+.instructor.courses .table thead tr,
+.instructor.students .table thead tr{
     text-decoration: underline;
 }
 
@@ -357,33 +374,75 @@ GLOBAL
     #login-main .login-title {
         margin: 100px 0 45px 0;
     }
-}
-
-/* for tablets screen 768px*/
-@media only screen and (max-width:768px) {
     #avatar-right {
         display: none;
     }
-
     #avatar-left {
         display: block;
     }
-
     #courses-section .card {
         margin-bottom: 16px;
     }
 }
 
+/* for tablets screen 768px*/
+@media only screen and (max-width:768px) {
+    /* .sidebar{
+        height: 400px;
+    } */
+    .instructor.courses .table-container,
+    .instructor.students .table-container{
+        overflow: auto;
+    }
+    .instructor.courses .table,
+    .instructor.students .table{
+        min-width: 940px!important;
+    }
+    
+    
+}
 
 /* for mobiles screen 425px*/
 @media only screen and (max-width:425px) {
-
+    
     /* all pages search */
     #search {
         display: none;
     }
-
+    .hero-section{
+        height: 200px;
+    }
+    #courses-section {
+        margin: 0;
+    }
     #courses-section .card {
         margin: 4px;
+    }
+    .instructor.courses .heading .title,
+    .instructor.students .heading .title{
+        padding-left: 0px;
+    }
+    .instructor.courses .heading .title a,
+    .instructor.students .heading .title a{
+        margin-top: -5px;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .top-nav .navbar-brand{
+        font-size: 16px;
+    }
+    .top-nav #avatar-left{
+        margin-right: 5px!important;
+    }
+    .instructor.courses .heading .title,
+    .instructor.students .heading .title {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px 0;
+    }
+    .instructor.courses .heading .title a,
+    .instructor.students .heading .title a{
+        margin-top: 0px;
     }
 }
