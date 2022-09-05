@@ -334,6 +334,50 @@ GLOBAL
 }
 
 
+/* ***************************
+
+    Create a course page
+
+********************************************* */
+/* slect university dropdown design */
+.input-focus{
+    padding: 5px 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+.input-focus:focus{
+    border: 1px solid var(--border-color);
+}
+.input-textarea{
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+.input-textarea:focus{
+    border: 1px solid var(--border-color);
+}
+#add-course button[type=submit] {
+    padding: 5px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: var(--font-weight-regular);
+    background-color: var(--button-primary);
+    border: none;
+}
+#add-course button[type=submit]:hover{
+    background-color:var(--button-primary-hover);
+}
+#add-course .date{
+    border: none;
+    background-color: transparent;
+}
+/* center border */
+#side-border{
+    background-color: black;
+    width: 1px;
+    height: 100%;
+}
+
+
 
 /*********************************************
                 Instructor  Page
@@ -398,6 +442,15 @@ GLOBAL
     .instructor.students .table{
         min-width: 940px!important;
     }
+    
+    /* +++++++++++++++++++++++ 
+    Create a Courses Page
+++++++++++++++++++++++++++++++    */
+#side-border{
+    background-color: black;
+    width: 100%;
+    height: 1px;
+}
     
     
 }
