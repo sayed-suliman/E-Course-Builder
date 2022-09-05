@@ -27,23 +27,23 @@
 
 /* border colors for getting the landscape of div */
 .red {
-    border: 1px solid red;
+    outline: 1px solid red;
 }
 
 .black {
-    border: 1px solid black;
+    outline: 1px solid black;
 }
 
 .green {
-    border: 1px solid green;
+    outline: 1px solid green;
 }
 
 .blue {
-    border: 1px solid blue;
+    outline: 1px solid blue;
 }
 
 .yellow {
-    border: 1px solid yellow;
+    outline: 1px solid yellow;
 }
 /************** 
 START CSS
@@ -58,6 +58,21 @@ body {
 
 
 /* custom define tages and classes */
+.fs-14{
+    font-size: 14px;
+}
+.fs-16{
+    font-size: 16px;
+}
+.fs-18{
+    font-size: 18px;
+}
+.fs-20{
+    font-size: 20px;
+}
+.fs-22{
+    font-size: 22px;
+}
 h2 {
     font-size: 26px;
     font-weight: var(--font-weight-regular);
@@ -283,7 +298,7 @@ GLOBAL
     background-color: #fff;
     text-transform: uppercase;
     box-shadow: var(--box-shadow);
-    transition: all 0.5s;
+    transition: all 0.25s;
 }
 
 #courses-section .card:hover a{
@@ -321,27 +336,33 @@ GLOBAL
 
 
 /*********************************************
-                Instructor Page
+                Instructor  Page
 ***********************************************/
-.instructor .back-btn a{
+.instructor .heading .back-btn a,
+.instructor .heading .back-btn a{
     text-decoration: none;
     color: var(--color-black);
     transition: margin 200ms ease-in-out;
 }
 
+.instructor .heading .back-btn a:hover,
 .instructor .heading .back-btn a:hover{
     margin-left: -5px!important;
 }
-.instructor .heading .title a{
+.instructor.courses .heading .title a,
+.instructor.students .heading .title a{
     margin-top: -15px;
 }
-.instructor .heading .title{
+.instructor.courses .heading .title,
+.instructor.students .heading .title{
     padding-left: 10px;
 }
-.instructor :is(tbody, td, tfoot, th, thead, tr) {
+.instructor.courses :is(tbody, td, tfoot, th, thead, tr) ,
+.instructor.students :is(tbody, td, tfoot, th, thead, tr) {
     border-style: none!important;
 }
-.instructor .table thead tr{
+.instructor.courses .table thead tr,
+.instructor.students .table thead tr{
     text-decoration: underline;
 }
 
@@ -369,10 +390,12 @@ GLOBAL
     /* .sidebar{
         height: 400px;
     } */
-    .instructor .table-container{
+    .instructor.courses .table-container,
+    .instructor.students .table-container{
         overflow: auto;
     }
-    .instructor .table{
+    .instructor.courses .table,
+    .instructor.students .table{
         min-width: 940px!important;
     }
     
@@ -395,10 +418,12 @@ GLOBAL
     #courses-section .card {
         margin: 4px;
     }
-    .instructor .heading .title{
+    .instructor.courses .heading .title,
+    .instructor.students .heading .title{
         padding-left: 0px;
     }
-    .instructor .heading .title a{
+    .instructor.courses .heading .title a,
+    .instructor.students .heading .title a{
         margin-top: -5px;
     }
 }
@@ -410,12 +435,14 @@ GLOBAL
     .top-nav #avatar-left{
         margin-right: 5px!important;
     }
-    .instructor .heading .title {
+    .instructor.courses .heading .title,
+    .instructor.students .heading .title {
         display: flex;
         flex-wrap: wrap;
         gap: 5px 0;
     }
-    .instructor .heading .title a{
+    .instructor.courses .heading .title a,
+    .instructor.students .heading .title a{
         margin-top: 0px;
     }
 }
