@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instructor-My Courses</title>
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../Assets/Css/style.css">
+</head>
+
+<body>
+    <header id="dashboard-top" class="top-nav">
+        <nav class="navbar navbar-expand-xl bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../Assets/Images/Group 21.svg" alt="" width="30" height="20"
+                        class="d-inline-block align-text-center">
+                    ECOURSE BUILDER
+                </a>
+                <div class="col-6 col-lg-6 ms-xl-5" id="search">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 shadow-none top-search" type="search"
+                            placeholder="Search for anything" aria-label="Search">
+                    </form>
+                </div>
+                <div class="d-flex">
+                    <div id="avatar-left" class="me-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
+                            alt="Black and White Portrait of a Man" />
+                    </div>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">DASHBOARD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MESSAGES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ACCOUNT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="avatar-right">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="30"
+                        alt="Black and White Portrait of a Man" />
+                </div>
+                <!-- <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" width="30" height="30" alt="Avatar" /> -->
+            </div>
+        </nav>
+    </header>
+    <!-- main section -->
+    <main id="body-section" class="instructor student-view">
+        <!-- hero section -->
+        <section class="hero-section d-flex justify-content-center align-items-center">
+            <div class="row d-flex mt-12">
+                <span class="hero-section-text text-center t">UCLA</span>
+            </div>
+        </section>
+
+        <section style="position: relative" class="main-section pt-4">
+            <div id="mySidebar" class="sidebar">
+                <div class="toggle">
+                    <button onclick="openNav()" id="nav-btn" class="slider-tab">
+                        <div id="dots-3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="./instructor-courses.html">my courses</a>
+                <a href="./instructor-student.html" class="active">students</a>
+                <a href="#">gradebook</a>
+                <a href="#">assignments</a>
+                <a href="#">whiteboard</a>
+                <a href="#">byetalk</a>
+                <a href="#">file share</a>
+                <a href="#">e-doc editor</a>
+            </div>
+            <div class="container">
+                <div class="heading">
+                    <div class="back-btn ms-4 ms-md-0">
+                        <a href="./instructor-student.html"><span class="pe-3"><img
+                                    src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a
+                            href="./dashboard.html">
+                    </div>
+                </div>
+                <div class="mt-4 p-3 ms-4 ms-md-0">
+                    <div class="row fs-18" id="course-policies">
+                        <!-- Courses Policies -->
+                        <div class="">
+                            <h2 class="">COURSE POLICIES</h2>
+                            <P class="">Enter the appropriate details for the course you wish to create. Upon approval,
+                                your
+                                course will be created.</P>
+                        </div>
+                        <!-- midterms -->
+                        <div class="container">
+                            <h3 class="fs-18">MIDTERMS</h3>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="m-0">How many retakes can a student have for a mid-tem?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="" id="" class="course-policies-dropdown">
+                                        <option value="">Select Value</option>
+                                        <option value="">100</option>
+                                        <option value="">90</option>
+                                        <option value="">80</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Randomize Questions for second/third attempt for mid-term exam?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="mid-term"
+                                            id="midterm-yes" value="option1">
+                                        <label class="form-check-label" for="midterm-yes">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="mid-term"
+                                            id="midterm-No" value="option2">
+                                        <label class="form-check-label" for="midterm-No">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- finals -->
+                        <div class="container mt-5">
+                            <h3 class="fs-18">FINALS</h3>
+                            <!-- row 1 -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="m-0">How many retakes can a student have for a final exam?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="" id="" class="course-policies-dropdown">
+                                        <option value="">Select Value</option>
+                                        <option value="">100</option>
+                                        <option value="">90</option>
+                                        <option value="">80</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- row 2 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Randomize Questions for second/third attempt for mid-term exam?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="final-1"
+                                            id="final-yes-1" value="option1">
+                                        <label class="form-check-label" for="final-yes-1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="final-1"
+                                            id="final-No-1" value="option2">
+                                        <label class="form-check-label" for="final-No-1">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 3 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Do you require a minimum score for the final exam?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="final-2"
+                                            id="final-yes-2" value="option1">
+                                        <label class="form-check-label" for="final-yes-2">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="final-2"
+                                            id="final-No-2" value="option2">
+                                        <label class="form-check-label" for="final-No-2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- quizzes -->
+                        <div class="container mt-5">
+                            <h3 class="fs-18">QUIZZES</h3>
+                            <!-- row 1 -->
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <p class="m-0">Keep all quizzes open to be accessed at any time.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <select name="" id="" class="course-policies-dropdown">
+                                        <option value="">Select Value</option>
+                                        <option value="">100</option>
+                                        <option value="">90</option>
+                                        <option value="">80</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- row 2 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">keep all quizzes open to be accessed at any time?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-1"
+                                            id="quiz-yes-1" value="option1">
+                                        <label class="form-check-label" for="quiz-yes-1">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-1"
+                                            id="quiz-No-1" value="option2">
+                                        <label class="form-check-label" for="quiz-No-1">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 3 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Allow access only if previous quiz has been passed.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-2"
+                                            id="quiz-yes-2" value="option1">
+                                        <label class="form-check-label" for="quiz-yes-2">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-2"
+                                            id="quiz-No-2" value="option2">
+                                        <label class="form-check-label" for="quiz-No-2">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 4 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Separate activation period for each quiz.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-3"
+                                            id="quiz-yes-3" value="option1">
+                                        <label class="form-check-label" for="quiz-yes-3">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-3"
+                                            id="quiz-No-3" value="option2">
+                                        <label class="form-check-label" for="quiz-No-3">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 5 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Randomize questions for second/third attempts at quizzes?</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-4"
+                                            id="quiz-yes-4" value="option1">
+                                        <label class="form-check-label" for="quiz-yes-4">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-4"
+                                            id="quiz-No-4" value="option2">
+                                        <label class="form-check-label" for="quiz-No-4">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- row 6 -->
+                            <div class="row mt-4 mt-md-2">
+                                <div class="col-md-8">
+                                    <p class="m-0">Allow student review of quiz.</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-5"
+                                            id="quiz-yes-5" value="option1">
+                                        <label class="form-check-label" for="quiz-yes-5">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-5"
+                                            id="quiz-No-5" value="option2">
+                                        <label class="form-check-label" for="quiz-No-5">No</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- save button -->
+                            <div class="mt-5">
+                                <button type="submit" class="btn text-white">NEXT</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="../Assets/Js/index.js"></script>
+</body>
+
+</html>
