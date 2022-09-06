@@ -69,6 +69,7 @@ body {
 }
 .fs-20{
     font-size: 20px;
+    font-weight: var(--font-weight-regular);
 }
 .fs-22{
     font-size: 22px;
@@ -447,7 +448,7 @@ GLOBAL
     Create a Courses Page
 ++++++++++++++++++++++++++++++    */
 #side-border{
-    background-color: black;
+    background-color:var(--color-black);
     width: 100%;
     height: 1px;
 }
