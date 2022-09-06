@@ -95,6 +95,13 @@ h4 {
 .main-section{
     min-height: 500px;
 }
+/* radio buttons */
+input[type=radio]{
+    border-color: var(--border-color);
+}
+input[type=radio]:checked{
+    background-color: var(--color-primary);
+}
 /************** 
     START
  TOP NAVBAR
@@ -409,6 +416,45 @@ GLOBAL
 .instructor.students .table thead tr{
     text-decoration: underline;
 }
+
+/* *************************** 
+
+Course policies page
+
+*******************************************  */
+#course-policies .course-policies-dropdown{
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+    padding: 5px 10px;
+}
+#course-policies .course-policies-dropdown:focus{
+    border: 1px solid var(--border-color);
+
+}
+/* login button */
+#course-policies button[type=submit] {
+    padding: 5px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: var(--font-weight-regular);
+    background-color: var(--button-primary);
+    border: none;
+}
+#course-policies button[type=submit]:hover{
+    background-color:var(--button-primary-hover);
+}
+
+
+
+
+
+/* ****************************************************************************************************************** */
+
+
+/*    Responsiveness */
+
+
+
 
 /* for laptop screens 1366 */
 
