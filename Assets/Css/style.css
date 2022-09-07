@@ -443,8 +443,44 @@ Course policies page
 #course-policies button[type=submit]:hover{
     background-color:var(--button-primary-hover);
 }
+/* *****************************
 
+student detail page
 
+****************************************8 */
+/* dropdowns */
+#grade-book select{
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+    padding: 5px 10px;
+}
+#grade-book select:focus{
+    border: 1px solid var(--border-color);
+
+}
+
+/* view button */
+#grade-book button[type=submit] {
+    padding: 5px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: var(--font-weight-regular);
+    background-color: var(--button-primary);
+    border: none;
+}
+#grade-book button[type=submit]:hover{
+    background-color:var(--button-primary-hover);
+}
+/* table design */
+#grade-book table :is(td) {
+    border-style: none!important;
+}
+#grade-book table thead tr {
+    text-decoration: underline;
+}
+#grade-book .see-more{
+    color: var(--color-black);
+}
 
 
 
