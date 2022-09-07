@@ -3,10 +3,11 @@
 
 :root {
     /* colors */
-    --color-red:#ff0202;
-    --color-green:#009D24;
-    --color-primary:#2E7CD8;
-    --color-grey:#989898;
+    --color-red: #ff0202;
+    --color-green: #009D24;
+    --color-primary: #2E7CD8;
+    --color-primary-60: rgb(46, 124, 216, .60);
+    --color-grey: #989898;
     --color-black: #000;
     --color-white: #fff;
     --border-color: #707070;
@@ -45,6 +46,7 @@
 .yellow {
     outline: 1px solid yellow;
 }
+
 /************** 
 START CSS
 GLOBAL
@@ -58,26 +60,32 @@ body {
 
 
 /* custom define tages and classes */
-.fs-14{
+.fs-14 {
     font-size: 14px;
 }
-.fs-16{
+
+.fs-16 {
     font-size: 16px;
 }
-.fs-18{
+
+.fs-18 {
     font-size: 18px;
 }
-.fs-20{
+
+.fs-20 {
     font-size: 20px;
     font-weight: var(--font-weight-regular);
 }
-.fs-22{
+
+.fs-22 {
     font-size: 22px;
 }
+
 h2 {
     font-size: 26px;
     font-weight: var(--font-weight-regular);
 }
+
 h3 {
     font-size: 24px;
     font-weight: var(--font-weight-medium);
@@ -87,22 +95,28 @@ h4 {
     font-size: 18px;
     font-weight: var(--font-weight-regular);
 }
-.text-green{
+
+.text-green {
     color: var(--color-green);
 }
-.text-red{
+
+.text-red {
     color: var(--color-red);
 }
-.main-section{
+
+.main-section {
     min-height: 500px;
 }
+
 /* radio buttons */
-input[type=radio]{
+input[type=radio] {
     border-color: var(--border-color);
 }
-input[type=radio]:checked{
+
+input[type=radio]:checked {
     background-color: var(--color-primary);
 }
+
 /************** 
     START
  TOP NAVBAR
@@ -128,14 +142,17 @@ input[type=radio]:checked{
 .top-nav .top-search::placeholder {
     font-size: 12px;
 }
+
 /* user profile */
 #avatar-left {
     display: none;
 }
-input[type=checkbox]:checked{
-    border-color: var(--color-primary)!important;
+
+input[type=checkbox]:checked {
+    border-color: var(--color-primary) !important;
     background-color: var(--color-primary);
 }
+
 /************** 
     END
  TOP NAVBAR
@@ -220,6 +237,7 @@ side bar in all pages
     border-radius: 50%;
     background-color: var(--button-primary);
 }
+
 .sidebar .toggle {
     padding-right: 2px;
     position: absolute;
@@ -229,17 +247,74 @@ side bar in all pages
     display: flex;
     justify-content: center;
 }
-.active{
-    color: var(--color-primary)!important;
+
+.active {
+    color: var(--color-primary) !important;
 }
-.btn-primary{
+
+.btn-primary {
     background-color: var(--button-primary);
     border-color: var(--button-primary);
 }
-.btn-primary:hover{
+
+.btn-primary:hover {
     background-color: var(--button-primary-hover);
     border-color: var(--button-primary-hover);
 }
+
+.form-select {
+    border: 1px solid var(--border-color);
+    border-radius: var(--input-border-radius);
+}
+
+.form-select:focus {
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    color: var(--color-white);
+    background-color: var(--color-primary-60);
+}
+
+.alert-error {
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+.error-tooltip{
+    --bs-tooltip-opacity:1;
+    --bs-tooltip-max-width:234px;
+    --bs-tooltip-padding-x:10px;
+}
+.error-tooltip .tooltip-inner{
+    --bs-tooltip-border-radius: 0;
+    --bs-tooltip-bg:var(--color-white);
+    --bs-tooltip-color:var(--color-black);
+    --bs-tooltip-opacity:1;
+    border: 1px solid var(--border-color);
+    font-size: 16px;
+    font-family: inherit;
+}
+.error-tooltip .tooltip-arrow{
+    display: none;
+}
+.alert-error::before {
+    width: 20px;
+    height: 20px;
+    content: '!';
+    color: #fff;
+    font-size: 14px;
+    display: grid;
+    place-items: center;
+    background-color: var(--color-red);
+    position: absolute;
+    top: 50%;
+    left: 0%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+}
+
 /************** 
 END CSS
 GLOBAL
@@ -284,8 +359,9 @@ GLOBAL
     background-color: var(--button-primary);
     border: none;
 }
-#login-form button[type=submit]:hover{
-    background-color:var(--button-primary-hover);
+
+#login-form button[type=submit]:hover {
+    background-color: var(--button-primary-hover);
 }
 
 /* *************** 
@@ -309,16 +385,19 @@ GLOBAL
     transition: all 0.25s;
 }
 
-#courses-section .card:hover a{
-    color: #fff!important;
+#courses-section .card:hover a {
+    color: #fff !important;
 }
-#courses-section .card:hover a img{
+
+#courses-section .card:hover a img {
     filter: invert(93%) sepia(0%) saturate(7448%) hue-rotate(31deg) brightness(113%) contrast(99%);
 }
+
 #courses-section .card:hover {
     box-shadow: none;
     background-color: var(--button-primary-hover);
 }
+
 #courses-section .card-body {
     padding: 24px 0;
 }
@@ -348,21 +427,25 @@ GLOBAL
 
 ********************************************* */
 /* slect university dropdown design */
-.input-focus{
+.input-focus {
     padding: 5px 20px;
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
 }
-.input-focus:focus{
+
+.input-focus:focus {
     border: 1px solid var(--border-color);
 }
-.input-textarea{
+
+.input-textarea {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
 }
-.input-textarea:focus{
+
+.input-textarea:focus {
     border: 1px solid var(--border-color);
 }
+
 #add-course button[type=submit] {
     padding: 5px 50px;
     border-radius: 50px;
@@ -371,15 +454,18 @@ GLOBAL
     background-color: var(--button-primary);
     border: none;
 }
-#add-course button[type=submit]:hover{
-    background-color:var(--button-primary-hover);
+
+#add-course button[type=submit]:hover {
+    background-color: var(--button-primary-hover);
 }
-#add-course .date{
+
+#add-course .date {
     border: none;
     background-color: transparent;
 }
+
 /* center border */
-#side-border{
+#side-border {
     background-color: black;
     width: 1px;
     height: 100%;
@@ -391,31 +477,50 @@ GLOBAL
                 Instructor  Page
 ***********************************************/
 .instructor .heading .back-btn a,
-.instructor .heading .back-btn a{
+.instructor .heading .back-btn a {
     text-decoration: none;
     color: var(--color-black);
     transition: margin 200ms ease-in-out;
 }
 
 .instructor .heading .back-btn a:hover,
-.instructor .heading .back-btn a:hover{
-    margin-left: -5px!important;
+.instructor .heading .back-btn a:hover {
+    margin-left: -5px !important;
 }
+
 .instructor.courses .heading .title a,
-.instructor.students .heading .title a{
+.instructor.students .heading .title a {
     margin-top: -15px;
 }
+
 .instructor.courses .heading .title,
-.instructor.students .heading .title{
+.instructor.students .heading .title {
     padding-left: 10px;
 }
-.instructor.courses :is(tbody, td, tfoot, th, thead, tr) ,
-.instructor.students :is(tbody, td, tfoot, th, thead, tr) {
-    border-style: none!important;
+
+.instructor.courses :is(tbody, td, tfoot, th, thead, tr),
+.instructor.students :is(tbody, td, tfoot, th, thead, tr),
+.instructor.student-view :is(tbody, td, tfoot, th, thead, tr),
+.instructor.gradebook :is(tbody, td, tfoot, th, thead, tr) {
+    border-style: none !important;
 }
+
 .instructor.courses .table thead tr,
-.instructor.students .table thead tr{
+.instructor.students .table thead tr,
+.instructor.student-view .table thead tr,
+.instructor.gradebook .table thead tr {
     text-decoration: underline;
+}
+
+.instructor.gradebook .table-container {
+    overflow: auto !important;
+}
+
+.my-gradebook .table {
+    min-width: 1820px !important;
+}
+.alert-notificaiton .table {
+    min-width: 1620px !important;
 }
 
 /* *************************** 
@@ -423,15 +528,17 @@ GLOBAL
 Course policies page
 
 *******************************************  */
-#course-policies .course-policies-dropdown{
+#course-policies .course-policies-dropdown {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
     padding: 5px 10px;
 }
-#course-policies .course-policies-dropdown:focus{
+
+#course-policies .course-policies-dropdown:focus {
     border: 1px solid var(--border-color);
 
 }
+
 /* login button */
 #course-policies button[type=submit] {
     padding: 5px 50px;
@@ -441,58 +548,33 @@ Course policies page
     background-color: var(--button-primary);
     border: none;
 }
-#course-policies button[type=submit]:hover{
-    background-color:var(--button-primary-hover);
+
+#course-policies button[type=submit]:hover {
+    background-color: var(--button-primary-hover);
 }
+
 /* *****************************
 
 student detail page
 
 ****************************************8 */
-/* dropdowns */
-#grade-book select{
-    border: 1px solid var(--border-color);
-    border-radius: var(--input-border-radius);
-    padding: 5px 10px;
-}
-#grade-book select:focus{
-    border: 1px solid var(--border-color);
-
-}
-
-/* view button */
-#grade-book button[type=submit] {
-    padding: 5px 50px;
-    border-radius: 50px;
-    font-size: 20px;
-    font-weight: var(--font-weight-regular);
-    background-color: var(--button-primary);
-    border: none;
-}
-#grade-book button[type=submit]:hover{
-    background-color:var(--button-primary-hover);
-}
 /* table design */
 #grade-book table :is(td) {
-    border-style: none!important;
+    border-style: none !important;
 }
+
 #grade-book table thead tr {
     text-decoration: underline;
 }
-#grade-book .see-more{
+
+#grade-book .see-more {
     color: var(--color-black);
 }
 
 
 
 /* ****************************************************************************************************************** */
-
-
 /*    Responsiveness */
-
-
-
-
 /* for laptop screens 1366 */
 
 @media only screen and (max-width:1366px) {
@@ -501,12 +583,15 @@ student detail page
     #login-main .login-title {
         margin: 100px 0 45px 0;
     }
+
     #avatar-right {
         display: none;
     }
+
     #avatar-left {
         display: block;
     }
+
     #courses-section .card {
         margin-bottom: 16px;
     }
@@ -514,71 +599,83 @@ student detail page
 
 /* for tablets screen 768px*/
 @media only screen and (max-width:768px) {
-    /* .sidebar{
-        height: 400px;
-    } */
+
     .instructor.courses .table-container,
-    .instructor.students .table-container{
+    .instructor.students .table-container,
+    .instructor.student-view .table-container,
+    .instructor.gradebook .table-container {
         overflow: auto;
     }
+
     .instructor.courses .table,
-    .instructor.students .table{
-        min-width: 940px!important;
+    .instructor.students .table,
+    .instructor.student-view .table {
+        min-width: 940px !important;
     }
-    
-    /* +++++++++++++++++++++++ 
+
+    /* 
+    ++++++++++++++++++++++++++++++ 
     Create a Courses Page
-++++++++++++++++++++++++++++++    */
-#side-border{
-    background-color:var(--color-black);
-    width: 100%;
-    height: 1px;
-}
-    
-    
+    ++++++++++++++++++++++++++++++
+    */
+    #side-border {
+        background-color: var(--color-black);
+        width: 100%;
+        height: 1px;
+    }
+
+
 }
 
 /* for mobiles screen 425px*/
 @media only screen and (max-width:425px) {
-    
+
     /* all pages search */
     #search {
         display: none;
     }
-    .hero-section{
+
+    .hero-section {
         height: 200px;
     }
+
     #courses-section {
         margin: 0;
     }
+
     #courses-section .card {
         margin: 4px;
     }
+
     .instructor.courses .heading .title,
-    .instructor.students .heading .title{
+    .instructor.students .heading .title {
         padding-left: 0px;
     }
+
     .instructor.courses .heading .title a,
-    .instructor.students .heading .title a{
+    .instructor.students .heading .title a {
         margin-top: -5px;
     }
 }
 
 @media only screen and (max-width:320px) {
-    .top-nav .navbar-brand{
+    .top-nav .navbar-brand {
         font-size: 16px;
     }
-    .top-nav #avatar-left{
-        margin-right: 5px!important;
+
+    .top-nav #avatar-left {
+        margin-right: 5px !important;
     }
+
     .instructor.courses .heading .title,
     .instructor.students .heading .title {
         display: flex;
         flex-wrap: wrap;
         gap: 5px 0;
     }
+
     .instructor.courses .heading .title a,
-    .instructor.students .heading .title a{
+    .instructor.students .heading .title a {
         margin-top: 0px;
     }
 }
