@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Instructor-Gradebook</title>
+    <!-- bootstrap css cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <!-- custom css -->
+    <link rel="stylesheet" href="../Assets/Css/style.css">
+</head>
+
+<body>
+    <header id="dashboard-top" class="top-nav">
+        <nav class="navbar navbar-expand-xl bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <img src="../Assets/Images/Group 21.svg" alt="" width="30" height="20"
+                        class="d-inline-block align-text-center">
+                    ECOURSE BUILDER
+                </a>
+                <div class="col-6 col-lg-6 ms-xl-5" id="search">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2 shadow-none top-search" type="search"
+                            placeholder="Search for anything" aria-label="Search">
+                    </form>
+                </div>
+                <div class="d-flex">
+                    <div id="avatar-left" class="me-3">
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
+                            alt="Black and White Portrait of a Man" />
+                    </div>
+                    <button class="navbar-toggler shadow-none" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                    <ul class="navbar-nav  mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">DASHBOARD</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">MESSAGES</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">ACCOUNT</a>
+                        </li>
+                    </ul>
+                </div>
+                <div id="avatar-right">
+                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="30"
+                        alt="Black and White Portrait of a Man" />
+                </div>
+                <!-- <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" width="30" height="30" alt="Avatar" /> -->
+            </div>
+        </nav>
+    </header>
+    <!-- main section -->
+    <main id="body-section" class="instructor gradebook">
+        <!-- hero section -->
+        <section class="hero-section d-flex justify-content-center align-items-center">
+            <div class="row d-flex mt-12">
+                <span class="hero-section-text text-center t">UCLA</span>
+            </div>
+        </section>
+        <section style="position: relative" class="main-section pt-4">
+            <div id="mySidebar" class="sidebar">
+                <div class="toggle">
+                    <button onclick="openNav()" id="nav-btn" class="slider-tab">
+                        <div id="dots-3">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </button>
+                </div>
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+                <a href="./instructor-courses.html">my courses</a>
+                <a href="./instructor-student.html">students</a>
+                <a href="./instructor-gradebook.html" class="active">gradebook</a>
+                <a href="#">assignments</a>
+                <a href="#">whiteboard</a>
+                <a href="#">byetalk</a>
+                <a href="#">file share</a>
+                <a href="#">e-doc editor</a>
+            </div>
+            <div class="container-fluid ps-2 ps-md-5">
+                <div class="heading">
+                    <div class="back-btn ps-4 ps-md-0">
+                        <a href="./dashboard.html"><span class="pe-3"><img src="../Assets/Images/icons/arrow-left.svg"
+                                    width="15px"></span> Back</a href="./dashboard.html">
+                    </div>
+                </div>
+                <div class="my-gradebook mt-4">
+                    <div class="header ms-4 ms-md-0">
+                        <h2 class="text-uppercase">My Gradebook</h2>
+                        <form class="row fs-16">
+                            <div class="col-6 col-sm-auto mb-1 mb-sm-0">
+                                <select name="year" class="form-select shadow-none">
+                                    <option disabled selected>Select Course</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-auto">
+                                <select name="year" class="form-select shadow-none">
+                                    <option disabled selected>Select Semester</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-auto mt-1 mt-sm-0">
+                                <button type="submit" class="btn btn-primary rounded-pill px-5">View</button>
+                            </div>
+                            <div class="col-auto ms-md-0 mt-2 mt-lg-0 ms-lg-3 ms-xl-5 align-self-center">
+                                <div class="dropdown me-4 d-inline">
+                                    <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">
+                                        Download <span class="ps-2"><img src="../Assets/Images/icons/download.svg"
+                                                alt="download"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">PDF</a></li>
+                                        <li><a class="dropdown-item" href="#">Excel File</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown me-4 d-inline">
+                                    <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">Filter <span class="ps-2"><img
+                                                src="../Assets/Images/icons/filter.svg" alt="filter"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Name</a></li>
+                                        <li><a class="dropdown-item" href="#">Current Score</a></li>
+                                        <li><a class="dropdown-item" href="#">Assignment Date</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown me-4 d-inline">
+                                    <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                        aria-expanded="false">Export <span class="ps-2"><img
+                                                src="../Assets/Images/icons/export.svg" alt="export"></span>
+                                    </button>
+                                    <ul class="dropdown-menu">
+                                        <li><a class="dropdown-item" href="#">Google Drive</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bg-white mt-2 mt-lg-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
+                        <table class="table  text-uppercase">
+                            <thead>
+                                <tr>
+                                    <td scope="col">Student ID</td>
+                                    <td scope="col">Student Name</td>
+                                    <td scope="col">Current Score</td>
+                                    <td scope="col">Assignment 1</td>
+                                    <td scope="col">Assignment 2</td>
+                                    <td scope="col">Assignment 3</td>
+                                    <td scope="col">Assignment 4</td>
+                                    <td scope="col">Assignment Name</td>
+                                    <td scope="col">Assignment Name</td>
+                                    <td scope="col">See more <span>></span></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">0000015</td>
+                                    <td>Johan Appleseed</td>
+                                    <td>72%</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>Enter Score</td>
+                                    <td>Enter Score</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">0000015</td>
+                                    <td>Johan Appleseed</td>
+                                    <td>72%</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>Enter Score</td>
+                                    <td>Enter Score</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">0000015</td>
+                                    <td>Johan Appleseed</td>
+                                    <td>72%</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>Enter Score</td>
+                                    <td>Enter Score</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">0000015</td>
+                                    <td>Johan Appleseed</td>
+                                    <td>72%</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>Enter Score</td>
+                                    <td>Enter Score</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">0000015</td>
+                                    <td>Johan Appleseed <span class="alert-error ms-2" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-custom-class="error-tooltip"
+                                            data-bs-offset="20,0"
+                                            data-bs-title="You have a smart alert Set up for this student."></span></td>
+                                    <td>72%</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>Enter Score</td>
+                                    <td>Enter Score</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td scope="row">0000015</td>
+                                    <td>Johan Appleseed</td>
+                                    <td>72%</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>MTW</td>
+                                    <td>Enter Score</td>
+                                    <td>Enter Score</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="alert-notificaiton mt-4">
+                    <div class="header ms-4 ms-md-0">
+                        <h2 class="text-uppercase">Alert And Notification <span class="alert-error ms-2"
+                                data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="error-tooltip"
+                                data-bs-offset="20,0"
+                                data-bs-title="You have a smart alert Set up for this student."></span></h2>
+                        <p class="fs-16">You can create, edit and set alerts for students who perform below benchmark
+                            expectations. We
+                            will notify you whenever a student has not met established expectations. </p>
+                        <form class="row fs-16">
+                            <div class="col-6 col-sm-auto mb-1 mb-sm-0">
+                                <select name="year" class="form-select shadow-none">
+                                    <option disabled selected>Select Course</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                    <option>Test</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-auto">
+                                <select name="year" class="form-select shadow-none">
+                                    <option disabled selected>Select Semester</option>
+                                    <option>1</option>
+                                    <option>2</option>
+                                    <option>3</option>
+                                </select>
+                            </div>
+                            <div class="col-6 col-sm-auto mt-1 mt-sm-0">
+                                <button type="submit" class="btn btn-primary rounded-pill px-5">View</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="bg-none mt-2 ms-4 ms-md-0 table-responsive-md table-container">
+                        <table class="table fs-20">
+                            <thead>
+                                <tr>
+                                    <td scope="col">Course</td>
+                                    <td scope="col">Semester</td>
+                                    <td scope="col">Student ID</td>
+                                    <td scope="col">Student Name</td>
+                                    <td scope="col">Alert</td>
+                                    <td scope="col"></td>
+                                    <td scope="col"></td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td scope="row">History of Real Estate</td>
+                                    <td>Fall 2022</td>
+                                    <td>479061</td>
+                                    <td>Joan Kipling <span class="alert-error ms-2" data-bs-toggle="tooltip"
+                                            data-bs-placement="top" data-bs-custom-class="error-tooltip"
+                                            data-bs-offset="20,0"
+                                            data-bs-title="You have a smart alert Set up for this student."></span></td>
+                                    <td>Notify when scores below 50% on all assignments, midterms, finals and course
+                                        score.</td>
+                                    <td class="text-end"><button class="btn border-0" data-bs-toggle="modal" data-bs-target="#edit"><img src="../Assets/Images/icons/edit.svg" alt="edit"></button></td>
+                                    <td class="text-start"><button class="btn border-0" data-bs-toggle="modal" data-bs-target="#delete"><img src="../Assets/Images/icons/Trash Icon.svg"></button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Delete Confirmation -->
+        <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
+            <div class="modal-dialog modal-sm" style="max-width: 416px;">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body p-4">
+                        <p>Are you sure you want to delete this smart alert</p>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary rounded-pill" style="padding-left: 35px;padding-right:35px;" >Yes</button>
+                            <button type="button" class="btn btn-outline-primary rounded-pill" style="padding-left: 25px;padding-right:25px;"  data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Modal -->
+        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body" style="min-height: 200px;max-width: 670;">
+                        <form style="margin-top: 50px;">
+                            <input type="text" class="form-control shadow-none" placeholder="Enter Student ID" style="width: 40%;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+    <!-- custom js -->
+    <script src="../Assets/Js/index.js"></script>
+</body>
+
+</html>
