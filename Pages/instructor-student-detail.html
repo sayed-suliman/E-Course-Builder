@@ -82,7 +82,7 @@
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <a href="./instructor-courses.html">my courses</a>
                 <a href="./instructor-student.html" class="active">students</a>
-                <a href="#">gradebook</a>
+                <a href="./instructor-gradebook.html">gradebook</a>
                 <a href="#">assignments</a>
                 <a href="#">whiteboard</a>
                 <a href="#">byetalk</a>
@@ -92,9 +92,8 @@
             <div class="container">
                 <div class="heading">
                     <div class="back-btn ms-4 ms-md-0">
-                        <a href="./dashboard.html"><span class="pe-3"><img
-                                    src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a
-                            href="./dashboard.html">
+                        <a href="./dashboard.html"><span class="pe-3"><img src="../Assets/Images/icons/arrow-left.svg"
+                                    width="15px"></span> Back</a href="./dashboard.html">
                     </div>
                 </div>
                 <div class="student-detail bg-white mt-4 p-3 ms-4 ms-md-0">
@@ -136,85 +135,102 @@
             </div>
             <!-- grade book -->
             <div class="container mt-4 mt-md-5" id="grade-book">
-                <div class="p-3 ms-4 ms-md-0">
-                    <div class="row">
-                        <h2>MY GRADEBOOK</h2>
-                        <div class="row">
-                            <div class="col-md-6 col-lg-3 col-xl-3 col-xxl-2">
-                                <select name="" id="" class="form-select shadow-none">
-                                    <option value="">Select Course</option>
-                                    <option value="">Test 1</option>
-                                    <option value="">Test 2</option>
-                                    <option value="">Test 3</option>
-                                </select>
+                <div class="header ms-4 ms-md-0">
+                    <h2 class="text-uppercase">My Gradebook</h2>
+                    <form class="row fs-16">
+                        <div class="col-6 col-sm-auto mb-1 mb-sm-0">
+                            <select name="year" class="form-select shadow-none">
+                                <option disabled selected>Select Course</option>
+                                <option>Test</option>
+                                <option>Test</option>
+                                <option>Test</option>
+                                <option>Test</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-sm-auto">
+                            <select name="year" class="form-select shadow-none">
+                                <option disabled selected>Select Semester</option>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-sm-auto mt-1 mt-sm-0">
+                            <button type="submit" class="btn btn-primary rounded-pill px-5">View</button>
+                        </div>
+                        <div class="col-auto ms-md-0 mt-2 mt-lg-0 ms-lg-3 ms-xl-5 align-self-center">
+                            <div class="dropdown me-4 d-inline">
+                                <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    Download <span class="ps-2"><img src="../Assets/Images/icons/download.svg"
+                                            alt="download"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">PDF</a></li>
+                                    <li><a class="dropdown-item" href="#">Excel File</a></li>
+                                </ul>
                             </div>
-                            <div class="col-md-6 mt-3 mt-md-0 col-lg-3 col-xl-3 col-xxl-2 mb-3 mb-lg-0">
-                                <select name="" id="" class="form-select shadow-none">
-                                    <option value="">Select Semester</option>
-                                    <option value="">Test 1</option>
-                                    <option value="">Test 2</option>
-                                    <option value="">Test 3</option>
-                                </select>
+                            <div class="dropdown me-4 d-inline">
+                                <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Filter <span class="ps-2"><img
+                                            src="../Assets/Images/icons/filter.svg" alt="filter"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Name</a></li>
+                                    <li><a class="dropdown-item" href="#">Current Score</a></li>
+                                    <li><a class="dropdown-item" href="#">Assignment Date</a></li>
+                                </ul>
                             </div>
-                            <div class="col-lg-2 col-md-3 ">
-                                <button type="submit" class="btn btn-primary rounded-pill px-4">View</button>
-                            </div>
-                            <div class="col-lg-4 mt-3 mt-md-0  d-flex justify-content-around align-items-center">
-                                <div class=" align-items-center">
-                                    <span>Download</span>
-                                    <img src="../Assets/Images/icons/download.svg" alt="" class="ms-2">
-                                </div>
-                                <div class="align-items-center">
-                                    <span>Filter</span>
-                                    <img src="../Assets/Images/icons/filter.svg" alt="" class="ms-2">
-                                </div>
-                                <div class="align-items-center">
-                                    <span>Export</span>
-                                    <img src="../Assets/Images/icons/export.svg" alt="" class="ms-2">
-                                </div>
+                            <div class="dropdown me-4 d-inline">
+                                <button class="border-0 bg-transparent" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">Export <span class="ps-2"><img
+                                            src="../Assets/Images/icons/export.svg" alt="export"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Google Drive</a></li>
+                                </ul>
                             </div>
                         </div>
-                        <!-- table -->
-                        <div class="row bg-white mt-3">
-                            <div class="col-xl-3 col-lg-4 col-md-5">
-                                <table class="table">
-                                    <thead>
-                                      <tr>
-                                        <td scope="col">Assignment Name</td>
-                                        <td scope="col">Score</td>
-                                      </tr>
-                                    </thead>
-                                    <tbody>
-                                      <tr>
-                                        <td scope="">Assignment 1 </td>
-                                        <td>72%</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="">Assignment  2</td>
-                                        <td>100%</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="">Assignment 3</td>
-                                        <td>100%</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="">Assignment 4</td>
-                                        <td>80%</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="row">Mid-Term</td>
-                                        <td>85%</td>
-                                      </tr>
-                                      <tr>
-                                        <td scope="row">Final</td>
-                                        <td>90%</td>
-                                      </tr>
-                                    </tbody>
-                                  </table>
-                            </div>
-                            <div class="col-xl-3 col-lg-2 col-md-3 ms-auto"><a href="#" class="see-more">See more ></a></div>
-                        </div>
-                    </div>
+                    </form>
+                </div>
+                <!-- table -->
+                <div class="bg-white mt-2 mt-lg-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
+                    <table class="table  text-uppercase">
+                        <thead>
+                            <tr>
+                                <td scope="col" width="120px">Student ID</td>
+                                <td scope="col" width="">Student Name</td>
+                                <td scope="col" class="float-end">See more <span>></span></td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">0000015</td>
+                                <td>Johan Appleseed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">0000015</td>
+                                <td>Johan Appleseed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">0000015</td>
+                                <td>Johan Appleseed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">0000015</td>
+                                <td>Johan Appleseed</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td scope="row">0000015</td>
+                                <td>Johan Appleseed</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
