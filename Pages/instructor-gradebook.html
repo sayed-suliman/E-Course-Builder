@@ -59,7 +59,6 @@
             </div>
         </nav>
     </header>
-
     <!-- main section -->
     <main id="body-section" class="instructor gradebook">
         <!-- hero section -->
@@ -100,7 +99,7 @@
                     <div class="header ms-4 ms-md-0">
                         <h2 class="text-uppercase">My Gradebook</h2>
                         <form class="row fs-16">
-                            <div class="col-auto">
+                            <div class="col-6 col-sm-auto mb-1 mb-sm-0">
                                 <select name="year" class="form-select shadow-none">
                                     <option disabled selected>Select Course</option>
                                     <option>Test</option>
@@ -109,7 +108,7 @@
                                     <option>Test</option>
                                 </select>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-6 col-sm-auto">
                                 <select name="year" class="form-select shadow-none">
                                     <option disabled selected>Select Semester</option>
                                     <option>1</option>
@@ -117,7 +116,7 @@
                                     <option>3</option>
                                 </select>
                             </div>
-                            <div class="col-auto mt-2 mt-md-0">
+                            <div class="col-6 col-sm-auto mt-1 mt-sm-0">
                                 <button type="submit" class="btn btn-primary rounded-pill px-5">View</button>
                             </div>
                             <div class="col-auto ms-md-0 mt-2 mt-lg-0 ms-lg-3 ms-xl-5 align-self-center">
@@ -261,7 +260,7 @@
                             expectations. We
                             will notify you whenever a student has not met established expectations. </p>
                         <form class="row fs-16">
-                            <div class="col-auto">
+                            <div class="col-6 col-sm-auto mb-1 mb-sm-0">
                                 <select name="year" class="form-select shadow-none">
                                     <option disabled selected>Select Course</option>
                                     <option>Test</option>
@@ -270,7 +269,7 @@
                                     <option>Test</option>
                                 </select>
                             </div>
-                            <div class="col-auto">
+                            <div class="col-6 col-sm-auto">
                                 <select name="year" class="form-select shadow-none">
                                     <option disabled selected>Select Semester</option>
                                     <option>1</option>
@@ -278,7 +277,7 @@
                                     <option>3</option>
                                 </select>
                             </div>
-                            <div class="col-auto mt-2 mt-md-0">
+                            <div class="col-6 col-sm-auto mt-1 mt-sm-0">
                                 <button type="submit" class="btn btn-primary rounded-pill px-5">View</button>
                             </div>
                         </form>
@@ -305,9 +304,10 @@
                                             data-bs-placement="top" data-bs-custom-class="error-tooltip"
                                             data-bs-offset="20,0"
                                             data-bs-title="You have a smart alert Set up for this student."></span></td>
-                                    <td>Notify when scores below 50% on all assignments, midterms, finals and course score.</td>
-                                    <td><a href="#"><img src="../Assets/Images/icons/edit.svg" alt="edit"></a></td>
-                                    <td><a href="#"><img src="../Assets/Images/icons/Trash Icon.svg" alt=""></a></td>
+                                    <td>Notify when scores below 50% on all assignments, midterms, finals and course
+                                        score.</td>
+                                    <td class="text-end"><button class="btn border-0" data-bs-toggle="modal" data-bs-target="#edit"><img src="../Assets/Images/icons/edit.svg" alt="edit"></button></td>
+                                    <td class="text-start"><button class="btn border-0" data-bs-toggle="modal" data-bs-target="#delete"><img src="../Assets/Images/icons/Trash Icon.svg"></button></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -315,6 +315,32 @@
                 </div>
             </div>
         </section>
+        <!-- Delete Confirmation -->
+        <div class="modal fade" id="delete" tabindex="-1" aria-labelledby="delete" aria-hidden="true">
+            <div class="modal-dialog modal-sm" style="max-width: 416px;">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body p-4">
+                        <p>Are you sure you want to delete this smart alert</p>
+                        <div class="text-center">
+                            <button type="button" class="btn btn-primary rounded-pill" style="padding-left: 35px;padding-right:35px;" >Yes</button>
+                            <button type="button" class="btn btn-outline-primary rounded-pill" style="padding-left: 25px;padding-right:25px;"  data-bs-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Modal -->
+        <div class="modal fade" id="edit" tabindex="-1" aria-labelledby="edit" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-body" style="min-height: 200px;max-width: 670;">
+                        <form style="margin-top: 50px;">
+                            <input type="text" class="form-control shadow-none" placeholder="Enter Student ID" style="width: 40%;">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
 

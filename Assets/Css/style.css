@@ -252,6 +252,13 @@ side bar in all pages
     color: var(--color-primary) !important;
 }
 
+.btn-outline-primary {
+    color: var(--button-primary);
+    border-color: var(--button-primary);
+}
+.btn-outline-primary:hover {
+    background-color: var(--button-primary);
+}
 .btn-primary {
     background-color: var(--button-primary);
     border-color: var(--button-primary);
@@ -262,12 +269,14 @@ side bar in all pages
     border-color: var(--button-primary-hover);
 }
 
-.form-select {
+.form-select,
+input:not([type=submit]) {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
 }
 
-.form-select:focus {
+.form-select:focus ,
+.input:not([type=submit]):focus {
     border: 1px solid var(--border-color);
 }
 
@@ -611,6 +620,9 @@ student detail page
     .instructor.students .table,
     .instructor.student-view .table {
         min-width: 940px !important;
+    }
+    #grade-book .table {
+        min-width: 450px!important;
     }
 
     /* 
