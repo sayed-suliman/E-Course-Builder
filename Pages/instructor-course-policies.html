@@ -92,9 +92,8 @@
             <div class="container">
                 <div class="heading">
                     <div class="back-btn ms-4 ms-md-0">
-                        <a href="./dashboard.html"><span class="pe-3"><img
-                                    src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a
-                            href="./dashboard.html">
+                        <a href="./dashboard.html"><span class="pe-3"><img src="../Assets/Images/icons/arrow-left.svg"
+                                    width="15px"></span> Back</a href="./dashboard.html">
                     </div>
                 </div>
                 <div class="mt-4 p-3 ms-4 ms-md-0">
@@ -203,12 +202,16 @@
                                     <p class="m-0">Keep all quizzes open to be accessed at any time.</p>
                                 </div>
                                 <div class="col-md-4">
-                                    <select name="" id="" class="course-policies-dropdown">
-                                        <option value="">Select Value</option>
-                                        <option value="">100</option>
-                                        <option value="">90</option>
-                                        <option value="">80</option>
-                                    </select>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-0"
+                                            id="quiz-yes-0" value="option1">
+                                        <label class="form-check-label" for="quiz-yes-0">Yes</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input shadow-none" type="radio" name="quiz-0"
+                                            id="quiz-No-0" value="option2">
+                                        <label class="form-check-label" for="quiz-No-0">No</label>
+                                    </div>
                                 </div>
                             </div>
                             <!-- row 2 -->
@@ -303,8 +306,26 @@
                             </div>
                             <!-- save button -->
                             <div class="mt-5">
-                                <button type="submit" class="btn text-white">NEXT</button>
+                                <button type="submit" class="btn text-white" data-bs-toggle="modal" data-bs-target="#staticBackdrop">SAVE</button>
                             </div>
+                            <!-- model for save Button -->
+                            <!-- Modal -->
+                            <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static"
+                                data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content p-4 rounded-0 border-0" data-bs-dismiss="modal">
+                                        <div class="modal-body">
+                                           Your course is now pending review and approval from the administrator.
+                                            Upon approval, you will be able to view your course under "My Courses" and create assignments.
+                                        </div>
+                                        <div class="modal-footer justify-content-center border-0">
+                                            <button type="button" class="btn btn-primary rounded-pill">OKAY</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end model -->
                         </div>
                     </div>
                 </div>
