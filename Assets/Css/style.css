@@ -27,6 +27,10 @@
 }
 
 /* border colors for getting the landscape of div */
+.border-color {
+    border: 1px solid var(--border-color);
+}
+
 .red {
     outline: 1px solid red;
 }
@@ -115,6 +119,11 @@ input[type=radio] {
 
 input[type=radio]:checked {
     background-color: var(--color-primary);
+}
+
+/* borders */
+.border-right-1 {
+    border-right: 1px solid var(--border-color);
 }
 
 /************** 
@@ -256,9 +265,11 @@ side bar in all pages
     color: var(--button-primary);
     border-color: var(--button-primary);
 }
+
 .btn-outline-primary:hover {
     background-color: var(--button-primary);
 }
+
 .btn-primary {
     background-color: var(--button-primary);
     border-color: var(--button-primary);
@@ -275,7 +286,7 @@ input:not([type=submit]) {
     border-radius: var(--input-border-radius);
 }
 
-.form-select:focus ,
+.form-select:focus,
 .input:not([type=submit]):focus {
     border: 1px solid var(--border-color);
 }
@@ -291,23 +302,27 @@ input:not([type=submit]) {
     width: 20px;
     height: 20px;
 }
-.error-tooltip{
-    --bs-tooltip-opacity:1;
-    --bs-tooltip-max-width:234px;
-    --bs-tooltip-padding-x:10px;
+
+.error-tooltip {
+    --bs-tooltip-opacity: 1;
+    --bs-tooltip-max-width: 234px;
+    --bs-tooltip-padding-x: 10px;
 }
-.error-tooltip .tooltip-inner{
+
+.error-tooltip .tooltip-inner {
     --bs-tooltip-border-radius: 0;
-    --bs-tooltip-bg:var(--color-white);
-    --bs-tooltip-color:var(--color-black);
-    --bs-tooltip-opacity:1;
+    --bs-tooltip-bg: var(--color-white);
+    --bs-tooltip-color: var(--color-black);
+    --bs-tooltip-opacity: 1;
     border: 1px solid var(--border-color);
     font-size: 16px;
     font-family: inherit;
 }
-.error-tooltip .tooltip-arrow{
+
+.error-tooltip .tooltip-arrow {
     display: none;
 }
+
 .alert-error::before {
     width: 20px;
     height: 20px;
@@ -528,6 +543,7 @@ GLOBAL
 .my-gradebook .table {
     min-width: 1820px !important;
 }
+
 .alert-notificaiton .table {
     min-width: 1620px !important;
 }
@@ -585,17 +601,138 @@ student detail page
     White Board Page
 
 ******************************************************************* */
-#white-board .white-btn{
+#white-board .white-btn {
     background: transparent;
     border: none;
 }
 
+/* *********************************
+
+    Create White board
+
+    ***************************************************/
+#white-board .dropdown-item button:hover {
+    background-color: var(--button-primary-hover);
+}
+
+#white-board .dropdown-item:focus,
+#white-board .dropdown-item:hover {
+    color: var(--color-white);
+    background-color: #fff;
+}
+
+/* sidemenu */
+#white-board .side-menu {
+    position: absolute;
+    left: 50px;
+    top: 10%;
+}
+
+#white-board .side-menu .nav-menu {
+    padding: 10px 0;
+    background: #fff;
+    border-radius: 50px;
+    width: 60px;
+    margin-bottom: 1rem;
+    opacity: 1;
+    transition: all .5s;
+}
+
+#white-board .side-menu button {
+    padding: 15px 0;
+}
+#white-board button:hover{
+    border: none;
+}
+#white-board button:not(:hover){
+    border: none;
+}
+
+#white-board .side-menu button img {
+    width: 20px;
+}
+
+#white-board .white-board {
+    background: var(--color-white);
+    border: 1px solid #707070;
+
+    min-height: 770px;
+}
+
+/* hide show */
+#switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 40px;
+}
+
+#switch input {
+    height: 0;
+    width: 0;
+    opacity: 0;
+}
+
+#switch .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--color-white);
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+#switch .slider::before{
+    position: absolute;
+  content: "";
+  height: 32px;
+  width: 32px;
+  left: 4px;
+  bottom: 4px;
+  background-color: var(--color-primary);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+#switch input:checked + .slider {
+  background-color: #2196F3;
+}
+#switch input:checked + .slider:before {
+    background-color: #fff;
+  }
+
+
+#switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(38px);
+}
+
+/* Rounded sliders */
+#switch .slider.round {
+  border-radius: 34px;
+}
+
+#switch .slider.round:before {
+  border-radius: 50%;
+}
+/* hideopen */
+#hideOpen{
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+}
+
+/* hide show end */
+
+
 
 /* ****************************************************************************************************************** */
 /*    Responsiveness */
-/* for laptop screens 1366 */
+/* for laptop screens 1440 */
 
-@media only screen and (max-width:1366px) {
+@media only screen and (max-width:1440px) {
 
     /* login page */
     #login-main .login-title {
@@ -613,10 +750,28 @@ student detail page
     #courses-section .card {
         margin-bottom: 16px;
     }
+
+    /* *********************************
+    Create White board
+    ***************************************************/
+
+    /* sidemenu */
+    #white-board .side-menu {
+        top: 5%;
+        left: 20px;
+    }
+
+    /* board */
+    #white-board .white-board {
+        min-height: calc(100vh - 90px);
+    }
+
+
+
 }
 
-/* for tablets screen 768px*/
-@media only screen and (max-width:768px) {
+/* for tablets screen 1024px*/
+@media only screen and (max-width:1024px) {
 
     .instructor.courses .table-container,
     .instructor.students .table-container,
@@ -630,8 +785,9 @@ student detail page
     .instructor.student-view .table {
         min-width: 940px !important;
     }
+
     #grade-book .table {
-        min-width: 450px!important;
+        min-width: 450px !important;
     }
 
     /* 
@@ -645,6 +801,33 @@ student detail page
         height: 1px;
     }
 
+    /* **********************
+    create whiteboard
+  *******************************  */
+ 
+ 
+    
+    /* sidemenu */
+    #white-board .side-menu {
+        position: relative;
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
+        margin-top: 1rem;
+        top: 0;
+    }
+    
+    #white-board .side-menu .nav-menu {
+        width: 60%;
+        margin-bottom: 1rem;
+    }
+    #white-board .side-menu .nav-menu  button{
+        padding: 0 10px;
+    }
+    /* board */
+    #white-board .white-board {
+        min-height: calc(100vh - 145px);
+    }
 
 }
 
@@ -677,6 +860,32 @@ student detail page
     .instructor.students .heading .title a {
         margin-top: -5px;
     }
+
+    /* border right 1 */
+
+    /* borders */
+    .border-right-1 {
+        border-right: none;
+    }
+    /*&*********************** 
+        Create whitebaord
+    ***************************************** */
+    #white-board .side-menu .nav-menu {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    #white-board .side-menu button img {
+        width: 16px;
+    }
+    #switchoffOn{
+        display: none;
+    }
+    /* board */
+    #white-board .white-board {
+        min-height: 60vh;
+    }
+
+    
 }
 
 @media only screen and (max-width:320px) {
@@ -699,4 +908,5 @@ student detail page
     .instructor.students .heading .title a {
         margin-top: 0px;
     }
+    
 }
