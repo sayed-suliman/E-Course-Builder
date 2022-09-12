@@ -37,7 +37,7 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 let switchHideShow = document.querySelector("#switch input")
 let navMenu = document.querySelector(".side-menu .nav-menu")
 switchHideShow.addEventListener("change",()=>{
-    if((switchHideShow.checked)){
+    if(!(switchHideShow.checked)){
         tabletScreenFtnHideOrOpen(tabletScreen)
         navMenu.style.transform = "translate(-150px,0)"
         navMenu.style.opacity = "0"
@@ -50,13 +50,14 @@ switchHideShow.addEventListener("change",()=>{
 })
 // 
 function tabletScreenFtnHideOrOpen(x){
-    if((x.matchMedia || window.innerWidth <= 1024) && switchHideShow.checked){
+    if((x.matchMedia || window.innerWidth <= 1024) && !(switchHideShow.checked)){
         navMenu.style.visibility = "hidden"
         navMenu.style.opacity = "0"
         navMenu.style.transform = "translate(-150px,0)"
 
     }
-    if((window.innerWidth > 1024) && !(switchHideShow.checked)){
+    if((window.innerWidth > 1024) && switchHideShow.checked){
+        console.log("here")
         navMenu.style.visibility = "visible"
         navMenu.style.transform = "translate(0,0)"
         navMenu.style.opacity = "1"
@@ -75,6 +76,8 @@ function sliderOn(x){
         console.log("fff")
         navMenu.style.transform = "translate(0,0)"
         navMenu.style.visibility = "visible"
+        navMenu.style.opacity = "1"
+        switchHideShow.checked = true
     }
 }
 tabletScreen.addListener(tabletScreenFtnHideOrOpen)
