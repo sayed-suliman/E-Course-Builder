@@ -5,6 +5,13 @@
 ul.dropdown-menu{
     border-radius: 0;
 }
+/* **** */
+/* jquery calender css */
+#ui-datepicker-div{
+    font-family: 'Poppins';
+}
+
+
 /* ************************************ */
 
 :root {
