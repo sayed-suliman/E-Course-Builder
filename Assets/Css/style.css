@@ -662,17 +662,20 @@ student detail page
 /* board */
 #white-board .white-board {
     background: var(--color-white);
+    /* background: url("../Images/icons/Mask2.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     border: 1px solid #707070;
     min-height: 770px;
 }
-#white-board canvas{
+/* #white-board canvas{
     width: 100%!important;
     height: 770px!important;
 }
 #white-board .canvas-container{
     width: 100%!important;
     height: 770px!important;
-}
+} */
 
 
 /* end white board */

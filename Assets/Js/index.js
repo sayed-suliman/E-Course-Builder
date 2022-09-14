@@ -71,9 +71,7 @@ function testyFunction(x){
 }
 // for in mobile screen the nav should be visible 
 function sliderOn(x){
-    console.log("asd")
     if(x.matches || window.innerHeight <= 425){
-        console.log("fff")
         navMenu.style.transform = "translate(0,0)"
         navMenu.style.visibility = "visible"
         navMenu.style.opacity = "1"
@@ -84,7 +82,6 @@ tabletScreen.addListener(tabletScreenFtnHideOrOpen)
 
 
 // for mobile screen nav should be visible
-console.log(tabletScreen)
 sliderOn(mobileScreen)
 mobileScreen.addListener(sliderOn)
 // tabletScreen.addListener(testyFunction)

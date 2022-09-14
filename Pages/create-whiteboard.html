@@ -115,25 +115,31 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownbackground">
                             <li class="dropdown-item d-flex flex-column flex-md-row">
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Mask Group 2.png"
+                                <button class="btn" type="button" onclick="setBackground('/Assets/Images/icons/Mask2.png')"><img src="../Assets/Images/icons/Mask2.png"
                                         alt=""></button>
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Mask Group 4.png"
+                                <button class="btn" type="button" onclick="setBackground('/Assets/Images/icons/Mask Group 4.png')"><img src="../Assets/Images/icons/Mask Group 4.png"
                                         alt=""></button>
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Mask Group 3.png"
+                                <button class="btn" type="button" onclick="setBackground('/Assets/Images/icons/Mask Group 3.png')"><img src="../Assets/Images/icons/Mask Group 3.png"
                                         alt=""></button>
+                                        <!-- <button class="btn" type="button" onclick="setBackgroundImg(event)"><img src="../Assets/Images/icons/Mask2.png"
+                                            alt=""></button>
+                                    <button class="btn" type="button" onclick="setBackgroundImg(event)"><img src="../Assets/Images/icons/Mask Group 4.png"
+                                            alt=""></button>
+                                    <button class="btn" type="button" onclick="setBackgroundImg(event)"><img src="../Assets/Images/icons/Mask Group 3.png"
+                                            alt=""></button> -->
                             </li>
                             <li class="dropdown-item d-flex flex-column flex-md-row">
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Rectangle 33.png" alt="">
+                                <button class="btn" type="button" onclick="setBackground()"><img src="../Assets/Images/icons/Rectangle 33.png" alt="">
                                 </button>
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Rectangle 34.png" alt="">
+                                <button class="btn" type="button" onclick="setBackground()"><img src="../Assets/Images/icons/Rectangle 34.png" alt="">
                                 </button>
-                                <button class="btn" href="#"> <input type="file" id="fff" style="display:none">
+                                <button class="btn" type="button" onclick="setBackground()"> <input type="file" id="fff" style="display:none">
                                     <label for="fff"><img src="../Assets/Images/icons/Rectangle 35.png" alt=""></label>
                                 </button>
                             </li>
                         </ul>
                         <span class="border-right-1"></span>
-                        <button class="btn">
+                        <button class="btn" type="button" onclick="clearBoard()">
                             Clear board
                         </button>
                         <button class="btn float-md-end">
@@ -149,7 +155,7 @@
             <div class="side-menu">
                 <div class="d-flex justify-content-around flex-xl-column nav-menu">
                     <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/52.-Note.svg" alt=""></button>
-                    <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/EraseTool.svg" alt=""></button>
+                    <button type="button" class="btn" onclick="eraseObj()"><img src="../Assets/Images/whiteboard-icons/EraseTool.svg" alt=""></button>
                     <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/ic_insert_photo_24px.svg"
                             alt=""></button>
                     <button type="button" class="btn" onclick="createTextbox()"><img src="../Assets/Images/whiteboard-icons/ic_text_format_48px.svg"
