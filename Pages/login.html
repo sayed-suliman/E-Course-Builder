@@ -32,14 +32,14 @@
                     <form action="dashboard.html" id="login-form">
                         <h3 class="text-center login-title">LOGIN</h3>
                         <div class="">
-                            <input type="text" placeholder="Email Address" class="form-control shadow-none" >
+                            <input type="text" placeholder="Email Address" class="form-control shadow-none">
                         </div>
                         <div class="mt-2 mt-xl-3 mt-xxl-4">
                             <input type="password" placeholder="Password" class="form-control shadow-none">
                         </div>
                         <div class="from-check mt-2 mt-xl-3 mt-xxl-4">
-                            <input type="checkbox" class="form-check-input shadow-none border-dark border border-2" id="check1" name="option1"
-                                value="something">
+                            <input type="checkbox" class="form-check-input shadow-none border-dark border border-2"
+                                id="check1" name="option1" value="something">
                             <label class="form-check-label ps-2" for="check1">Remember Me</label>
                         </div>
                         <div class="mt-2 mt-xl-3 mt-xxl-4 d-flex flex-column align-items-center">
@@ -47,7 +47,24 @@
                             <div class="login-form-links mt-2">
                                 <p class="text-center mt-2"><a href="#" class="links forget-email">Forgot
                                         EmailAddress/Password?</a></p>
-                                <p class="text-center mt-2"><a href="#" class="links">Enter Access Code</a></p>
+                                <p class="text-center mt-2">
+                                    <a href="#" class="links" data-bs-toggle="modal" data-bs-target="#accessModal">Enter Access Code</a>
+                                </p>
+                                <!-- access code modal -->
+                                <div class="modal fade" id="accessModal" tabindex="-1"
+                                    aria-labelledby="accessModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog modal-md">
+                                        <div class="modal-content p-5">
+                                            <div class="modal-body">
+                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Enter Access Code">
+                                                <div class="text-center mt-4">
+                                                    <button type="button" class="btn btn-primary rounded-pill me-2" style="padding-left: 35px;padding-right:35px;" >Login</button>
+                                                    <button type="button" class="btn rounded-pill text-primary" style="padding-left: 25px;padding-right:25px;"  data-bs-dismiss="modal">Cancel</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </form>
@@ -64,7 +81,7 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
 
-        </script>
+    </script>
 </body>
 
 </html>

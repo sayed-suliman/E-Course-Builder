@@ -1,6 +1,12 @@
 /* poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
+/* changing bootstrap  dropdown */
+ul.dropdown-menu{
+    border-radius: 0;
+}
+/* ************************************ */
+
 :root {
     /* colors */
     --color-red: #ff0202;
@@ -111,7 +117,6 @@ h4 {
 .main-section {
     min-height: 500px;
 }
-
 /* radio buttons */
 input[type=radio] {
     border-color: var(--border-color);
@@ -386,6 +391,12 @@ GLOBAL
 
 #login-form button[type=submit]:hover {
     background-color: var(--button-primary-hover);
+}
+/* access modal dialog */
+#accessModal input::placeholder{
+    text-align: center;
+    color: var(--color-black);
+    
 }
 
 /* *************** 
