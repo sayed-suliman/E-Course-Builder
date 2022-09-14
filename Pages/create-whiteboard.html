@@ -30,14 +30,52 @@
             <div class="row">
                 <div class="col-lg-2 col-md-6 fs-20">Untitled Board</div>
                 <div class="col-lg-10  col-md-6 d-flex justify-content-md-end my-md-0 my-3">
-                    <div class="me-4">
+                    <div class="me-4 d-flex">
                         <button type="button" class="btn shadow-none btn-outline-primary px-4">Present</button>
-                        <img src="../Assets/Images/icons/ic_more_vert_36px.svg" class="mx-4" alt="">
-                        <button type="button" class="btn shadow-none btn-primary px-4">Share</button>
+                        <div class="dropdown">
+                            <button type="button" class="btn shadow-none btn px-4 border-0 " data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="../Assets/Images/icons/ic_more_vert_36px.svg" class="mx-4" alt="">
+                            </button>
+                            <ul class="dropdown-menu rounded-0" id="dots-dropdown">
+                                <li class="dropdown-item p-0">
+                                    <p class="fs-16"><button type="button" class="btn" href="">General Access</button></p>
+                                    <p class="fs-16"><button type="button" class="btn" href="">Download as PDF</button></p>
+                                    <p class="fs-16"><button type="button" class="btn" href="">Remove</button> </p>
+                                    <p class="fs-16"><button type="button" class="btn" href="">Make a copy</button></p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="dropdown">
+                            <button type="button" class="btn shadow-none btn-primary px-4 " data-bs-toggle="dropdown"
+                                aria-expanded="false">Share</button>
+                            <ul class="dropdown-menu rounded-0 p-3" id="share-dropdown">
+                                <li class="dropdown-item">
+                                    <p class="m-0 mb-2 fs-20">Share "Untitled Board"</p>
+                                    <input class="form-control shadow-none rounded-0" type="text"
+                                        placeholder="Type in email address">
+                                    <p class="fs-16 m-0 mt-4 b-bold">People with access</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span>Shaun Bina</span>
+                                        <span>Owner</span>
+                                    </div>
+                                    <p class="fs-16 m-0 mt-4">General Access</p>
+                                    <p class="fs-16  m-0 b-bold">Restricted</p>
+                                    <p class="fs-16 m-0 mb-3">Only People with access can open with the link</p>
+                                    <div class="d-flex justify-content-between">
+                                        <button class="btn  px-4 btn-outline-dark">Copy link</button>
+                                        <button class="btn px-3 btn-primary">Share</button>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+
                     </div>
                     <div id="">
-                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="40"
-                            alt="Black and White Portrait of a Man" />
+                        <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" class="rounded-circle" height="38"
+                            alt="Black and White Portrait of a Man" data-bs-toggle="tooltip"
+                            title="shaunbina@ecoursebuilder.com" />
                     </div>
                 </div>
             </div>
@@ -57,7 +95,8 @@
         <section class="">
             <div class="container-fluid bg-white">
                 <div class="row">
-                    <div class="col-xl-12  px-lg-4 border-color mt-4 d-flex d-md-inline flex-wrap justify-content-center ">
+                    <div
+                        class="col-xl-12  px-lg-4 border-color mt-4 d-flex d-md-inline flex-wrap justify-content-center ">
 
                         <button class="btn">
                             <img src="../Assets/Images/icons/ic_undo_24px.svg" alt="">
@@ -76,25 +115,31 @@
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownbackground">
                             <li class="dropdown-item d-flex flex-column flex-md-row">
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Mask Group 2.png"
+                                <button class="btn" type="button" onclick="setBackground('/Assets/Images/icons/Mask2.png')"><img src="../Assets/Images/icons/Mask2.png"
                                         alt=""></button>
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Mask Group 4.png"
+                                <button class="btn" type="button" onclick="setBackground('/Assets/Images/icons/Mask Group 4.png')"><img src="../Assets/Images/icons/Mask Group 4.png"
                                         alt=""></button>
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Mask Group 3.png"
+                                <button class="btn" type="button" onclick="setBackground('/Assets/Images/icons/Mask Group 3.png')"><img src="../Assets/Images/icons/Mask Group 3.png"
                                         alt=""></button>
+                                        <!-- <button class="btn" type="button" onclick="setBackgroundImg(event)"><img src="../Assets/Images/icons/Mask2.png"
+                                            alt=""></button>
+                                    <button class="btn" type="button" onclick="setBackgroundImg(event)"><img src="../Assets/Images/icons/Mask Group 4.png"
+                                            alt=""></button>
+                                    <button class="btn" type="button" onclick="setBackgroundImg(event)"><img src="../Assets/Images/icons/Mask Group 3.png"
+                                            alt=""></button> -->
                             </li>
                             <li class="dropdown-item d-flex flex-column flex-md-row">
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Rectangle 33.png" alt="">
+                                <button class="btn" type="button" onclick="setBackground()"><img src="../Assets/Images/icons/Rectangle 33.png" alt="">
                                 </button>
-                                <button class="btn" href="#"><img src="../Assets/Images/icons/Rectangle 34.png" alt="">
+                                <button class="btn" type="button" onclick="setBackground()"><img src="../Assets/Images/icons/Rectangle 34.png" alt="">
                                 </button>
-                                <button class="btn" href="#"> <input type="file" id="fff" style="display:none">
+                                <button class="btn" type="button" onclick="setBackground()"> <input type="file" id="fff" style="display:none">
                                     <label for="fff"><img src="../Assets/Images/icons/Rectangle 35.png" alt=""></label>
                                 </button>
                             </li>
                         </ul>
                         <span class="border-right-1"></span>
-                        <button class="btn">
+                        <button class="btn" type="button" onclick="clearBoard()">
                             Clear board
                         </button>
                         <button class="btn float-md-end">
@@ -109,16 +154,16 @@
         <section style="position:relative;">
             <div class="side-menu">
                 <div class="d-flex justify-content-around flex-xl-column nav-menu">
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/52.-Note.svg" alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/EraseTool.svg" alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/ic_insert_photo_24px.svg"
+                    <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/52.-Note.svg" alt=""></button>
+                    <button type="button" class="btn" onclick="eraseObj()"><img src="../Assets/Images/whiteboard-icons/EraseTool.svg" alt=""></button>
+                    <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/ic_insert_photo_24px.svg"
                             alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/ic_text_format_48px.svg"
+                    <button type="button" class="btn" onclick="createTextbox()"><img src="../Assets/Images/whiteboard-icons/ic_text_format_48px.svg"
                             alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/Layer-1.svg" alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/pen-tool.svg" alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/Polygon 1.svg" alt=""></button>
-                    <button class="btn"><img src="../Assets/Images/whiteboard-icons/StrokeErase2.svg" alt=""></button>
+                    <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/Layer-1.svg" alt=""></button>
+                    <button type="button" class="btn" onclick="toggleDraw()"><img src="../Assets/Images/whiteboard-icons/pen-tool.svg" alt=""></button>
+                    <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/Polygon 1.svg" alt=""></button>
+                    <button type="button" class="btn"><img src="../Assets/Images/whiteboard-icons/StrokeErase2.svg" alt=""></button>
                 </div>
                 <div id="switchoffOn">
                     <label id="switch">
@@ -132,7 +177,9 @@
                 </div>
             </div>
             <div class="container mt-md-4">
-                <div class="w-100 white-board"></div>
+                <div class="white-board">
+                    <canvas id="demoCanvas"></canvas>
+                </div>
             </div>
         </section>
     </main>
@@ -145,6 +192,11 @@
         crossorigin="anonymous"></script>
     <!-- custom js -->
     <script src="../Assets/Js/index.js"></script>
+    <!-- create whiteboard js -->
+    <script src="../Assets/Js/whiteboars.js"></script>
+    <!-- canva js -->
+    <script src="../Assets/Js/fabric.min.js"></script>
+    <script src="../Assets/Js/canva.js"></script>
 </body>
 
 </html>

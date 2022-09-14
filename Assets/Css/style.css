@@ -90,7 +90,15 @@ body {
 .fs-22 {
     font-size: 22px;
 }
+/* boldness */
+.b-bold{
+    font-weight: var(--font-weight-bold);
+}
+.b-regular{
+    font-weight: var(--font-weight-regular);
+}
 
+/* end boldness */
 h2 {
     font-size: 26px;
     font-weight: var(--font-weight-regular);
@@ -662,14 +670,39 @@ student detail page
 #white-board .side-menu button img {
     width: 20px;
 }
-
+/* board */
 #white-board .white-board {
     background: var(--color-white);
+    /* background: url("../Images/icons/Mask2.png"); */
+    /* background-repeat: no-repeat; */
+    /* background-size: cover; */
     border: 1px solid #707070;
-
     min-height: 770px;
 }
+/* #white-board canvas{
+    width: 100%!important;
+    height: 770px!important;
+}
+#white-board .canvas-container{
+    width: 100%!important;
+    height: 770px!important;
+} */
 
+
+/* end white board */
+/* share button */
+#share-dropdown li{
+    width: 500px;
+}
+#share-dropdown li:hover,
+#dots-dropdown li:hover{
+    background: var(--color-white);
+    color: var(--color-black);
+}
+/* dots button dropdown */
+#dots-dropdown li{
+    width: 200px;
+}
 /* hide show */
 #switch {
     position: relative;
@@ -776,6 +809,14 @@ student detail page
     #white-board .white-board {
         min-height: calc(100vh - 90px);
     }
+    #white-board canvas{
+        width: 100%!important;
+        height: calc(100vh - 90px)!important;
+    }
+    #white-board .canvas-container{
+        width: 100%!important;
+        height: calc(100vh - 90px)!important;
+    }
 
 
 
@@ -839,6 +880,12 @@ student detail page
     #white-board .white-board {
         min-height: calc(100vh - 145px);
     }
+    #white-board canvas{
+        height: calc(100vh-145px)!important;
+    }
+    #white-board .canvas-container{
+        height: calc(100vh-145px)!important;
+    }
 
 }
 
@@ -894,6 +941,12 @@ student detail page
     /* board */
     #white-board .white-board {
         min-height: 60vh;
+    }
+    #white-board canvas{
+        height: 60vh!important;
+    }
+    #white-board .canvas-container{
+        height: 60vh!important;
     }
 
     
