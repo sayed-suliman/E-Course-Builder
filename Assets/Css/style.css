@@ -106,6 +106,9 @@ body {
 .b-regular{
     font-weight: var(--font-weight-regular);
 }
+.b-medium{
+    font-weight: var(--font-weight-medium);
+}
 
 /* end boldness */
 h2 {
