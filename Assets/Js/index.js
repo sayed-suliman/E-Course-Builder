@@ -27,3 +27,11 @@ function closeNav() {
 // enabling tooltip
 const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
+// for alert box
+let redAlert = document.getElementById("red-alert")
+    if(redAlert){
+        setTimeout(function(){
+            document.getElementById("red-alert").style.display = "none"
+        },3000)
+    }

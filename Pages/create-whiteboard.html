@@ -21,7 +21,7 @@
     <header id="" class="top-nav px-md-4 bg-white">
         <nav class="navbar navbar-expand-xl">
             <div class="container-fluid">
-                <a class="navbar-brand fs-20" href="#">
+                <a class="navbar-brand fs-20" href="./dashboard.html">
                     ECOURSE BUILDER
                 </a>
             </div>
@@ -31,7 +31,20 @@
                 <div class="col-lg-2 col-md-6 fs-20">Untitled Board</div>
                 <div class="col-lg-10  col-md-6 d-flex justify-content-md-end my-md-0 my-3">
                     <div class="me-4 d-flex">
-                        <button type="button" class="btn shadow-none btn-outline-primary px-4">Present</button>
+                        <div class="dropdown">
+                            <button type="button" class="btn shadow-none btn-outline-primary px-4 " data-bs-toggle="dropdown"
+                                aria-expanded="false">Present</button>
+                            <ul class="dropdown-menu rounded-0 p-3" id="present-dropdown">
+                                <li class="dropdown-item">
+                                    <p class="m-0 mb-2 fs-18">Present to a meeting</p>
+                                    <p class="disabled p-4">There are no upcoming meetings</p>
+                                    <div class="d-flex justify-content-between">
+                                        <span class="fs-16">Present using a meeting code</span>
+                                        <input type="text" class="m-code">
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
                         <div class="dropdown">
                             <button type="button" class="btn shadow-none btn px-4 border-0 " data-bs-toggle="dropdown"
                                 aria-expanded="false">
@@ -83,7 +96,7 @@
         <div class="container-fluid instructor">
             <div class="heading">
                 <div class="back-btn ms-4 ms-md-0">
-                    <a href="./dashboard.html" style="text-decoration: none;font-size: 18px;"><span class="pe-3"><img
+                    <a href="./white-board.html" style="text-decoration: none;font-size: 18px;"><span class="pe-3"><img
                                 src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a
                         href="./dashboard.html">
                 </div>

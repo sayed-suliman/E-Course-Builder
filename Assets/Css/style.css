@@ -10,7 +10,9 @@ ul.dropdown-menu{
 #ui-datepicker-div{
     font-family: 'Poppins';
 }
-
+button{
+    box-shadow: none!important;
+}
 
 /* ************************************ */
 
@@ -469,7 +471,15 @@ GLOBAL
     font-weight: var(--font-weight-regular);
     border-radius: var(--input-border-radius);
 }
-
+/* red alert */
+#red-alert{
+    position:absolute;
+     right: 0;
+     top: 0;
+     z-index: 2;
+     opacity: 1;
+     transition: all 0.5s;
+}
 
 /* ***************************
 
@@ -702,10 +712,24 @@ student detail page
     width: 500px;
 }
 #share-dropdown li:hover,
-#dots-dropdown li:hover{
+#dots-dropdown li:hover,
+#present-dropdown li:hover{
     background: var(--color-white);
     color: var(--color-black);
 }
+/* present dropdown */
+#present-dropdown li{
+    width: 350px;
+}
+#present-dropdown .disabled{
+    background: #8d8d8d;
+    border-radius: 12px;
+}
+#present-dropdown .m-code{
+    width: 50px;
+    border-radius: 0;
+}
+
 /* dots button dropdown */
 #dots-dropdown li{
     width: 200px;
@@ -791,11 +815,11 @@ student detail page
     }
 
     #avatar-right {
-        display: none;
+        display: block;
     }
 
     #avatar-left {
-        display: block;
+        display: none;
     }
 
     #courses-section .card {
@@ -831,6 +855,14 @@ student detail page
 
 /* for tablets screen 1024px*/
 @media only screen and (max-width:1024px) {
+    /* top bar */
+    #avatar-right {
+        display: none;
+    }
+
+    #avatar-left {
+        display: block;
+    }
 
     .instructor.courses .table-container,
     .instructor.students .table-container,
