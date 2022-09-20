@@ -75,7 +75,6 @@ GLOBAL
 
 /* body */
 body {
-    background: #F8F8F8;
     font-family: Poppins;
 }
 
@@ -406,10 +405,9 @@ GLOBAL
 
  ************************ */
 /* login page */
-#login-main .login-title {
-    margin: 140px 0 65px 0;
+#login-form{
+    margin: 140px 0 0 45px;
 }
-
 #login-form input:not([type=checkbox]) {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
@@ -455,6 +453,9 @@ GLOBAL
 ********** */
 /* left section */
 /* top welcome professor */
+#body-section p{
+    color: var(--color-black);
+}
 .welcome-title {
     font-weight: var(--font-weight-regular);
     font-size: 20px;
@@ -501,7 +502,7 @@ GLOBAL
     font-size: 14px;
     margin-bottom: 10px;
     padding: 8px;
-    border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
     font-weight: var(--font-weight-regular);
     border-radius: var(--input-border-radius);
 }
@@ -514,6 +515,18 @@ GLOBAL
     z-index: 2;
     opacity: 1;
     transition: all 0.5s;
+}
+
+/* calender */
+#calender .rd-container{
+    width: 100%;
+    box-shadow: var(--box-shadow);
+    border-radius: 16px;
+}
+#calender .rd-day-selected{
+    color: var(--color-white);
+    background: #4CBC9A;
+    border-radius: 8px;
 }
 
 /* ***************************
@@ -968,8 +981,8 @@ textarea {
 @media only screen and (max-width:1440px) {
 
     /* login page */
-    #login-main .login-title {
-        margin: 100px 0 45px 0;
+    #login-form{
+        margin: 100px 0 0 45px;
     }
 
     #avatar-right {
@@ -1055,6 +1068,24 @@ create assignments q1
 
     #grade-book .table {
         min-width: 450px !important;
+    }
+
+    /* login page */
+
+    #login-main{
+        background: url("../Images/login-image.jpg") no-repeat center;
+        height: 100vh;
+        background-size: cover;
+    }
+    #login-form{
+        margin: 100px 0 0 0;
+        background-color: rgb(0, 0, 0, .3);
+        padding: 120px;
+    }
+    #login-form h3,
+    #login-form .form-check-label, 
+    #login-form a{
+        color: var(--color-white)!important;
     }
 
     /* 
@@ -1165,6 +1196,14 @@ create assignments q1
     /* borders */
     .border-right-1 {
         border-right: none;
+    }
+    /* 
+    
+    LOGIN PAGE
+    
+    */
+    #login-form{
+        padding: 50px 20px;
     }
 
     /*&*********************** 
