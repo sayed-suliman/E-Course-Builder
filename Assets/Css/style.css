@@ -2,16 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
 /* changing bootstrap  dropdown */
-ul.dropdown-menu{
+ul.dropdown-menu {
     border-radius: 0;
 }
+
 /* **** */
 /* jquery calender css */
-#ui-datepicker-div{
+#ui-datepicker-div {
     font-family: 'Poppins';
 }
-button{
-    box-shadow: none!important;
+
+button {
+    box-shadow: none !important;
 }
 
 /* ************************************ */
@@ -79,6 +81,10 @@ body {
 
 
 /* custom define tages and classes */
+.fs-12 {
+    font-size: 12px;
+}
+
 .fs-14 {
     font-size: 14px;
 }
@@ -99,17 +105,29 @@ body {
 .fs-22 {
     font-size: 22px;
 }
+
 /* boldness */
-.b-bold{
+.b-bold {
     font-weight: var(--font-weight-bold);
 }
-.b-regular{
+
+.b-regular {
     font-weight: var(--font-weight-regular);
 }
-.b-medium{
+
+.b-medium {
     font-weight: var(--font-weight-medium);
 }
-
+.rounded-12px{
+    border-radius: 12px;
+}
+.rounded-10px{
+    border-radius: 10px;
+}
+/* placeholer */
+.center-placeholer::placeholder{
+    text-align: center;
+}
 /* end boldness */
 h2 {
     font-size: 26px;
@@ -137,6 +155,7 @@ h4 {
 .main-section {
     min-height: 500px;
 }
+
 /* radio buttons */
 input[type=radio] {
     border-color: var(--border-color);
@@ -195,6 +214,17 @@ input[type=checkbox]:checked {
 /* all body section */
 #body-section .main-section {
     padding-bottom: 20px;
+}
+
+/* assignments hero section */
+.assignment-hero-section {
+    height: 350px;
+    border: 1px solid var(--border-color);
+}
+
+.assignment-hero-section-text {
+    font-size: 56px;
+    font-weight: var(--font-weight-regular);
 }
 
 /* herosection in all pages */
@@ -412,11 +442,12 @@ GLOBAL
 #login-form button[type=submit]:hover {
     background-color: var(--button-primary-hover);
 }
+
 /* access modal dialog */
-#accessModal input::placeholder{
+#accessModal input::placeholder {
     text-align: center;
     color: var(--color-black);
-    
+
 }
 
 /* *************** 
@@ -474,14 +505,15 @@ GLOBAL
     font-weight: var(--font-weight-regular);
     border-radius: var(--input-border-radius);
 }
+
 /* red alert */
-#red-alert{
-    position:absolute;
-     right: 0;
-     top: 0;
-     z-index: 2;
-     opacity: 1;
-     transition: all 0.5s;
+#red-alert {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    opacity: 1;
+    transition: all 0.5s;
 }
 
 /* ***************************
@@ -680,16 +712,19 @@ student detail page
 #white-board .side-menu button {
     padding: 15px 0;
 }
-#white-board button:hover{
+
+#white-board button:hover {
     border: none;
 }
-#white-board button:not(:hover){
+
+#white-board button:not(:hover) {
     border: none;
 }
 
 #white-board .side-menu button img {
     width: 20px;
 }
+
 /* board */
 #white-board .white-board {
     background: var(--color-white);
@@ -699,6 +734,7 @@ student detail page
     border: 1px solid #707070;
     min-height: 770px;
 }
+
 /* #white-board canvas{
     width: 100%!important;
     height: 770px!important;
@@ -711,32 +747,37 @@ student detail page
 
 /* end white board */
 /* share button */
-#share-dropdown li{
+#share-dropdown li {
     width: 500px;
 }
+
 #share-dropdown li:hover,
 #dots-dropdown li:hover,
-#present-dropdown li:hover{
+#present-dropdown li:hover {
     background: var(--color-white);
     color: var(--color-black);
 }
+
 /* present dropdown */
-#present-dropdown li{
+#present-dropdown li {
     width: 350px;
 }
-#present-dropdown .disabled{
+
+#present-dropdown .disabled {
     background: #8d8d8d;
     border-radius: 12px;
 }
-#present-dropdown .m-code{
+
+#present-dropdown .m-code {
     width: 50px;
     border-radius: 0;
 }
 
 /* dots button dropdown */
-#dots-dropdown li{
+#dots-dropdown li {
     width: 200px;
 }
+
 /* hide show */
 #switch {
     position: relative;
@@ -762,41 +803,45 @@ student detail page
     -webkit-transition: .4s;
     transition: .4s;
 }
-#switch .slider::before{
+
+#switch .slider::before {
     position: absolute;
-  content: "";
-  height: 32px;
-  width: 32px;
-  left: 4px;
-  bottom: 4px;
-  background-color: var(--color-primary);
-  -webkit-transition: .4s;
-  transition: .4s;
+    content: "";
+    height: 32px;
+    width: 32px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--color-primary);
+    -webkit-transition: .4s;
+    transition: .4s;
 }
-#switch input:checked + .slider {
-  background-color: #2196F3;
+
+#switch input:checked+.slider {
+    background-color: #2196F3;
 }
-#switch input:checked + .slider:before {
+
+#switch input:checked+.slider:before {
     background-color: #fff;
-  }
+}
 
 
-#switch input:checked + .slider:before {
-  -webkit-transform: translateX(26px);
-  -ms-transform: translateX(26px);
-  transform: translateX(38px);
+#switch input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(38px);
 }
 
 /* Rounded sliders */
 #switch .slider.round {
-  border-radius: 34px;
+    border-radius: 34px;
 }
 
 #switch .slider.round:before {
-  border-radius: 50%;
+    border-radius: 50%;
 }
+
 /* hideopen */
-#hideOpen{
+#hideOpen {
     display: flex;
     justify-content: space-between;
     font-size: 14px;
@@ -804,7 +849,117 @@ student detail page
 
 /* hide show end */
 
+/* **************************** 
 
+ red red red red red red red Assignment Page  red red red red red red red 
+
+*********************************************** */
+.assignment-home .home-text::after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    left: 0;
+    bottom: 10px;
+    background-color: var(--color-primary);
+}
+
+.assignment-home tbody,
+td,
+tfoot,
+th,
+thead,
+tr {
+    border: none;
+    font-size: 16px;
+    font-weight: var(--font-weight-regular);
+}
+
+/* **************************** 
+
+ red red red red red red red Create Assignment Question 1 Page  red red red red red red red 
+
+*********************************************** */
+.create-assignment-q1 .select-value {
+    border-radius: 10px;
+    width: 150px;
+}
+
+.create-assignment-q1 input#title-assessment {
+    border-radius: 6px;
+    width: 30%;
+    border: 1px solid var(--border-color);
+}
+
+.create-assignment-q1 input[type="text"]:focus,
+.create-assignment-q1 select:focus,
+textarea {
+    border: 1px solid var(--border-color);
+    outline: 0;
+}
+
+/* date */
+.create-assignment-q1 .datepicker input {
+    width: 150px;
+}
+
+.create-assignment-q1 .multiple-choice {
+    border: 1px solid var(--border-color);
+    width: 40%;
+    padding: 0 15px 15px;
+}
+
+.create-assignment-q1 .multiple-choice input {
+    width: 25% !important;
+}
+
+.create-assignment-q1 .part-2-checks div:nth-child(even) input {
+    border: 2px solid var(--color-green);
+}
+
+.create-assignment-q1 .part-2-checks div:nth-child(odd) input {
+    border: 2px solid var(--color-red);
+}
+
+.create-assignment-q1 .round {
+    position: relative;
+}
+
+.create-assignment-q1 .round .radio-rounded {
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 18px;
+    left: -26px;
+    top: 0;
+    width: 18px;
+}
+
+.create-assignment-q1 .round .radio-rounded::after {
+    border: 2px solid #fff;
+    border-top: none;
+    border-right: none;
+    content: "";
+    height: 6px;
+    left: 5px;
+    opacity: 0;
+    position: absolute;
+    top: 6px;
+    transform: rotate(-45deg);
+    width: 10px;
+}
+
+.create-assignment-q1 .round input[type="checkbox"] {
+    visibility: hidden;
+}
+
+.create-assignment-q1 .round input[type="checkbox"]:checked+label {
+    background-color: var(--color-black);
+    box-shadow: inset 0 0 0 3px white;
+    /* margin: 10px; */
+}
 
 /* ****************************************************************************************************************** */
 /*    Responsiveness */
@@ -843,21 +998,37 @@ student detail page
     #white-board .white-board {
         min-height: calc(100vh - 90px);
     }
-    #white-board canvas{
-        width: 100%!important;
-        height: calc(100vh - 90px)!important;
-    }
-    #white-board .canvas-container{
-        width: 100%!important;
-        height: calc(100vh - 90px)!important;
+
+    #white-board canvas {
+        width: 100% !important;
+        height: calc(100vh - 90px) !important;
     }
 
+    #white-board .canvas-container {
+        width: 100% !important;
+        height: calc(100vh - 90px) !important;
+    }
+/* 
 
+create assignments q1
+
+*/
+.create-assignment-q1 .multiple-choice input {
+    width: 35% !important;
+
+}
+.create-assignment-q1 input#title-assessment {
+    width: 35%;
+}
+.create-assignment-q1 .multiple-choice {
+    width: 50%;
+}
 
 }
 
 /* for tablets screen 1024px*/
 @media only screen and (max-width:1024px) {
+
     /* top bar */
     #avatar-right {
         display: none;
@@ -870,12 +1041,14 @@ student detail page
     .instructor.courses .table-container,
     .instructor.students .table-container,
     .instructor.student-view .table-container,
+    .assignment-home .table-container,
     .instructor.gradebook .table-container {
         overflow: auto;
     }
 
     .instructor.courses .table,
     .instructor.students .table,
+    .assignment-home .table,
     .instructor.student-view .table {
         min-width: 940px !important;
     }
@@ -898,9 +1071,9 @@ student detail page
     /* **********************
     create whiteboard
   *******************************  */
- 
- 
-    
+
+
+
     /* sidemenu */
     #white-board .side-menu {
         position: relative;
@@ -910,24 +1083,50 @@ student detail page
         margin-top: 1rem;
         top: 0;
     }
-    
+
     #white-board .side-menu .nav-menu {
         width: 60%;
         margin-bottom: 1rem;
     }
-    #white-board .side-menu .nav-menu  button{
+
+    #white-board .side-menu .nav-menu button {
         padding: 0 10px;
     }
+
     /* board */
     #white-board .white-board {
         min-height: calc(100vh - 145px);
     }
-    #white-board canvas{
-        height: calc(100vh-145px)!important;
+
+    #white-board canvas {
+        height: calc(100vh-145px) !important;
     }
-    #white-board .canvas-container{
-        height: calc(100vh-145px)!important;
+
+    #white-board .canvas-container {
+        height: calc(100vh-145px) !important;
     }
+
+    /* 
+    
+    Create new assignmetn q-1 page
+    
+    */
+    .create-assignment-q1 .select-value {
+        border-radius: 10px;
+    }
+
+    .create-assignment-q1 input#title-assessment {
+        width: 60%;
+    }
+
+    .create-assignment-q1 .multiple-choice {
+        width: 100%;
+    }
+    .create-assignment-q1 .multiple-choice input {
+        width: 25% !important;
+    }
+    
+
 
 }
 
@@ -967,6 +1166,7 @@ student detail page
     .border-right-1 {
         border-right: none;
     }
+
     /*&*********************** 
         Create whitebaord
     ***************************************** */
@@ -974,24 +1174,47 @@ student detail page
         width: 100%;
         margin-bottom: 1rem;
     }
+
     #white-board .side-menu button img {
         width: 16px;
     }
-    #switchoffOn{
+
+    #switchoffOn {
         display: none;
     }
+
     /* board */
     #white-board .white-board {
         min-height: 60vh;
     }
-    #white-board canvas{
-        height: 60vh!important;
-    }
-    #white-board .canvas-container{
-        height: 60vh!important;
+
+    #white-board canvas {
+        height: 60vh !important;
     }
 
-    
+    #white-board .canvas-container {
+        height: 60vh !important;
+    }
+
+    /*
+
+create new assignment question no.1 page
+
+*/
+    .create-assignment-q1 input#title-assessment {
+        width: 48%;
+    }
+
+    /* date */
+    .create-assignment-q1 .datepicker input {
+        width: 130px;
+    }
+
+    .create-assignment-q1 .multiple-choice input {
+        width: 55% !important;
+    }
+
+
 }
 
 @media only screen and (max-width:320px) {
@@ -1014,5 +1237,5 @@ student detail page
     .instructor.students .heading .title a {
         margin-top: 0px;
     }
-    
+
 }
