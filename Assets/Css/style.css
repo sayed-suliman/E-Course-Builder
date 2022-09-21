@@ -259,8 +259,8 @@ side bar in all pages
     overflow-x: hidden;
     transition: .5s;
     padding-top: 60px;
+    box-shadow: var(--box-shadow);
 }
-
 .sidebar .closebtn {
     position: absolute;
     top: 0;
