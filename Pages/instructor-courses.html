@@ -90,14 +90,27 @@
                 <a href="#">e-doc editor</a>
             </div>
             <div class="container-fluid  ps-2 ps-md-5">
+                <!-- heading -->
                 <div class="heading">
                     <div class="back-btn ms-4 ms-md-0">
-                        <a href="./dashboard.html"><span class="pe-3"><img src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a href="./dashboard.html">
+                        <a href="./dashboard.html"><span class="pe-3"><img
+                                    src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a>
                     </div>
-                    <div class="title mt-2 ms-4">
-                        <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
-                        <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">+ Add Course</a>
+                </div>
+                <!-- heading end -->
+                <div class="title mt-2 ms-2">
+                    <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
+                    <div class="dropdown d-inline " style="top: -5px;">
+                        <button class="border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false"><img src="../Assets/Images/icons/ic_more_vert_36px.svg"
+                                    alt="menu" class="img-fluid p-0 m-0 " style="width:18px;height: 18px;">
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">View by list</a></li>
+                            <li><a class="dropdown-item" href="#">View by tile</a></li>
+                        </ul>
                     </div>
+                    <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">+ Add Course</a>
                 </div>
                 <div class="bg-white mt-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
                     <table class="table">
