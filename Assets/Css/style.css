@@ -973,6 +973,27 @@ textarea {
     box-shadow: inset 0 0 0 3px white;
     /* margin: 10px; */
 }
+.my-courses .cards-section .card{
+    border-radius: 12px;
+    box-shadow: var(--box-shadow);
+}
+.my-courses .cards-section .card-top-color.bg-primary{
+    background-color: var(--color-primary)!important;
+}
+.my-courses .cards-section .card-top-color.bg-green{
+    background-color: var(--color-green);
+}
+.my-courses .cards-section .card-top-color.bg-grey{
+    background-color: var(--color-grey);
+}
+.my-courses .cards-section .card-top-color{
+    height: 10rem;
+}
+.my-courses .cards-section .icon{
+    padding: 10px;
+    font-size: 11px;
+}
+
 
 /* ****************************************************************************************************************** */
 /*    Responsiveness */
