@@ -226,6 +226,7 @@ input[type=checkbox]:checked {
 /* assignments hero section */
 .assignment-hero-section {
     height: 350px;
+    background: #989898;
     border: 1px solid var(--border-color);
 }
 
