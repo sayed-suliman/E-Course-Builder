@@ -227,6 +227,7 @@ input[type=checkbox]:checked {
 .assignment-hero-section {
     height: 350px;
     background: #989898;
+    color: var(--color-white);
     border: 1px solid var(--border-color);
 }
 
@@ -1046,6 +1047,52 @@ textarea {
 .my-courses .cards-section .icon-red img{
     filter: invert(19%) sepia(87%) saturate(5814%) hue-rotate(356deg) brightness(99%) contrast(117%);
 }
+
+/* **************************** 
+
+ red red red red red red red History of real Estate  red red red red red red red 
+
+*********************************************** */
+#chose-img + label{
+    background-color: #505050;
+    border: 1px solid var(--border-color);
+}
+/* tabnavs */
+#tab-nav .nav-link{
+    padding-left: 0;
+    transition:all .4s linear;
+    position: relative;
+    color: var(--color-black);
+}
+#tab-nav .nav-item .active{
+    color: var(--color-black)!important;
+    /* transition-delay:  2s;
+    transition-duration: 2s; */
+    background-color: transparent!important;
+}
+#tab-nav .nav-link.active::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background: #1F71CE;
+    animation: sheen 0.3s alternate forwards;
+}
+@keyframes sheen {
+    /* 25% {
+        width: 25%;
+      } */
+      50% {
+        width: 50%;
+      }
+      /* 75% {
+        width: 75%;
+      } */
+    100% {
+      width: 100%;
+    }
+  }
 
 
 
