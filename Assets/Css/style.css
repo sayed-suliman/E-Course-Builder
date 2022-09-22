@@ -483,7 +483,7 @@ GLOBAL
 ********** */
 /* left section */
 /* top welcome professor */
-#body-section .card p{
+.dashboard-main .card .card-text{
     color: var(--color-primary);
     transition: all 0.25s;
 }
@@ -1047,8 +1047,34 @@ textarea {
 }
 
 
+
+
+
+
+
 /* ****************************************************************************************************************** */
 /*    Responsiveness */
+
+/* the screen from 1400 to 1800 */
+
+@media only screen and (max-width:1800px) and (min-width:1400px){
+
+ /*  red red red red red red red Assignments Listing page red red red red red red red *** */
+ .assignment-listing .cards-section .row{
+    flex-wrap: nowrap;
+    overflow:scroll;
+
+ }
+ .assignment-listing .cards-section .custom-card-width{
+    height: 100%;
+    width: 300px;
+ }
+
+
+}
+
+
+
 /* for laptop screens 1440 */
 
 @media only screen and (max-width:1440px) {
