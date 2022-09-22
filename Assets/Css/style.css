@@ -117,16 +117,24 @@ body {
 .b-medium {
     font-weight: var(--font-weight-medium);
 }
-.rounded-12px{
+
+.rounded-12px {
     border-radius: 12px;
 }
-.rounded-10px{
+
+.rounded-6px {
+    border-radius: 6px;
+}
+
+.rounded-10px {
     border-radius: 10px;
 }
+
 /* placeholer */
-.center-placeholer::placeholder{
+.center-placeholer::placeholder {
     text-align: center;
 }
+
 /* end boldness */
 h2 {
     font-size: 26px;
@@ -261,6 +269,7 @@ side bar in all pages
     padding-top: 60px;
     box-shadow: var(--box-shadow);
 }
+
 .sidebar .closebtn {
     position: absolute;
     top: 0;
@@ -405,9 +414,17 @@ GLOBAL
 
  ************************ */
 /* login page */
-#login-form{
+#login-form {
     margin: 140px 0 0 45px;
 }
+#login-form .input-fields,
+#login-form select,
+#login-form  .remember-me
+{
+    width: 313px!important;
+    margin: 0 auto;
+}
+
 #login-form input:not([type=checkbox]) {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
@@ -430,7 +447,6 @@ GLOBAL
 /* login button */
 #login-form button[type=submit] {
     padding: 5px 50px;
-    border-radius: 50px;
     font-size: 20px;
     font-weight: var(--font-weight-regular);
     background-color: var(--button-primary);
@@ -441,6 +457,10 @@ GLOBAL
     background-color: var(--button-primary-hover);
 }
 
+.navbar-nav a:hover {
+    color: var(--color-primary) !important;
+}
+
 /* access modal dialog */
 #accessModal input::placeholder {
     text-align: center;
@@ -448,16 +468,28 @@ GLOBAL
 
 }
 
+/* *********** 
+
+    Sing up page
+
+    ************************ */
+#sing-up-main select {
+    -webkit-appearance: menulist !important;
+}
+
+
 /* *************** 
     Dashboard Page
 ********** */
 /* left section */
 /* top welcome professor */
-#body-section p{
-    color: var(--color-black);
+#body-section .card p{
+    color: var(--color-primary);
+    transition: all 0.25s;
 }
 .welcome-title {
     font-weight: var(--font-weight-regular);
+    color: var(--color-primary);
     font-size: 20px;
 }
 
@@ -472,7 +504,7 @@ GLOBAL
     transition: all 0.25s;
 }
 
-#courses-section .card:hover a {
+#courses-section .card:hover p {
     color: #fff !important;
 }
 
@@ -518,15 +550,20 @@ GLOBAL
 }
 
 /* calender */
-#calender .rd-container{
+#calender .rd-container {
     width: 100%;
     box-shadow: var(--box-shadow);
     border-radius: 16px;
 }
-#calender .rd-day-selected{
-    color: var(--color-white);
-    background: #4CBC9A;
+
+#calender .rd-day-selected {
+    color: #000;
+    background: rgba(46, 124, 216,0.5);
     border-radius: 8px;
+}
+/* today date */
+.today-date{
+    color: var(--color-primary);
 }
 
 /* ***************************
@@ -887,6 +924,9 @@ tr {
     font-size: 16px;
     font-weight: var(--font-weight-regular);
 }
+.assignment-home thead{
+    border-bottom: 2px solid #1F71CE;
+}
 
 /* **************************** 
 
@@ -973,23 +1013,29 @@ textarea {
     box-shadow: inset 0 0 0 3px white;
     /* margin: 10px; */
 }
-.my-courses .cards-section .card{
+
+.my-courses .cards-section .card {
     border-radius: 12px;
     box-shadow: var(--box-shadow);
 }
-.my-courses .cards-section .card-top-color.bg-primary{
-    background-color: var(--color-primary)!important;
+
+.my-courses .cards-section .card-top-color.bg-primary {
+    background-color: var(--color-primary) !important;
 }
-.my-courses .cards-section .card-top-color.bg-green{
+
+.my-courses .cards-section .card-top-color.bg-green {
     background-color: var(--color-green);
 }
-.my-courses .cards-section .card-top-color.bg-grey{
+
+.my-courses .cards-section .card-top-color.bg-grey {
     background-color: var(--color-grey);
 }
-.my-courses .cards-section .card-top-color{
+
+.my-courses .cards-section .card-top-color {
     height: 10rem;
 }
-.my-courses .cards-section .icon{
+
+.my-courses .cards-section .icon {
     padding: 10px;
     font-size: 11px;
 }
@@ -1002,8 +1048,8 @@ textarea {
 @media only screen and (max-width:1440px) {
 
     /* login page */
-    #login-form{
-        margin: 100px 0 0 45px;
+    #login-form {
+        margin: 65px 0 0 45px;
     }
 
     #avatar-right {
@@ -1042,21 +1088,24 @@ textarea {
         width: 100% !important;
         height: calc(100vh - 90px) !important;
     }
-/* 
+
+    /* 
 
 create assignments q1
 
 */
-.create-assignment-q1 .multiple-choice input {
-    width: 35% !important;
+    .create-assignment-q1 .multiple-choice input {
+        width: 35% !important;
 
-}
-.create-assignment-q1 input#title-assessment {
-    width: 35%;
-}
-.create-assignment-q1 .multiple-choice {
-    width: 50%;
-}
+    }
+
+    .create-assignment-q1 input#title-assessment {
+        width: 35%;
+    }
+
+    .create-assignment-q1 .multiple-choice {
+        width: 50%;
+    }
 
 }
 
@@ -1093,20 +1142,23 @@ create assignments q1
 
     /* login page */
 
-    #login-main{
+    .logins-main {
         background: url("../Images/login-image.jpg") no-repeat center;
         height: 100vh;
         background-size: cover;
     }
-    #login-form{
+
+    #login-form {
         margin: 100px 0 0 0;
         background-color: rgb(0, 0, 0, .3);
         padding: 120px;
     }
+    
+
     #login-form h3,
-    #login-form .form-check-label, 
-    #login-form a{
-        color: var(--color-white)!important;
+    #login-form .form-check-label,
+    #login-form a {
+        color: var(--color-white) !important;
     }
 
     /* 
@@ -1174,10 +1226,11 @@ create assignments q1
     .create-assignment-q1 .multiple-choice {
         width: 100%;
     }
+
     .create-assignment-q1 .multiple-choice input {
         width: 25% !important;
     }
-    
+
 
 
 }
@@ -1218,12 +1271,13 @@ create assignments q1
     .border-right-1 {
         border-right: none;
     }
+
     /* 
     
     LOGIN PAGE
     
     */
-    #login-form{
+    #login-form {
         padding: 50px 20px;
     }
 

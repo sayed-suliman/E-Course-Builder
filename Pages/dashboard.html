@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="../Assets/calendar-16/fonts/icomoon/style.css">
 
     <link rel="stylesheet" href="../Assets/calendar-16/css/rome.css">
-    
-    
+
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="../Assets/calendar-16/css/bootstrap.min.css">
-    
+
     <!-- Style -->
     <link rel="stylesheet" href="../Assets/calendar-16/css/style.css">
 
@@ -80,11 +80,11 @@
     <!-- main section -->
     <main id="body-section">
         <!-- show alert message -->
-        <div class="alert alert-danger alert-dismissible fade show" id="red-alert" role="alert">
+        <!-- <div class="alert alert-danger alert-dismissible fade show" id="red-alert" role="alert">
             <strong>SMART ALERT</strong>
-            <p> 1 of your students performed below average on <u>Midterm.</u></p>
+            <p class="text-dark"> 1 of your students performed below average on <u>Midterm.</u></p>
             <button type="button" class="btn-close shadow-none" data-bs-dismiss="alert" aria-label="Close"></button>
-        </div>
+        </div> -->
         <!-- end of the button -->
 
 
@@ -120,7 +120,7 @@
                 <div class="row ms-2 ms-lg-5 p-2 pe-lg-5">
                     <!-- left section -->
                     <div class="col-lg-8 col-xxl-9">
-                        <p class="welcome-title">Welcome, Professor Bina.</p>
+                        <p class="welcome-title">Welcome<span class="text-dark">, Professor Bina.</span></p>
                         <!-- all courses card -->
                         <!-- 1st row -->
                         <div class="row " id="courses-section">
@@ -213,7 +213,7 @@
                     </div>
                     <!-- right section -->
                     <div class="col-lg-4 col-xxl-3 mt-4 m-lg-0 p-lg-0  d-flex d-lg-block" id="right-calender-section">
-                    <!-- calender -->
+                        <!-- calender -->
                         <div class="row">
                             <div class="col-lg-12 col-md-6 p-0 pe-md-1 pe-lg-0">
                                 <div class="row justify-content-center" id="calender">
@@ -228,19 +228,22 @@
                             </div>
                             <div class="col-lg-12 col-md-6 p-0 ps-md-1 ps-lg-0">
                                 <div class="mt-3">
-                                    <h4>TODAY, Monday, August 30, 2022</h4>
+                                    <h4 class="today-date">TODAY, Monday, August 30, 2022</h4>
                                     <div class="row classes-time m-0 py-3 justify-content-between">
                                         <div class="col-auto align-self-center fs-16">9:30 AM Understanding Buyers</div>
                                         <div class="col-auto"><button
-                                                class="btn btn-primary p-0 px-xxl-4 px-xl-3 text-uppercase fs-16">join</button></div>
+                                                class="btn btn-primary p-0 px-xxl-4 px-xl-3 text-uppercase fs-16">join</button>
+                                        </div>
                                     </div>
                                     <div class="row classes-time mt-2 py-3 m-0 justify-content-between">
-                                        <div class="col-auto align-self-center fs-16">2:30 PM History of Real Estate</div>
+                                        <div class="col-auto align-self-center fs-16">2:30 PM History of Real Estate
+                                        </div>
                                         <div class="col-auto"><button
-                                                class="btn btn-primary p-0 px-xxl-4 px-xl-3 text-uppercase fs-16">join</button></div>
+                                                class="btn btn-primary p-0 px-xxl-4 px-xl-3 text-uppercase fs-16">join</button>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="mt-3">
+                                <div class="mt-3 opacity-50">
                                     <h4>TOMORROW, Tuesday, August 31, 2022</h4>
                                     <div class="row classes-time m-0 py-3 justify-content-between">
                                         <div class="col-auto align-self-center fs-16">9:30 AM Understanding Buyers</div>
@@ -274,6 +277,79 @@
     <script src="../Assets/calendar-16/js/main.js"></script>
     <!-- custom js -->
     <script src="../Assets/Js/index.js"></script>
+    <!-- javascript for date -->
+    <script>
+        var dateField = document.querySelector(".today-date")
+        let date = new Date()
+        let day = date.getDay()
+        let month = date.getMonth()
+        switch (day) {
+            case 0:
+                day = "Sunday"
+                break
+            case 1:
+                day = "Monday"
+                break
+            case 2:
+                day = "Tuesday"
+                break
+            case 3:
+                day = "Wednesday"
+                break
+            case 4:
+                day = "Thursday"
+                break
+            case 5:
+                day = "Friday"
+                break
+            case 6:
+                day = "Saturday"
+                break
+            default:
+                day = "Dummydate"
+        }
+        switch (month) {
+            case 0:
+                month = "January"
+                break
+            case 1:
+                month = "Febuary"
+                break
+            case 2:
+                month = "March"
+                break
+            case 3:
+                month = "April"
+                break
+            case 4:
+                month = "May"
+                break
+            case 5:
+                month = "June"
+                break
+            case 6:
+                month = "July"
+                break
+            case 7:
+                month = "August"
+                break
+            case 8:
+                month = "September"
+                break
+            case 9:
+                month = "October"
+                break
+            case 10:
+                month = "November"
+                break
+            case 11:
+                month = "December"
+                break
+            default:
+                month = "Dummydate"
+        }
+        dateField.textContent = `TODAY, ${day}, ${month} ${date.getDate()}, ${date.getFullYear()}`
+    </script>
 </body>
 
 </html>
