@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../Assets/Css/style.css">
 </head>
 
-<body>
+<body style="background:#f8f8f8">
     <header id="dashboard-top" class="top-nav">
         <nav class="navbar navbar-expand-xl bg-light">
             <div class="container-fluid">
@@ -60,7 +60,7 @@
         </nav>
     </header>
     <!-- main section -->
-    <main id="body-section" class="instructor assignment-home">
+    <main id="body-section" class="instructor history-of-real-estate">
         <!-- hero section -->
         <section class="assignment-hero-section d-flex justify-content-center align-items-center">
             <div class="container-fluid">
@@ -113,40 +113,368 @@
                                 href="./dashboard.html">
                         </div>
                     </div>
-                    <div class="col-md-auto mx-auto">
+                    <div class="col-md-auto mx-lg-auto">
                         <!-- Tabs navs -->
                         <ul class="nav nav-pills" id="tab-nav" role="tablist">
                             <li class="nav-item">
-                                <a class="nav-link active" data-bs-toggle="pill" href="#home">Posts</a>
+                                <a class="nav-link active" data-bs-toggle="pill" href="#posts">Posts</a>
                             </li>
                             <li class="nav-item mx-5">
-                                <a class="nav-link" data-bs-toggle="pill" href="#menu1">Students</a>
+                                <a class="nav-link" data-bs-toggle="pill" href="#student">Students</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" data-bs-toggle="pill" href="#menu2">Assignments</a>
+                                <a class="nav-link" data-bs-toggle="pill" href="#assignment">Assignments</a>
                             </li>
                         </ul>
                         <!-- Tabs navs -->
                     </div>
                 </div>
                 <div class="container">
-                    <div class="row">
+                    <div class="row justify-content-center">
                         <!-- Tab panes -->
                         <div class="tab-content">
-                            <div id="home" class="container tab-pane active"><br>
-                                <h3>HOME</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.</p>
+                            <!-- posts -->
+                            <div id="posts" class="container tab-pane fade  w-75">
+                                <!-- first row -->
+                                <div class="row p-4 border-color rounded-12px" style="background-color: #fff;">
+                                    <div class="rounded-12px editor-row">
+                                        <div class="border-0 p-2 input-outline-0" contenteditable="true" spellcheck="false">
+                                            Share something with your students
+                                        </div>
+                                        <div>
+                                            <button class="btn" id="btn-bold">
+                                                <img src="../Assets/Images/text-editor-icons/ic_format_bold_24px.svg"
+                                                    alt="">
+                                            </button>
+                                            <button class="btn" id="btn-italic">
+                                                <img src="../Assets/Images/text-editor-icons/ic_format_italic_24px.svg"
+                                                    alt="">
+                                            </button>
+                                            <button class="btn" id="btn-underline">
+                                                <img src="../Assets/Images/text-editor-icons/ic_format_underlined_24px.svg"
+                                                    alt="">
+                                            </button>
+                                            <button class="btn" id="btn-bullet">
+                                                <img src="../Assets/Images/text-editor-icons/ic_format_list_bulleted_24px.svg"
+                                                    alt="">
+                                            </button>
+                                            <button class="btn" id="btn-strikeThrough">
+                                                <img src="../Assets/Images/text-editor-icons/ic_format_strikethrough_24px.png"
+                                                    alt="">
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                    <div class="row justify-content-between mt-3 editor-last-row">
+                                        <div class="col-auto">
+                                            <button class="btn">
+                                                <input type="file" class="d-none" id="upload-file-editor">
+                                                <label for="upload-file-editor"><img
+                                                        src="../Assets/Images/icons/uploadfile.svg" alt=""></label>
+                                            </button>
+                                            <button class="btn">
+                                                <img src="../Assets/Images/text-editor-icons/ic_link_24px.svg" alt="">
+                                            </button>
+                                            <button class="btn">
+                                                <img src="../Assets/Images/text-editor-icons/logo-youtube.png" alt="">
+                                            </button>
+                                        </div>
+                                        <div class="col-auto">
+                                            <button class="btn text-primary rounded-10px px-4">CANCEL</button>
+                                            <button class="btn btn-primary rounded-10px px-4">SHARE</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 2nd row -->
+                                <div class="row border-color rounded-12px mt-4" style="background-color: #fff;">
+                                    <div class="row justify-content-between py-4 px-4">
+                                        <div class="col-10 d-flex">
+                                            <div>
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                                    class="rounded-circle" width="68"
+                                                    alt="Black and White Portrait of a Man" />
+                                            </div>
+                                            <div class="ms-3">
+                                                <h2>John Appleseed</h2>
+                                                <p>August 21,2022</p>
+                                                <p>
+                                                    Hi Professor Bina, I am having trouble accessing the latest
+                                                    assignment. Can you repost it?
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-end">
+                                            <button class="btn btn-outline-success rounded-pill">Active</button>
+                                        </div>
+                                    </div>
+                                    <div style="outline: 1px solid var(--border-color);"></div>
+                                    <div class="row py-4 px-4">
+                                        <div class="col-2 col-md-1">
+                                            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                                class="rounded-circle" width="40"
+                                                alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <div class="col-10 col-md-11 p-0 border-color add-a-comment position-relative">
+                                            <input type="text" class="h-100 w-100 border-0 ps-3 input-outline-0">
+                                            <button class="btn position-absolute text-primary border-0" style="right: 0;">SHARE</button>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!-- 3rd row -->
+                                <div class="row p-4 border-color rounded-12px mt-4" style="background-color: #fff;">
+                                    <div class="row justify-content-between">
+                                        <div class="col-10 d-flex">
+                                            <div>
+                                                <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp"
+                                                    class="rounded-circle" width="68"
+                                                    alt="Black and White Portrait of a Man" />
+                                            </div>
+                                            <div class="ms-3">
+                                                <h2>Terry Benedict</h2>
+                                                <p>August 19,2022</p>
+                                                <p>
+                                                   Anyone want to meet up for a study session?
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-end">
+                                            <button class="btn btn-outline-success rounded-pill">Active</button>
+                                        </div>
+                                    </div>
+
+                                </div>
                             </div>
-                            <div id="menu1" class="container tab-pane fade"><br>
-                                <h3>Menu 1</h3>
-                                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-                                    ea commodo consequat.</p>
+
+
+                            <!-- Students -->
+                            <div id="student" class="container tab-pane active">
+                                <div class="row justify-content-end">
+                                    <div class="col-auto add-student-btn text-end">
+                                        <button class="btn btn-primary">+ Add Student</button>
+                                    </div>
+                                </div>
+                                <div class="row justify-content-start">
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Johnny Appleseed</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Kelly Collins</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Terry Edgars</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">John Fitzgerald Grant</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Alex Rodriguez</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Tara Arapa</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Sara Crasby</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Richard Edelstein</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Johnny Appleseed</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Kelly Collins</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Terry Edgars</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">John Fitzgerald Grant</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Alex Rodriguez</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Tara Arapa</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Sara Crasby</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Richard Edelstein</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Johnny Appleseed</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Kelly Collins</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Terry Edgars</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">John Fitzgerald Grant</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Alex Rodriguez</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Tara Arapa</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Sara Crasby</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Richard Edelstein</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Kelly Collins</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Terry Edgars</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">John Fitzgerald Grant</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Alex Rodriguez</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Tara Arapa</span>
+                                    </div>
+                                    <div class="col-auto d-flex align-items-center">
+                                        <div class="student-profile">
+                                            <img src="./../Assets/Images/ic_person_48px.png" class="rounded-circle"
+                                            alt="Black and White Portrait of a Man" />
+                                        </div>
+                                        <span class="ms-2">Sara Crasby</span>
+                                    </div>
+                                </div>
                             </div>
-                            <div id="menu2" class="container tab-pane fade"><br>
-                                <h3>Menu 2</h3>
-                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-                                    laudantium, totam rem aperiam.</p>
+
+                            <!-- Assignment  3rd tab -->
+                            <div id="assignment" class="container tab-pane fade"><br>
+                                <div class="row justify-content-end">
+                                    <div class="col-auto create-assignment-btn">
+                                        <button class="btn btn-primary px-4 rounded-12px">Create New</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -183,6 +511,36 @@
 
         })
 
+    </script>
+    <!-- for editor -->
+    <script>
+        var btnBold = document.querySelector("#btn-bold")
+        var btnItalic = document.querySelector("#btn-italic")
+        var btnUnderline = document.querySelector("#btn-underline")
+        var btnUnderline = document.querySelector("#btn-underline")
+        var btnBullet = document.querySelector("#btn-bullet")
+        var btnStrikeThrough = document.querySelector("#btn-strikeThrough")
+        // bold
+        btnBold.addEventListener("click", () => {
+            document.execCommand("bold")
+        })
+        // italic
+        btnItalic.addEventListener("click", () => {
+            document.execCommand("italic")
+        })
+        // underline
+        btnUnderline.addEventListener("click", () => {
+            document.execCommand("underline")
+        })
+       
+        // unorderlist
+        btnBullet.addEventListener("click", () => {
+            document.execCommand("insertUnorderedList")
+        })
+        // strike through
+        btnStrikeThrough.addEventListener("click", () => {
+            document.execCommand("strikeThrough")
+        })
     </script>
 </body>
 

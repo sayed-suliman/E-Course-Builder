@@ -42,6 +42,18 @@ button {
     --font-weight-bold: 700;
     --input-border-radius: 12px;
 }
+/* bootstrap text  color */
+.text-primary{
+    color: var(--color-primary)!important;
+}
+.btn-outline-primary{
+    color: var(--color-primary)!important;
+    border:1px solid var(--color-primary) !important;
+}
+
+
+
+
 
 /* border colors for getting the landscape of div */
 .border-color {
@@ -66,6 +78,13 @@ button {
 
 .yellow {
     outline: 1px solid yellow;
+}
+.input-outline-0:focus{
+    outline: none;
+    /* background-color: red; */
+}
+.input-outline-1:focus{
+    outline: 1px solid var(--border-color);
 }
 
 /************** 
@@ -419,11 +438,11 @@ GLOBAL
 #login-form {
     margin: 140px 0 0 45px;
 }
+
 #login-form .input-fields,
 #login-form select,
-#login-form  .remember-me
-{
-    width: 313px!important;
+#login-form .remember-me {
+    width: 313px !important;
     margin: 0 auto;
 }
 
@@ -485,10 +504,11 @@ GLOBAL
 ********** */
 /* left section */
 /* top welcome professor */
-.dashboard-main .card .card-text{
+.dashboard-main .card .card-text {
     color: var(--color-primary);
     transition: all 0.25s;
 }
+
 .welcome-title {
     font-weight: var(--font-weight-regular);
     color: var(--color-primary);
@@ -560,11 +580,12 @@ GLOBAL
 
 #calender .rd-day-selected {
     color: #000;
-    background: rgba(46, 124, 216,0.5);
+    background: rgba(46, 124, 216, 0.5);
     border-radius: 8px;
 }
+
 /* today date */
-.today-date{
+.today-date {
     color: var(--color-primary);
 }
 
@@ -669,6 +690,16 @@ GLOBAL
 
 .alert-notificaiton .table {
     min-width: 1620px !important;
+}
+
+/* ***************
+
+Instructor view student page
+
+        **************************8*/
+
+.student-view .profile-section {
+    background: #EDEDED;
 }
 
 /* *************************** 
@@ -926,7 +957,8 @@ tr {
     font-size: 16px;
     font-weight: var(--font-weight-regular);
 }
-.assignment-home thead{
+
+.assignment-home thead {
     border-bottom: 2px solid #1F71CE;
 }
 
@@ -1041,10 +1073,12 @@ textarea {
     padding: 10px;
     font-size: 11px;
 }
-.my-courses .cards-section .icon-red p{
-    color: var(--color-red)!important;
+
+.my-courses .cards-section .icon-red p {
+    color: var(--color-red) !important;
 }
-.my-courses .cards-section .icon-red img{
+
+.my-courses .cards-section .icon-red img {
     filter: invert(19%) sepia(87%) saturate(5814%) hue-rotate(356deg) brightness(99%) contrast(117%);
 }
 
@@ -1053,47 +1087,100 @@ textarea {
  red red red red red red red History of real Estate  red red red red red red red 
 
 *********************************************** */
-#chose-img + label{
+#chose-img+label {
     background-color: #505050;
     border: 1px solid var(--border-color);
 }
+
 /* tabnavs */
-#tab-nav .nav-link{
+#tab-nav .nav-link {
     padding-left: 0;
-    transition:all .4s linear;
+    transition: all .4s linear;
     position: relative;
     color: var(--color-black);
 }
-#tab-nav .nav-item .active{
-    color: var(--color-black)!important;
+.tab-content .active{
+    color: #000!important;
+}
+#tab-nav .nav-item .active {
+    color: var(--color-black) !important;
     /* transition-delay:  2s;
     transition-duration: 2s; */
-    background-color: transparent!important;
+    background-color: transparent !important;
 }
-#tab-nav .nav-link.active::after{
+
+#tab-nav .nav-link.active::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     height: 3px;
+    width: 100%;
     background: #1F71CE;
-    animation: sheen 0.3s alternate forwards;
+    /* animation: sheen 0.3s alternate forwards; */
 }
-@keyframes sheen {
-    /* 25% {
+
+/* @keyframes sheen { */
+/* 25% {
         width: 25%;
       } */
-      50% {
+/* 50% {
         width: 50%;
-      }
-      /* 75% {
+      } */
+/* 75% {
         width: 75%;
       } */
-    100% {
+/* 100% {
       width: 100%;
-    }
-  }
+    } */
+/* } */
 
+/* posts */
+#posts {
+    /* border: 1px solid #8D8D8D; */
+    margin-top: 80px;
+}
+
+#posts .editor-row {
+    background: rgb(152, 152, 152, 0.07);
+    padding: 20px 30px;
+}
+
+#posts .editor-last-row {
+    padding: 20px 0 20px 30px;
+}
+#posts .add-a-comment{
+    border-radius: 30px;
+}
+#posts .add-a-comment input{
+    border-radius: 30px;
+}
+#student .col-auto{
+    width: 250px!important;
+    margin-top: 40px;
+}
+#student .add-student-btn{
+    margin-top: -40px;
+}
+#student .add-student-btn button{
+    border-radius: 30px;
+}
+#student .student-profile{
+    height: 40px;
+    /* padding: ; */
+    /* padding: 20px; */
+    background-color: #009D24;
+    width: 40px;
+    border-radius: 50%;
+}
+#student .student-profile img{
+    /* width:20px; */
+    width: 100%;
+    padding: 8px;
+}
+#assignment .create-assignment-btn{
+    margin-top: -60px;
+}
 
 
 
@@ -1105,18 +1192,19 @@ textarea {
 
 /* the screen from 1400 to 1800 */
 
-@media only screen and (max-width:1800px) and (min-width:1400px){
+@media only screen and (max-width:1800px) and (min-width:1400px) {
 
- /*  red red red red red red red Assignments Listing page red red red red red red red *** */
- .assignment-listing .cards-section .row{
-    flex-wrap: nowrap;
-    overflow:scroll;
+    /*  red red red red red red red Assignments Listing page red red red red red red red *** */
+    .assignment-listing .cards-section .row {
+        flex-wrap: nowrap;
+        overflow: scroll;
 
- }
- .assignment-listing .cards-section .custom-card-width{
-    height: 100%;
-    width: 300px;
- }
+    }
+
+    .assignment-listing .cards-section .custom-card-width {
+        height: 100%;
+        width: 300px;
+    }
 
 
 }
@@ -1233,7 +1321,7 @@ create assignments q1
         background-color: rgb(0, 0, 0, .3);
         padding: 120px;
     }
-    
+
 
     #login-form h3,
     #login-form .form-check-label,
@@ -1310,10 +1398,35 @@ create assignments q1
     .create-assignment-q1 .multiple-choice input {
         width: 25% !important;
     }
-
-
+    /* 
+    
+    history of real estate
+    
+    */
+    #tab-nav .nav-link{
+        padding-top: 0;
+    }
+    #student .col-auto{
+        width: 220px!important;
+    }
 
 }
+
+/* ********************************************************* */
+/* for mobiles screen 768px*/
+@media only screen and (max-width:768px) {
+
+    /*
+    
+    history of real estate
+    
+    */
+    /* posts */
+    #posts {
+        width: 100% !important;
+    }
+}
+
 
 /* for mobiles screen 425px*/
 @media only screen and (max-width:425px) {
@@ -1327,9 +1440,9 @@ create assignments q1
         height: 200px;
     }
 
-    #courses-section {
+    /* #courses-section {
         margin: 0;
-    }
+    } */
 
     #courses-section .card {
         margin: 4px;
@@ -1406,6 +1519,36 @@ create new assignment question no.1 page
 
     .create-assignment-q1 .multiple-choice input {
         width: 55% !important;
+    }
+
+    /*     
+    history of real estate 
+*/
+    /* posts */
+    .history-of-real-estate .nav-pills {
+        margin-left: 40px;
+    }
+
+    #posts {
+        margin-left: 12px;
+    }
+
+    #posts .editor-row {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    #posts .editor-last-row {
+        padding: 0;
+    }
+    #student .add-student-btn{
+        margin: 10px;
+    }
+    #student .col-auto{
+        margin-top: 20px;
+    }
+    #assignment .create-assignment-btn{
+        margin-top: -10px;
     }
 
 

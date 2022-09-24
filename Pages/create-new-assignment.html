@@ -4,7 +4,11 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create Assignment 1</title>
+    <title>Create Assignment</title>
+    <!-- cke editor cdn css -->
+    <!-- <link type="text/css" href="../Assets/cke-editor/sample/css/sample.css" rel="stylesheet" media="screen" /> -->
+
+
     <!-- jquery cdn linkkk -->
     <script src="https://code.jquery.com/jquery-3.6.1.js"
         integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
@@ -95,23 +99,27 @@
                 <a href="#">e-doc editor</a>
             </div>
             <div class="container-fluid ps-2 ps-md-5">
-                <div class="heading d-flex">
-                    <div class="back-btn ps-4 ps-md-0">
-                        <a href="./assignments-home.html"><span class="pe-3"><img
-                                    src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a>
+                <div class="row">
+                    <div class="heading d-flex col-2">
+                        <div class="back-btn ps-4 ps-md-0">
+                            <a href="./assignments-home.html"><span class="pe-3"><img
+                                        src="../Assets/Images/icons/arrow-left.svg" width="15px"></span> Back</a>
+                        </div>
                     </div>
-                    <div class="w-50"></div>
-                    <div>
-                        <p>Not Published</p>
+                    <div class="col-6 d-flex justify-content-end">
+                        <span class="">
+                            <img src="../Assets/Images/text-editor-icons/ic_do_not_disturb_24px.svg" class="me-2"
+                                alt="">Not Published
+                        </span>
                     </div>
                 </div>
-                <div class="ms-lg-5 ms-1 ps-3">
+                <div class="ms-lg-5 ms-1 ps-3 col-lg-8">
                     <div class="mt-4">
                         <h2 class="m-0">Add Assignment Details</h2>
-                        <div>
-                            <p class="fs-16 b-regular">Assignment Name</p>
+                        <div class="mt-4">
+                            <p class="fs-16 b-regular mb-0">Assignment Name</p>
                             <div>
-                                <input type="text" class="rounded w-50">
+                                <input type="text" class="rounded" style="width: 70%;">
                                 <select name="" class="p-1 pe-3 ms-3 rounded-10px" id="select-value-1">
                                     <option value="0">Submission Type</option>
                                     <option value="1">Value 1</option>
@@ -127,12 +135,122 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row mt-3">
+                        <div class="col-auto">Edit</div>
+                        <div class="col-auto">View</div>
+                        <div class="col-auto">Insert</div>
+                        <div class="col-auto">Format</div>
+                        <div class="col-auto">Tools</div>
+                        <div class="col-auto">Table</div>
+                    </div>
+                    <div class="row">
+                        <!-- ck editor -->
+                        <!-- <div class="centered">
+                            <div id="editor">
+                            </div>
+                        </div> -->
+                        <!-- ck editor end -->
+                        <div id="text-editor" class="rich-text-editor">
+                            <div class="row">
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-bold"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_bold_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-italic"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_italic_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-underline"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_underlined_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1">
+                                    <button class="btn" id="font-color" style="position:relative">
+                                        <img src="../Assets/Images/text-editor-icons/Path 140.svg" alt="">
+                                        <input id="input-font-color" type="color"
+                                            style="position: absolute;height:8px;left: 0; width: 100%; bottom: 0; border: 0;">
+                                    </button>
+                                </div>
+                                <div class="col-auto p-0 p-1">
+                                    <button class="btn" style="position:relative" id="bg-color">
+                                        <img src="../Assets/Images/text-editor-icons/Path 137.svg" alt="">
+                                        <input id="input-bg-color" type="color"
+                                            style="position: absolute;height:8px;left: 0; width: 100%; bottom: 0; border: 0;">
+                                    </button>
+                                </div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-link"><img
+                                            src="../Assets/Images/text-editor-icons/ic_link_24px.svg" alt=""></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_line_spacing_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-bullet"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_list_bulleted_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-numberList"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_list_numbered_24px.svg "
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-indent"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_indent_increase_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-outdent"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_indent_decrease_24px.svg "
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-justify"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_align_justify_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-center"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_align_center_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-left"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_align_left_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-"><img
+                                            src="../Assets/Images/text-editor-icons/ic_insert_chart_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-image"><img
+                                            src="../Assets/Images/text-editor-icons/ic_insert_photo_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-"><img
+                                            src="../Assets/Images/text-editor-icons/ic_insert_emoticon_24px.svg"
+                                            alt=""></button></div>
+                                <div class="col-auto p-0 p-1"><button class="btn" id="btn-"><img
+                                            src="../Assets/Images/text-editor-icons/ic_format_shapes_24px.svg"
+                                            alt=""></button></div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="form-outline">
+                                    <div class="border-color rounded-12px p-3" spellcheck="false" contenteditable="true"
+                                        style="min-height: 250px;">hello sir this is lorem import moduleName from
+                                        'module';
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, facere. Voluptate
+                                        accusamus quia ab minima quaerat debitis aperiam facilis voluptatem sed?
+                                        Dolorum, praesentium. Rem iste consectetur, dolore esse vel et?</div>
+                                    <!-- <textarea class="form-control shadow-none" id="textAreaExample2" rows="8" placeholder="Type in your instructions here."></textarea> -->
+                                </div>
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
                 </div>
             </div>
         </section>
     </main>
+    <!-- cke editor js -->
+    <!-- <script src="../Assets/cke-editor/ckeditor.js"></script>
 
-
+<script>
+	ClassicEditor
+		.create( document.querySelector( '#editor' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		.then( editor => {
+			window.editor = editor;
+		} )
+		.catch( err => {
+			console.error( err.stack );
+		} );
+</script> -->
 
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -141,6 +259,99 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <!-- cutom rich text editor -->
+    <script>
+        var btnBold = document.querySelector("#btn-bold")
+        var btnItalic = document.querySelector("#btn-italic")
+        var btnUnderline = document.querySelector("#btn-underline")
+        var btnfontColor = document.querySelector("#font-color")
+        var btnBgColor = document.querySelector("#bg-color")
+        var btnLink = document.querySelector("#btn-link")
+        var btnBullet = document.querySelector("#btn-bullet")
+        var btnListNumber = document.querySelector("#btn-numberList")
+        var btnIndent = document.querySelector("#btn-indent")
+        var btnOutdent = document.querySelector("#btn-outdent")
+        var btnJustify = document.querySelector("#btn-justify")
+        var btnCenter = document.querySelector("#btn-center")
+        var btnLeft = document.querySelector("#btn-left")
+        var btnImage = document.querySelector("#btn-image")
+        // bold
+        btnBold.addEventListener("click", () => {
+            document.execCommand("bold")
+        })
+        // italic
+        btnItalic.addEventListener("click", () => {
+            document.execCommand("italic")
+        })
+        // underline
+        btnUnderline.addEventListener("click", () => {
+            document.execCommand("underline")
+        })
+        // url
+        btnLink.addEventListener("click", () => {
+            var linkURL = prompt('Enter a URL:', 'http://');
+            // var selection = document.getSelection();
+            // var newLink = 
+            document.execCommand("createLink", true,linkURL)
+            //    selection.anchorNode.parentElement.target = '_blank';
+            // newLink.target = "_blank"
+        })
+       
+        // background color or highlight
+        btnBgColor.addEventListener("click", () => {
+            document.getElementById("input-bg-color").click()
+            document.getElementById("input-bg-color").addEventListener("input", () => {
+                document.execCommand("backColor", false, document.getElementById("input-bg-color").value)
+            })
+        })
+        // font or text color
+        btnfontColor.addEventListener("click", () => {
+            document.getElementById("input-font-color").click()
+            document.getElementById("input-font-color").addEventListener("input", () => {
+                document.execCommand("forecolor", false, document.getElementById("input-font-color").value)
+            })
+        })
+        // unorderlist
+        btnBullet.addEventListener("click", () => {
+            document.execCommand("insertUnorderedList")
+        })
+        // orderNumbers
+        btnBullet.addEventListener("click", () => {
+            document.execCommand("insertOrderedList")
+        })
+         // indent
+         btnIndent.addEventListener("click", () => {
+            document.execCommand("indent")
+        })
+         // outdent
+         btnOutdent.addEventListener("click", () => {
+            document.execCommand("outdent")
+        })
+         // justify
+         btnJustify.addEventListener("click", () => {
+            document.execCommand("justifyFull")
+        })
+         // center
+         btnCenter.addEventListener("click", () => {
+            document.execCommand("justifyCenter")
+        })
+         // left
+         btnLeft.addEventListener("click", () => {
+            document.execCommand("justifyLeft")
+        })
+        // insert image
+        btnImage.addEventListener("click", () => {
+            var linkURL = prompt('Enter a URL:', 'http://');
+            // var selection = document.getSelection();
+            // var newLink = 
+            document.execCommand("insertImage", true,linkURL)
+            //    selection.anchorNode.parentElement.target = '_blank';
+            // newLink.target = "_blank"
+        })
+
+      
+
+    </script>
     <!-- custom js -->
     <script src="../Assets/Js/index.js"></script>
 </body>
