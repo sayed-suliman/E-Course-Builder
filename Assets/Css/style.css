@@ -931,6 +931,20 @@ student detail page
 }
 
 /* hide show end */
+/* tooltip */
+.profile-tooltip {
+    opacity: 1!important;
+    /* background-color: red !important; */
+}
+
+.profile-tooltip .tooltip-arrow {
+    display: none !important;
+}
+.profile-tooltip .tooltip-inner {
+    border-radius: 0;
+    background-color: #6E6969;
+}
+
 
 /* **************************** 
 
@@ -1181,7 +1195,23 @@ textarea {
 #assignment .create-assignment-btn{
     margin-top: -60px;
 }
+/* **************************** 
 
+ red red red red red red red Recent Board Page  red red red red red red red 
+
+*********************************************** */
+.recent-board-div .recent-board-btn{
+    position: relative;
+}
+.recent-board-div .recent-board-btn::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    width: 100%;
+    height: 2px;
+    background-color: #1F71CE;
+}
 
 
 
