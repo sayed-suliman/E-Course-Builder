@@ -214,7 +214,7 @@
                                             src="../Assets/Images/text-editor-icons/ic_format_shapes_24px.svg"
                                             alt=""></button></div>
                             </div>
-                            <div class="row mt-3">
+                            <div class="row mt-3 justify-content-md-end">
                                 <div class="form-outline">
                                     <div class="border-color rounded-12px p-3" spellcheck="false" contenteditable="true"
                                         style="min-height: 250px;">hello sir this is lorem import moduleName from
@@ -223,6 +223,11 @@
                                         accusamus quia ab minima quaerat debitis aperiam facilis voluptatem sed?
                                         Dolorum, praesentium. Rem iste consectetur, dolore esse vel et?</div>
                                     <!-- <textarea class="form-control shadow-none" id="textAreaExample2" rows="8" placeholder="Type in your instructions here."></textarea> -->
+                                </div>
+                                <div class="col-auto mt-3">
+                                    <button class="btn border-color rounded-pill px-3">Cancel</button>
+                                    <button class="btn border-color rounded-pill px-4 mx-2">Save</button>
+                                    <button class="btn btn-primary rounded-pill px-4">Post</button>
                                 </div>
                             </div>
                         </div>
@@ -316,7 +321,7 @@
             document.execCommand("insertUnorderedList")
         })
         // orderNumbers
-        btnBullet.addEventListener("click", () => {
+        btnListNumber.addEventListener("click", () => {
             document.execCommand("insertOrderedList")
         })
          // indent
