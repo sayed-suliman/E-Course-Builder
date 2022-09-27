@@ -29,8 +29,11 @@
                 </a>
                 <div class="col-6 col-lg-6 ms-xl-5" id="search">
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2 shadow-none top-search" type="search"
-                            placeholder="Search for anything" aria-label="Search">
+                        <div class="w-100 position-relative">
+                            <input class="form-control me-2 shadow-none top-search" type="search"
+                                placeholder="Search for anything" aria-label="Search">
+                            <button class="btn btn-primary position-absolute border-0 rounded-12px fs-16 b-medium top-search-btn">Search</button>
+                        </div>
                     </form>
                 </div>
                 <div class="d-flex">
@@ -69,7 +72,12 @@
     <!-- main section -->
     <main id="" class="instructor my-courses assignment-listing">
         <!-- hero section -->
-        <section class="hero-section d-flex justify-content-center align-items-center">
+        <section class="hero-section d-flex justify-content-center align-items-center position-relative">
+            <div class="text-end position-absolute top-0 end-0 me-3 mt-3">
+                <input type="file" id="chose-img" class="d-none">
+                <label for="chose-img" class="p-2 fs-12 text-light"><img src="../Assets/Images/Path 141.svg" class="me-2"
+                        alt="">Choose Image</label>
+            </div>
             <div class="row d-flex mt-12">
                 <span class="hero-section-text text-center t">UCLA</span>
             </div>
@@ -210,6 +218,26 @@
         crossorigin="anonymous"></script>
     <!-- custom js -->
     <script src="../Assets/Js/index.js"></script>
+    <!-- for background image -->
+    <script>
+        const fileInput = document.getElementById("chose-img")
+        const backGroundImageDiv = document.querySelector(".my-courses .hero-section")
+        fileInput.addEventListener("change", (e) => {
+            const file = e.target.files[0]
+
+            let fileReader = new FileReader()
+            fileReader.readAsDataURL(file)
+            fileReader.onload = function () {
+                console.log(fileReader)
+                console.log(fileReader.result)
+                backGroundImageDiv.setAttribute('src', fileReader.result)
+                backGroundImageDiv.setAttribute('style', `background:url("${fileReader.result}") no-repeat center`)
+                backGroundImageDiv.style.backgroundSize = "cover"
+            }
+
+        })
+
+    </script>
 </body>
 
 </html>

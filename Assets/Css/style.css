@@ -42,16 +42,19 @@ button {
     --font-weight-bold: 700;
     --input-border-radius: 12px;
 }
+
 /* bootstrap text  color */
-.text-primary{
-    color: var(--color-primary)!important;
+.text-primary {
+    color: var(--color-primary) !important;
 }
-.btn-outline-primary{
-    color: var(--color-primary)!important;
-    border:1px solid var(--color-primary) !important;
+
+.btn-outline-primary {
+    color: var(--color-primary) !important;
+    border: 1px solid var(--color-primary) !important;
 }
-.bg-primary{
-background-color: var(--color-primary)!important;
+
+.bg-primary {
+    background-color: var(--color-primary) !important;
 }
 
 
@@ -82,11 +85,13 @@ background-color: var(--color-primary)!important;
 .yellow {
     outline: 1px solid yellow;
 }
-.input-outline-0:focus{
+
+.input-outline-0:focus {
     outline: none;
     /* background-color: red; */
 }
-.input-outline-1:focus{
+
+.input-outline-1:focus {
     outline: 1px solid var(--border-color);
 }
 
@@ -130,6 +135,10 @@ body {
 /* boldness */
 .b-bold {
     font-weight: var(--font-weight-bold);
+}
+
+.b-semi-bold {
+    font-weight: var(--font-weight-bold-medium);
 }
 
 .b-regular {
@@ -219,6 +228,12 @@ input[type=radio]:checked {
 .top-nav .top-search {
     border: 1px solid var(--border-color);
     border-radius: var(--input-border-radius);
+}
+
+.top-nav .top-search-btn {
+    right: 8px;
+    top: 5px;
+    padding: 2px 15px;
 }
 
 .top-nav .top-search::placeholder {
@@ -936,13 +951,14 @@ student detail page
 /* hide show end */
 /* tooltip */
 .profile-tooltip {
-    opacity: 1!important;
+    opacity: 1 !important;
     /* background-color: red !important; */
 }
 
 .profile-tooltip .tooltip-arrow {
     display: none !important;
 }
+
 .profile-tooltip .tooltip-inner {
     border-radius: 0;
     background-color: #6E6969;
@@ -1116,9 +1132,11 @@ textarea {
     position: relative;
     color: var(--color-black);
 }
-.tab-content .active{
-    color: #000!important;
+
+.tab-content .active {
+    color: #000 !important;
 }
+
 #tab-nav .nav-item .active {
     color: var(--color-black) !important;
     /* transition-delay:  2s;
@@ -1166,23 +1184,29 @@ textarea {
 #posts .editor-last-row {
     padding: 20px 0 20px 30px;
 }
-#posts .add-a-comment{
+
+#posts .add-a-comment {
     border-radius: 30px;
 }
-#posts .add-a-comment input{
+
+#posts .add-a-comment input {
     border-radius: 30px;
 }
-#student .col-auto{
-    width: 250px!important;
+
+#student .col-auto {
+    width: 250px !important;
     margin-top: 40px;
 }
-#student .add-student-btn{
+
+#student .add-student-btn {
     margin-top: -40px;
 }
-#student .add-student-btn button{
+
+#student .add-student-btn button {
     border-radius: 30px;
 }
-#student .student-profile{
+
+#student .student-profile {
     height: 40px;
     /* padding: ; */
     /* padding: 20px; */
@@ -1190,23 +1214,27 @@ textarea {
     width: 40px;
     border-radius: 50%;
 }
-#student .student-profile img{
+
+#student .student-profile img {
     /* width:20px; */
     width: 100%;
     padding: 8px;
 }
-#assignment .create-assignment-btn{
+
+#assignment .create-assignment-btn {
     margin-top: -60px;
 }
+
 /* **************************** 
 
  red red red red red red red Recent Board Page  red red red red red red red 
 
 *********************************************** */
-.recent-board-div .recent-board-btn{
+.recent-board-div .recent-board-btn {
     position: relative;
 }
-.recent-board-div .recent-board-btn::after{
+
+.recent-board-div .recent-board-btn::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1431,16 +1459,18 @@ create assignments q1
     .create-assignment-q1 .multiple-choice input {
         width: 25% !important;
     }
+
     /* 
     
     history of real estate
     
     */
-    #tab-nav .nav-link{
+    #tab-nav .nav-link {
         padding-top: 0;
     }
-    #student .col-auto{
-        width: 220px!important;
+
+    #student .col-auto {
+        width: 220px !important;
     }
 
 }
@@ -1574,13 +1604,16 @@ create new assignment question no.1 page
     #posts .editor-last-row {
         padding: 0;
     }
-    #student .add-student-btn{
+
+    #student .add-student-btn {
         margin: 10px;
     }
-    #student .col-auto{
+
+    #student .col-auto {
         margin-top: 20px;
     }
-    #assignment .create-assignment-btn{
+
+    #assignment .create-assignment-btn {
         margin-top: -10px;
     }
 
@@ -1607,5 +1640,12 @@ create new assignment question no.1 page
     .instructor.students .heading .title a {
         margin-top: 0px;
     }
-
+/* courses */
+.courses h2,a.btn-primary{
+    font-size: 18px;
+}
+.courses a.btn-primary{
+    padding: 5px 10px;
+    font-size: 16px;
+}
 }

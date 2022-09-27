@@ -23,8 +23,11 @@
                 </a>
                 <div class="col-6 col-lg-6 ms-xl-5" id="search">
                     <form class="d-flex" role="search">
-                        <input class="form-control me-2 shadow-none top-search" type="search"
-                            placeholder="Search for anything" aria-label="Search">
+                        <div class="w-100 position-relative">
+                            <input class="form-control me-2 shadow-none top-search" type="search"
+                                placeholder="Search for anything" aria-label="Search">
+                            <button class="btn btn-primary position-absolute border-0 rounded-12px fs-16 b-medium top-search-btn">Search</button>
+                        </div>
                     </form>
                 </div>
                 <div class="d-flex">
@@ -98,7 +101,7 @@
                     </div>
                 </div>
                 <!-- heading end -->
-                <div class="title mt-2 ms-2">
+                <div class="title mt-2 ms-md-2 ms-4">
                     <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
                     <div class="dropdown d-inline " style="top: -5px;">
                         <button class="border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown"
@@ -110,7 +113,8 @@
                             <li><a class="dropdown-item" href="my-courses-instructor.html">View by tile</a></li>
                         </ul>
                     </div>
-                    <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">+ Add Course</a>
+                    <!-- <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">
+                        + Add Course</a> -->
                 </div>
                 <div class="bg-white mt-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
                     <table class="table">
