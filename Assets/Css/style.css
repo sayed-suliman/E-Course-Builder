@@ -385,6 +385,7 @@ side bar in all pages
 .form-select,
 input:not([type=submit]) {
     border: 1px solid var(--border-color);
+    outline: 0;
     border-radius: var(--input-border-radius);
 }
 
@@ -858,19 +859,22 @@ student detail page
     background: var(--color-white);
     color: var(--color-black);
 }
-
+.dropdown .btn-outline-primary:focus,
+.dropdown .btn-outline-primary:hover{
+    color: #fff!important;
+}
 /* present dropdown */
 #present-dropdown li {
     width: 350px;
 }
 
 #present-dropdown .disabled {
-    background: #8d8d8d;
+    background: rgba(141, 141, 141,.22);
     border-radius: 12px;
 }
 
 #present-dropdown .m-code {
-    width: 50px;
+    width: 60px;
     border-radius: 0;
 }
 
