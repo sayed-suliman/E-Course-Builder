@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dashboard</title>
     <!-- calender cdns -->
-    <link rel="stylesheet" href="../Assets/calendar-16/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="../../Assets/calendar-16/fonts/icomoon/style.css">
 
-    <link rel="stylesheet" href="../Assets/calendar-16/css/rome.css">
+    <link rel="stylesheet" href="../../Assets/calendar-16/css/rome.css">
 
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="../Assets/calendar-16/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../Assets/calendar-16/css/bootstrap.min.css">
 
     <!-- Style -->
-    <link rel="stylesheet" href="../Assets/calendar-16/css/style.css">
+    <link rel="stylesheet" href="../../Assets/calendar-16/css/style.css">
 
     <!-- calender cdns end -->
 
@@ -26,7 +26,7 @@
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"> -->
     <!-- </script> -->
     <!-- custom css -->
-    <link rel="stylesheet" href="../Assets/Css/style.css">
+    <link rel="stylesheet" href="../../Assets/Css/style.css">
 </head>
 
 <body>
@@ -34,7 +34,7 @@
         <nav class="navbar navbar-expand-xl bg-light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="./dashboard.html">
-                    <img src="../Assets/Images/Group 21.svg" alt="" width="30" height="20"
+                    <img src="../../Assets/Images/Group 21.svg" alt="" width="30" height="20"
                         class="d-inline-block align-text-center">
                     ECOURSE BUILDER
                 </a>
@@ -43,7 +43,8 @@
                         <div class="w-100 position-relative">
                             <input class="form-control me-2 shadow-none top-search" type="search"
                                 placeholder="Search for anything" aria-label="Search">
-                            <button class="btn btn-primary position-absolute border-0 fs-16 b-medium top-search-btn">Search</button>
+                            <button
+                                class="btn btn-primary position-absolute border-0 fs-16 b-medium top-search-btn">Search</button>
                         </div>
                     </form>
                 </div>
@@ -98,7 +99,7 @@
             </div>
         </section>
 
-        <section style="position: relative" class="main-section pt-4">
+        <section class="main-section pt-4 students position-relative">
             <div id="mySidebar" class="sidebar">
                 <div class="toggle">
                     <button onclick="openNav()" id="nav-btn" class="slider-tab">
@@ -123,82 +124,115 @@
                 <div class="row ms-2 ms-lg-5 p-2 pe-lg-5">
                     <!-- left section -->
                     <div class="col-lg-8 col-xxl-9">
-                        <p class="welcome-title">Welcome<span class="text-dark">, Professor Bina.</span></p>
+                        <p class="welcome-title">Welcome<span class="text-dark">, Student Shaina Bandeni.</span></p>
                         <!-- all courses card -->
                         <!-- 1st row -->
                         <div class="row " id="courses-section">
-                            <!-- My Courses -->
+                            <!-- 1 My Courses -->
                             <div class="card text-center border-0">
                                 <a href="./instructor-courses.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/my_courses.svg" alt="">
+                                        <img src="../../Assets/Images/icons/my_courses.svg" alt="">
                                         <p class="card-text pt-3">my courses</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- Students -->
+                            <!-- 2 Calendar -->
                             <div class="card text-center border-0">
                                 <a href="./instructor-student.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/students.svg" alt="">
-                                        <p class="card-text pt-3">students</p>
+                                        <img src="../../Assets/Images/icons/calendar.svg" alt="">
+                                        <p class="card-text pt-3">Calendar</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- Gradebook -->
-                            <div class="card text-center border-0">
-                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
-                                    <div class="card-body">
-                                        <img src="../Assets/Images/icons/gradebook.svg" alt="">
-                                        <p class="card-text pt-3">gradebook</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Assignment -->
+                            <!-- 3 Assignment -->
                             <div class="card text-center border-0">
                                 <a href="./assignments-home.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/assignments.svg" alt="">
+                                        <img src="../../Assets/Images/icons/assignments.svg" alt="">
                                         <p class="card-text pt-3">assignment</p>
                                     </div>
                                 </a>
                             </div>
-                        </div>
-                        <!-- 2nd row -->
-                        <div class="mt-lg-5 row" id="courses-section">
-                            <!-- Whiteboard -->
+                            <!-- 4 File-Sharing -->
+                            <div class="card text-center border-0">
+                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/file-sharing.svg" alt="">
+                                        <p class="card-text pt-3">File-Sharing</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 5 Gradebook -->
+                            <div class="card text-center border-0">
+                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/gradebook.svg" alt="">
+                                        <p class="card-text pt-3">Gradebook</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 6 Alert System -->
+                            <div class="card text-center border-0">
+                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/alert-system.svg" alt="">
+                                        <p class="card-text pt-3">Alert System</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 7 Message -->
                             <div class="card  text-center border-0">
                                 <a href="./white-board.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/white-board.svg" alt="">
+                                        <img src="../../Assets/Images/icons/message.svg" alt="">
+                                        <p class="card-text pt-3">Message</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 8 Whiteboard -->
+                            <div class="card  text-center border-0">
+                                <a href="./white-board.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/white-board.svg" alt="">
                                         <p class="card-text pt-3">whiteboard</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- Byetalk -->
+                            <!-- 9 Presentation -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/byetalk.svg" alt="">
+                                        <img src="../../Assets/Images/icons/presentation.svg" alt="">
+                                        <p class="card-text pt-3">Presentation</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- 10 Byetalk -->
+                            <div class="card text-center border-0">
+                                <a href="#" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/byetalk.svg" alt="">
                                         <p class="card-text pt-3">byetalk</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- Drive -->
+                            <!-- 11 eDoc Editor -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/drive.svg" alt="">
-                                        <p class="card-text pt-3">drive</p>
+                                        <img src="../../Assets/Images/icons/e-doc-editor.svg" alt="">
+                                        <p class="card-text pt-3">e-doc editor</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- eDoc Editor -->
+                            <!-- 12 Drive -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/e-doc-editor.svg" alt="">
-                                        <p class="card-text pt-3">e-doc editor</p>
+                                        <img src="../../Assets/Images/icons/drive.svg" alt="">
+                                        <p class="card-text pt-3">drive</p>
                                     </div>
                                 </a>
                             </div>
@@ -206,13 +240,12 @@
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../Assets/Images/icons/+.svg" alt="">
+                                        <img src="../../Assets/Images/icons/+.svg" alt="">
                                         <p class="card-text pt-3">add application</p>
                                     </div>
                                 </a>
                             </div>
                         </div>
-
                     </div>
                     <!-- right section -->
                     <div class="col-lg-4 col-xxl-3 mt-4 m-lg-0 p-lg-0  d-flex d-lg-block" id="right-calender-section">
@@ -233,7 +266,7 @@
                                 <div class="mt-3">
                                     <div class="d-flex justify-content-between mb-2">
                                         <h4 class="today-date">TODAY, Monday, August 30, 2022</h4>
-                                        <a href="#" class="fs-18 b-semi-bold p-0 text-primary">+Add NEW</a >
+                                        <a href="#" class="fs-18 b-semi-bold p-0 text-primary">+Add NEW</a>
                                     </div>
                                     <div class="row classes-time m-0 py-3 justify-content-between">
                                         <div class="col-auto align-self-center fs-16">9:30 AM Understanding Buyers</div>
@@ -249,7 +282,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-3 opacity-50">
+                                <div class="mt-3">
                                     <h4 class="tomorrow-date">TOMORROW, Tuesday, August 31, 2022</h4>
                                     <div class="row classes-time m-0 py-3 justify-content-between">
                                         <div class="col-auto align-self-center fs-16">9:30 AM Understanding Buyers</div>
@@ -275,14 +308,14 @@
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
     <!-- calender js -->
-    <script src="../Assets/calendar-16/js/jquery-3.3.1.min.js"></script>
-    <script src="../Assets/calendar-16/js/popper.min.js"></script>
-    <script src="../Assets/calendar-16/js/bootstrap.min.js"></script>
-    <script src="../Assets/calendar-16/js/rome.js"></script>
+    <script src="../../Assets/calendar-16/js/jquery-3.3.1.min.js"></script>
+    <script src="../../Assets/calendar-16/js/popper.min.js"></script>
+    <script src="../../Assets/calendar-16/js/bootstrap.min.js"></script>
+    <script src="../../Assets/calendar-16/js/rome.js"></script>
 
-    <script src="../Assets/calendar-16/js/main.js"></script>
+    <script src="../../Assets/calendar-16/js/main.js"></script>
     <!-- custom js -->
-    <script src="../Assets/Js/index.js"></script>
+    <script src="../../Assets/Js/index.js"></script>
     <!-- javascript for date -->
     <script>
         var toDayField = document.querySelector(".today-date")
@@ -367,6 +400,7 @@
         }
         toDayField.textContent = `TODAY, ${LongDate(date)}`
         tomorrowDateField.textContent = `TOMORROW, ${LongDate(date.addDays(1))}`
+
     </script>
 </body>
 

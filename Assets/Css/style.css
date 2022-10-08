@@ -231,13 +231,15 @@ input[type=radio]:checked {
 }
 
 .top-nav .top-search-btn {
-    right: 8px;
+    right: 5px;
     top: 5px;
     padding: 2px 15px;
+    border-radius: 7px;
 }
 
 .top-nav .top-search::placeholder {
     font-size: 12px;
+    vertical-align: super;
 }
 
 /* user profile */
@@ -537,6 +539,7 @@ GLOBAL
 /* courses card section */
 #courses-section .card {
     margin-left: 16px;
+    margin-bottom: 30px;
     width: 160px;
     border-radius: 12px;
     background-color: #fff;
@@ -544,13 +547,12 @@ GLOBAL
     box-shadow: var(--box-shadow);
     transition: all 0.25s;
 }
-
 #courses-section .card:hover p {
     color: #fff !important;
 }
 
 #courses-section .card:hover a img {
-    filter: invert(93%) sepia(0%) saturate(7448%) hue-rotate(31deg) brightness(113%) contrast(99%);
+    filter: invert(95%) sepia(100%) saturate(14%) hue-rotate(213deg) brightness(104%) contrast(104%);
 }
 
 #courses-section .card:hover {
@@ -566,7 +568,15 @@ GLOBAL
     font-size: 16px;
     font-weight: var(--font-weight-regular);
 }
-
+/* ****************************************** */
+/*    Student Page --- Course Card section     */
+/* ****************************************** */
+.students #courses-section {
+    width: 1070px;
+}
+.students #courses-section .card {
+    margin-bottom: 30px;
+}
 
 /* right section */
 #right-calender-section .classes-time {
@@ -601,6 +611,10 @@ GLOBAL
     color: #000;
     background: rgba(46, 124, 216, 0.5);
     border-radius: 8px;
+}
+/* At Student Dashboard */
+.students #calender .rd-day-selected {
+    background: #4CBC9A;
 }
 
 /* today date */
@@ -1340,6 +1354,10 @@ create assignments q1
         width: 50%;
     }
 
+    .students #courses-section {
+        width: unset;
+    }
+
 }
 
 /* for tablets screen 1024px*/
@@ -1476,7 +1494,7 @@ create assignments q1
     #student .col-auto {
         width: 220px !important;
     }
-
+    
 }
 
 /* ********************************************************* */
