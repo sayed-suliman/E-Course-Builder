@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25" height="25" viewBox="0 0 25 25">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_273" data-name="Rectangle 273" width="25" height="25" transform="translate(468 1288)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="checked" transform="translate(-468 -1288)" clip-path="url(#clip-path)">
+    <path id="checked-checkbox" d="M24.924,4.5H8.183A3.758,3.758,0,0,0,4.5,8.319V25.681A3.758,3.758,0,0,0,8.183,29.5H24.924a3.758,3.758,0,0,0,3.683-3.819V8.319A3.758,3.758,0,0,0,24.924,4.5ZM24.3,13.223,14.92,22.945a.98.98,0,0,1-1.421,0L9.481,18.778a1.069,1.069,0,0,1,0-1.473.979.979,0,0,1,1.42,0l3.307,3.43,8.665-8.985a.979.979,0,0,1,1.42,0A1.069,1.069,0,0,1,24.3,13.223Z" transform="translate(463.946 1283.5)"/>
+  </g>
+</svg>

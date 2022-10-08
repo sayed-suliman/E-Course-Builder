@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="49" viewBox="0 0 48 49">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_265" data-name="Rectangle 265" width="48" height="49" transform="translate(-5853 -1828)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="file-sharing" transform="translate(5853 1828)" clip-path="url(#clip-path)">
+    <g id="folder-share-social" transform="translate(-5857.8 -1829.9)">
+      <rect id="Rectangle_266" data-name="Rectangle 266" width="45.6" height="33.6" rx="2.4" transform="translate(6 13.2)" fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2.4"/>
+      <path id="Path_845" data-name="Path 845" d="M6,18V8.4A2.4,2.4,0,0,1,8.4,6H25.406a2.4,2.4,0,0,1,1.7.7l6.5,6.5" fill="none" stroke="#333" stroke-linejoin="round" stroke-width="2.4"/>
+      <circle id="Ellipse_54" data-name="Ellipse 54" cx="2.4" cy="2.4" r="2.4" transform="translate(31.8 33.6)" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="2.4"/>
+      <circle id="Ellipse_55" data-name="Ellipse 55" cx="2.4" cy="2.4" r="2.4" transform="translate(31.8 21.6)" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="2.4"/>
+      <circle id="Ellipse_56" data-name="Ellipse 56" cx="2.4" cy="2.4" r="2.4" transform="translate(21 27.6)" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="2.4"/>
+      <line id="Line_30" data-name="Line 30" x1="6.615" y2="3.675" transform="translate(25.489 25.164)" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="2.4"/>
+      <line id="Line_31" data-name="Line 31" x2="6.623" y2="3.679" transform="translate(25.489 31.16)" fill="none" stroke="#333" stroke-miterlimit="10" stroke-width="2.4"/>
+    </g>
+  </g>
+</svg>
