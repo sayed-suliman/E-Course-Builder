@@ -17,11 +17,12 @@ function toggleSlider() {
     if(parent.classList.contains('hide')){
         icon.src ='../../Assets/Images/icons/eye.png'
         icon.style.padding = "0 20px"
-        icon.style.width = "90px"
+        icon.style.width = "80px"
         text.innerText = 'Show'
     }else{
         icon.src ='../../Assets/Images/icons/hide-eye.svg'
         icon.style.padding = "0"
+        icon.style.width = "71px"
         text.innerText = 'Hide'
     }
 }
