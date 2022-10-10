@@ -22,6 +22,7 @@ button {
     /* colors */
     --color-red: #ff0202;
     --color-green: #009D24;
+    --color-green-light: #52D952;
     --color-primary: #2E7CD8;
     --color-primary-60: rgb(46, 124, 216, .60);
     --color-grey: #989898;
@@ -51,6 +52,13 @@ button {
 .btn-outline-primary {
     color: var(--color-primary) !important;
     border: 1px solid var(--color-primary) !important;
+}
+.btn-green {
+    background-color: var(--color-green-light) !important;
+}
+.btn-green:hover {
+    background-color: var(--color-green)!important;
+    color: var(--color-white)!important;
 }
 
 .bg-primary {
@@ -274,6 +282,10 @@ input[type=checkbox]:checked {
     font-size: 56px;
     font-weight: var(--font-weight-regular);
 }
+.assignment-hero-section-subtext {
+    font-size: 46px;
+    font-weight: var(--font-weight-regular);
+}
 
 /* herosection in all pages */
 .hero-section {
@@ -332,7 +344,41 @@ side bar in all pages
 .sidebar a:hover {
     color: var(--button-primary);
 }
-
+.right-slider{
+    height: 160px;
+    width: 400px;
+    padding: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 34px 0 0 34px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0px;
+    background-color: var(--color-white);
+    overflow-x: hidden;
+    transition: .5s;
+}
+.right-slider.slider-2{
+    top:200px
+}
+.right-slider.hide{
+    right: -320px;
+}
+.right-slider .toggler{
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+    border-radius: 30px;
+    box-shadow: var(--box-shadow)!important;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0;
+    padding-left: 25px;
+}
+.right-slider .content{
+    margin-left: 65px;
+}
 #nav-btn {
     background: var(--color-white);
     border: none;
@@ -1209,6 +1255,12 @@ textarea {
 
 #posts .add-a-comment input {
     border-radius: 30px;
+    padding-right: 80px;
+}
+#posts .add-a-comment button {
+    top:1px;
+    right: 1px;
+    border-radius: 0 20px 20px 0;
 }
 
 #student .col-auto {
