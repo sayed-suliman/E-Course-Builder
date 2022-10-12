@@ -1,0 +1,13 @@
+<svg id="Timer" xmlns="http://www.w3.org/2000/svg" width="26" height="30" viewBox="0 0 26 30">
+  <path id="Path_846" data-name="Path 846" d="M13,30A13,13,0,1,1,26,17,13,13,0,0,1,13,30ZM13,6A11,11,0,1,0,24,17,11,11,0,0,0,13,6Z" fill="#231f20"/>
+  <path id="Path_847" data-name="Path 847" d="M13,6a1,1,0,0,1-1-1V1a1,1,0,1,1,2,0V5A1,1,0,0,1,13,6Z" fill="#231f20"/>
+  <path id="Path_848" data-name="Path 848" d="M16,2H10a1,1,0,1,1,0-2h6a1,1,0,0,1,0,2Z" fill="#231f20"/>
+  <path id="Path_849" data-name="Path 849" d="M21.485,9.515a1,1,0,0,1-.707-1.707l1.414-1.414a1,1,0,1,1,1.414,1.414L22.192,9.222a1,1,0,0,1-.707.293Z" fill="#231f20"/>
+  <path id="Path_850" data-name="Path 850" d="M4.515,9.515a1,1,0,0,1-.707-.293L2.394,7.808A1,1,0,1,1,3.808,6.394L5.222,7.808a1,1,0,0,1-.707,1.707Z" fill="#231f20"/>
+  <path id="Path_851" data-name="Path 851" d="M13,16a1,1,0,0,1-1-1V10a1,1,0,0,1,2,0v5A1,1,0,0,1,13,16Z" fill="#231f20"/>
+  <path id="Path_852" data-name="Path 852" d="M13,20a3,3,0,1,1,3-3A3,3,0,0,1,13,20Zm0-4a1,1,0,1,0,1,1A1,1,0,0,0,13,16Z" fill="#231f20"/>
+  <path id="Path_853" data-name="Path 853" d="M25,18H23a1,1,0,0,1,0-2h2a1,1,0,0,1,0,2Z" fill="#231f20"/>
+  <path id="Path_854" data-name="Path 854" d="M13,30a1,1,0,0,1-1-1V27a1,1,0,0,1,2,0v2A1,1,0,0,1,13,30Z" fill="#231f20"/>
+  <path id="Path_855" data-name="Path 855" d="M3,18H1a1,1,0,0,1,0-2H3a1,1,0,0,1,0,2Z" fill="#231f20"/>
+  <path id="Path_856" data-name="Path 856" d="M13,8a1,1,0,0,1-1-1V5a1,1,0,0,1,2,0V7A1,1,0,0,1,13,8Z" fill="#231f20"/>
+</svg>
