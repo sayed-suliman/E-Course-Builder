@@ -139,6 +139,12 @@ body {
 .fs-22 {
     font-size: 22px;
 }
+.fs-24 {
+    font-size: 24px;
+}
+.fs-26 {
+    font-size: 26px;
+}
 
 /* boldness */
 .b-bold {
@@ -358,9 +364,31 @@ side bar in all pages
     overflow-x: hidden;
     transition: .5s;
 }
-.right-slider.slider-2{
-    top:200px
+.overflow-x-hidden{
+    overflow-x: hidden;
 }
+
+
+/* custom scrollbar start to righe slider-2 */
+.right-slider.slider-2{
+    top:200px;
+    height: 800px;
+}
+.right-slider.slider-2::-webkit-scrollbar{
+    width: 20px;
+}
+.right-slider.slider-2::-webkit-scrollbar-thumb{
+    background:var(--border-color);
+    border-radius: 130px;
+}
+
+/* scrollbar end */
+
+
+.slider-2 input[type="checkbox"]{
+    accent-color: var(--color-black);
+}
+
 .right-slider.hide{
     right: -320px;
 }
@@ -1313,7 +1341,6 @@ textarea {
     height: 2px;
     background-color: #1F71CE;
 }
-
 
 
 
