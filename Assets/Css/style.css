@@ -1717,7 +1717,26 @@ create new assignment question no.1 page
     #assignment .create-assignment-btn {
         margin-top: -10px;
     }
-
+/* 
++++++++++++++++++++++++
+    Students/ assessment part 2
+++++++++++++++++++++++++++++++++++++++++++++
+*/
+/* right slider */
+.right-slider{
+    right: -55px;
+}
+.right-slider .content{
+    margin: 0;
+    align-items: center;
+}
+.assessment-part-2-body p{
+    font-size: 17px;
+ text-align: justify;
+}
+.assessment-part-2-body h3{
+    font-size: 20px;
+}
 
 }
 

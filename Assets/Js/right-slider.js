@@ -1,6 +1,9 @@
 var rightSlider = document.querySelector('.right-slider')
-var toggler = rightSlider.querySelector('.toggler');
-toggler.addEventListener('click', toggleSlider)
+var toggler = document.querySelectorAll('.toggler');
+toggler.forEach(toggle =>{
+    toggle.addEventListener('click', toggleSlider)
+})
+
 
 function toggleSlider() {
     var parent = this.parentNode;
