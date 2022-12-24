@@ -53,10 +53,26 @@
                     <form action="./login-access-code.html" id="login-form">
                         <h3 class="text-center login-title">LOGIN</h3>
                         <div class="mt-5">
-                            <input type="text" placeholder="Email Address" class="form-control shadow-none rounded-0 input-fields">
+                            <div class="alert alert-danger fade show d-flex align-items-center mb-3 rounded-0"
+                                role="alert">
+                                <svg width="15" xmlns="http://www.w3.org/2000/svg" fill="var(--bs-danger)"
+                                    class="bi bi-exclamation-triangle-fill flex-shrink-0 me-2" viewBox="0 0 16 16"
+                                    role="img" aria-label="Danger:">
+                                    <path
+                                        d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z" />
+                                </svg>
+                                <div>
+                                    An example alert with an icon
+                                </div>
+                                <button type="button" class="btn-close ms-auto" data-bs-dismiss="alert"
+                                    aria-label="Close"></button>
+                            </div>
+                            <input type="text" placeholder="Email Address"
+                                class="form-control shadow-none rounded-0 input-fields">
                         </div>
                         <div class="mt-2 mt-xl-3 mt-xxl-4">
-                            <input type="password" placeholder="Password" class="form-control shadow-none rounded-0 input-fields">
+                            <input type="password" placeholder="Password"
+                                class="form-control shadow-none rounded-0 input-fields">
                         </div>
                         <div class="from-check mt-2 mt-xl-3 mt-xxl-4">
                             <div class="remember-me">
@@ -71,26 +87,172 @@
                                 <p class="text-center mt-2"><a href="#" class="links forget-email">Forgot
                                         EmailAddress/Password?</a></p>
                                 <p class="text-center mt-2">
-                                    <a href="#" class="links" data-bs-toggle="modal" data-bs-target="#accessModal">Enter Access Code</a>
+                                    <a href="#" class="links" data-bs-toggle="modal" data-bs-target="#accessModal">Enter
+                                        Access Code</a>
                                 </p>
-                                <!-- access code modal -->
-                                <div class="modal fade" id="accessModal" tabindex="-1"
-                                    aria-labelledby="accessModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog modal-md">
-                                        <div class="modal-content p-5">
-                                            <div class="modal-body">
-                                                <input type="text" class="form-control shadow-none rounded-0" placeholder="Enter Access Code">
-                                                <div class="text-center mt-4">
-                                                    <button type="button" class="btn btn-primary rounded-6px me-2" style="padding-left: 35px;padding-right:35px;" >Login</button>
-                                                    <button type="button" class="btn rounded-6px text-primary" style="padding-left: 25px;padding-right:25px;"  data-bs-dismiss="modal">Cancel</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
                     </form>
+                    <!-- access code modal -->
+                    <div class="modal fade" id="accessModal" tabindex="-1" aria-labelledby="accessModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-md">
+                            <div class="modal-content p-5">
+                                <div class="modal-body">
+                                    <form action="">
+                                        <input type="text" class="form-control shadow-none rounded-0"
+                                            placeholder="Enter Access Code">
+                                        <div class="text-center mt-4">
+                                            <button type="submit" class="btn btn-primary rounded-6px me-2"
+                                                style="padding-left: 35px;padding-right:35px; ">Login</button>
+                                            <button type="reset" class="btn rounded-6px text-primary"
+                                                style="padding-left: 25px;padding-right:25px;"
+                                                data-bs-dismiss="modal">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div
+                                    class="loading position-absolute d-none flex-column align-items-center top-50 start-50 translate-middle">
+                                    <div class="spinner-border" role="status">
+                                        <span class="visually-hidden">Loading...</span>
+                                    </div>
+                                    <span class="message">Checking your access code</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal Access code form -->
+                    <div class="modal fade" id="accessCodeForm" aria-hidden="true"
+                        aria-labelledby="exampleModalToggleLabel2" tabindex="-1" data-bs-backdrop="static"
+                        data-bs-keyboard="false">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header border-0">
+                                    <h1 class="modal-title fs-5" id="exampleModalToggleLabel2">Student
+                                        Information</h1>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="row mb-3">
+                                            <label class="form-check-label text-dark" aria-describedby="nameHelp">Name
+                                                <span class="text-danger">*</span></label>
+                                            <div id="nameHelp" class="form-text">Enter your name exactly as
+                                                you would like it to appear on your certificate of
+                                                completion (when applicable) including capital letters.
+                                            </div>
+                                            <div class="col-md-6 col-lg-auto mb-2 mb-lg-0">
+                                                <select class="form-select rounded-0 suffix" required>
+                                                    <option selected disabled value="">Suffix</option>
+                                                    <option value="1">One</option>
+                                                    <option value="2">Two</option>
+                                                    <option value="3">Three</option>
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-lg mb-2 mb-lg-0">
+                                                <input required type="text" placeholder="First Name"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                            <div class="col-md-6 col-lg mb-2 mb-lg-0">
+                                                <input type="text" placeholder="Middle Name"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                            <div class="col-md-6 col-lg mb-2 mb-lg-0">
+                                                <input required type="text" placeholder="Last Name"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-md-12 col-lg mb-3">
+                                                <label for="emailAddress" class="form-label mb-0">Email <span
+                                                        class="text-danger">*</span></label>
+                                                <input required type="email" class="form-control shadow-none rounded-0"
+                                                    id="emailAddress">
+                                            </div>
+                                            <div class="col-md-6 col-lg mb-3">
+                                                <label for="studentID" class="form-label mb-0">College Student ID
+                                                    Number <span class="text-danger">*</span></label>
+                                                <input required type="text" class="form-control shadow-none rounded-0"
+                                                    id="studentID" aria-describedby="studentID">
+                                                <div id="studentID" class="form-text">Your instructor needs
+                                                    this to track your grade.</div>
+                                            </div>
+                                            <div class="col-md-6 col-lg mb-3">
+                                                <label for="studentID-2" class="form-label mb-0">Re-Type Student
+                                                    ID Number <span class="text-danger">*</span></label>
+                                                <input required type="text" class="form-control shadow-none rounded-0"
+                                                    id="studentID-2" aria-describedby="studentID-2">
+                                                <div id="studentID-2" class="form-text">Please include all
+                                                    letters and digits, including leading zeros.</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mb-2 mb-md-3">
+                                            <label class="form-check-label">Address
+                                                <span class="text-danger">*</span></label>
+                                            <div class="col-12 col-md mb-2">
+                                                <input required type="text" placeholder="Street"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                            <div class="col-12 col-md">
+                                                <input required type="text" placeholder="Apt/Suite/Unit"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <div class="col-12 col-md mb-2 mb-md-0">
+                                                <input required type="text" placeholder="City"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                            <div class="col-12 col-md mb-2 mb-md-0">
+                                                <input required type="text" placeholder="State"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                            <div class="col-12 col-md">
+                                                <input required type="text" placeholder="Zip"
+                                                    class="form-control shadow-none rounded-0">
+                                            </div>
+                                        </div>
+                                        <div class="row mb-3">
+                                            <label class="form-check-label">Primary Phone Number
+                                                <span class="text-danger">*</span></label>
+                                            <div class="col-4 col-md-3 col-lg-2">
+                                                <input required type="text" class="form-control shadow-none rounded-0"
+                                                    pattern="[0-9]{3}" title="Enter 3 digits" maxlength="3"
+                                                    name="phone1">
+                                            </div>
+                                            <div class="col-4 col-md-3 col-lg-2">
+                                                <input required type="text" class="form-control shadow-none rounded-0"
+                                                    pattern="[0-9]{3}" title="Enter 3 digits" maxlength="3"
+                                                    name="phone2">
+                                            </div>
+                                            <div class="col-4 col-md-3 col-lg-2">
+                                                <input required type="text" class="form-control shadow-none rounded-0"
+                                                    pattern="[0-9]{4}" title="Enter 4 digits" maxlength="4"
+                                                    name="phone3">
+                                            </div>
+                                        </div>
+                                        <div class="mb-3 form-check">
+                                            <input required type="checkbox"
+                                                class="form-check-input rounded-0 shadow-none" id="exampleCheck1">
+                                            <label class="form-check-label user-select-none" for="exampleCheck1">By
+                                                entering
+                                                my mobile/cell number, I consent to allowing Real Estate
+                                                Instruct to contact me via SMS text message regarding
+                                                updates in class status or unexpected cancellations/closures
+                                                only. I understand that text/data rates may apply.</label>
+                                        </div>
+                                        <div class="modal-footer border-0">
+                                            <button class="btn btn-outline-primary rounded-6px px-4 text-uppercase">Sign
+                                                Up</button>
+                                            <button class="btn btn-primary rounded-6px px-4 text-uppercase"
+                                                data-bs-toggle="modal">Cancel</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -103,7 +265,62 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
+    <!--jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        const accessCode = document.querySelector('#accessModal')
+        const accessCodeForm = accessCode.querySelector('form')
+        const accessCodeModal = new bootstrap.Modal(accessCode)
 
+        const signUp = new bootstrap.Modal('#accessCodeForm')
+        var classes = ['opacity-0', 'pe-none']
+        accessCodeForm.addEventListener('submit', function (e) {
+            e.preventDefault()
+            // accessCode.querySelector('.modal-body').classList.add(...classes)
+            // accessCode.querySelector('.loading').classList.replace('d-none', 'd-flex')
+            $.ajax('http://127.0.0.1:8000/accessJquery', {
+                method: 'POST',
+                data: "TEST",
+                headers:{
+                    'Access-Control-Allow-Headers' : 'X-Requested-With, Content-Type, X-Auth-Token, Origin, Authorization'
+                },
+                crossDomain:true,
+                success(res) {
+                    console.log(res)
+                },
+                error(err) {
+                    console.log("Error", err)
+                }
+            })
+            // setTimeout(() => {
+            //     accessCodeModal.hide()
+            //     signUp.show()
+            //     accessCode.querySelector('.modal-body').classList.remove(...classes)
+            //     accessCode.querySelector('.loading').classList.replace('d-flex', 'd-none')
+            // }, 2000)
+        })
+
+        var phone1 = document.querySelector('[name=phone1]')
+        var phone2 = document.querySelector('[name=phone2]')
+        var phone3 = document.querySelector('[name=phone3]')
+
+
+
+
+        phone1.addEventListener('keyup', function (e) {
+            var val = e.target.value
+            if (val.length >= 3) {
+                phone2.focus()
+            }
+        })
+        phone2.addEventListener('keyup', function (e) {
+            var val = e.target.value
+            if (val.length >= 3) {
+                phone3.focus()
+            }
+        })
     </script>
 </body>
 
