@@ -328,6 +328,9 @@ side bar in all pages
     padding-top: 60px;
     box-shadow: var(--box-shadow);
 }
+.sidebar.max-height{
+    height: max-content;
+}
 
 .sidebar .closebtn {
     position: absolute;
@@ -446,6 +449,7 @@ side bar in all pages
 
 .btn-outline-primary:hover {
     background-color: var(--button-primary);
+    color: var(--color-white)!important;
 }
 
 .btn-primary {
@@ -536,7 +540,8 @@ GLOBAL
 
 #login-form .input-fields,
 #login-form select,
-#login-form .remember-me {
+#login-form .remember-me,
+#login-form .alert {
     width: 313px !important;
     margin: 0 auto;
 }
@@ -561,7 +566,7 @@ GLOBAL
 }
 
 /* login button */
-#login-form button[type=submit] {
+#login-form :not(#accessModal button[type=submit]) button[type=submit] {
     padding: 5px 50px;
     font-size: 20px;
     font-weight: var(--font-weight-regular);
@@ -571,6 +576,9 @@ GLOBAL
 
 #login-form button[type=submit]:hover {
     background-color: var(--button-primary-hover);
+}
+#login-form .modal .suffix{
+    width: auto!important;;
 }
 
 .navbar-nav a:hover {
@@ -582,6 +590,9 @@ GLOBAL
     text-align: center;
     color: var(--color-black);
 
+}
+#accessModal button {
+    font-size: medium!important;
 }
 
 /* *********** 
@@ -1486,7 +1497,7 @@ create assignments q1
 
 
     #login-form h3,
-    #login-form .form-check-label,
+    #login-form :not(.modal .form-check-label).form-check-label,
     #login-form a {
         color: var(--color-white) !important;
     }
@@ -1589,6 +1600,12 @@ create assignments q1
     #posts {
         width: 100% !important;
     }
+    #login-form .modal .suffix{
+        width: 100%!important;
+    }
+    .modal{
+        --bs-modal-width: calc(100% - 100px)
+    }
 }
 
 
@@ -1637,6 +1654,7 @@ create assignments q1
     #login-form {
         padding: 50px 20px;
     }
+    
 
     /*&*********************** 
         Create whitebaord

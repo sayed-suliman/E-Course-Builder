@@ -99,8 +99,8 @@
             </div>
         </section>
 
-        <section class="main-section pt-4 students position-relative">
-            <div id="mySidebar" class="sidebar">
+        <section style="position: relative" class="main-section pt-4">
+            <div id="mySidebar" class="sidebar max-height">
                 <div class="toggle">
                     <button onclick="openNav()" id="nav-btn" class="slider-tab">
                         <div id="dots-3">
@@ -111,138 +111,128 @@
                     </button>
                 </div>
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="./instructor-courses.html">my courses</a>
-                <a href="./instructor-student.html">students</a>
-                <a href="./instructor-gradebook.html">gradebook</a>
-                <a href="./assignments-home.html">assignments</a>
-                <a href="../Pages/white-board.html">whiteboard</a>
-                <a href="#">byetalk</a>
-                <a href="#">file share</a>
+                <a href="#">courses</a>
+                <a href="#">teachers</a>
+                <a href="#">students</a>
+                <a href="#">Access Code</a>
+                <a href="#">Account</a>
+                <a href="#">Calender</a>
+                <a href="#">Assignments</a>
+                <a href="#">File-Sharing</a>
+                <a href="#">Gradebook</a>
+                <a href="#">Alert System</a>
+                <a href="#">Message</a>
+                <a href="#">Whiteboard</a>
+                <a href="#">Presentation</a>
+                <a href="#">ByeTalk</a>
                 <a href="#">e-doc editor</a>
+                <a href="#">Drive</a>
             </div>
-
-            <button type="button" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
-
-            <div class="toast-container position-fixed top-0 end-0 p-3">
-                <div class="toast liveToast align-items-center text-bg-warning border-0" role="alert"
-                    aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                        <div class="toast-body">
-                            Hello, world! This is a toast message.
-                        </div>
-                        <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
-                            aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="toast liveToast align-items-center text-bg-warning border-0" role="alert"
-                    aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                        <div class="toast-body">
-                            Hello, world! This is a toast message.
-                        </div>
-                        <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
-                            aria-label="Close"></button>
-                    </div>
-                </div>
-                <div class="toast liveToast align-items-center text-bg-warning border-0" role="alert"
-                    aria-live="assertive" aria-atomic="true">
-                    <div class="d-flex">
-                        <div class="toast-body">
-                            Hello, world! This is a toast message.
-                        </div>
-                        <button type="button" class="btn-close btn-close-dark me-2 m-auto" data-bs-dismiss="toast"
-                            aria-label="Close"></button>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                const toastTrigger = document.getElementById('liveToastBtn')
-                const toastLiveExample = document.querySelectorAll('.liveToast')
-                if (toastTrigger) {
-                }
-                    window.onload= () => {
-                        [...toastLiveExample].map((toastEl) => {
-
-                            const toast = new bootstrap.Toast(toastEl, {
-                                delay: 5000
-                            })
-                            toast.show()
-                        }
-
-                        )
-
-                        // const toast = new bootstrap.Toast(toastLiveExample, {
-                        //     delay: 5000
-                        // })
-                        // toast.show()
-
-                    }
-            </script>
-
             <div class="container-fluid">
                 <div class="row ms-2 ms-lg-5 p-2 pe-lg-5">
                     <!-- left section -->
                     <div class="col-lg-8 col-xxl-9">
-                        <p class="welcome-title">Welcome<span class="text-dark">, Student Shaina Bandeni.</span></p>
+                        <p class="welcome-title">Welcome<span class="text-dark">, Administrator Bina.</span></p>
                         <!-- all courses card -->
                         <!-- 1st row -->
                         <div class="row " id="courses-section">
-                            <!-- 1 My Courses -->
+                            <!-- Courses -->
                             <div class="card text-center border-0">
                                 <a href="./instructor-courses.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/my_courses.svg" alt="">
-                                        <p class="card-text pt-3">my courses</p>
+                                        <p class="card-text pt-3">courses</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 2 Calendar -->
+                            <!-- Teacher -->
                             <div class="card text-center border-0">
                                 <a href="./instructor-student.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/teacher.svg" alt="">
+                                        <p class="card-text pt-3">Teachers</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Students -->
+                            <div class="card text-center border-0">
+                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/students_new.svg" alt="">
+                                        <p class="card-text pt-3">Students</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Access code -->
+                            <div class="card text-center border-0">
+                                <a href="./assignments-home.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/lock-open.svg" alt="">
+                                        <p class="card-text pt-3">Access Codes</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Account -->
+                            <div class="card text-center border-0">
+                                <a href="./assignments-home.html" class="text-decoration-none text-dark">
+                                    <div class="card-body">
+                                        <img src="../../Assets/Images/icons/setting.svg" alt="">
+                                        <p class="card-text pt-3">Account</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- 2nd row -->
+                        <div class="row " id="courses-section">
+                            <!-- calender -->
+                            <div class="card text-center border-0">
+                                <a href="./instructor-courses.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/calendar.svg" alt="">
                                         <p class="card-text pt-3">Calendar</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 3 Assignment -->
+                            <!-- assignment -->
                             <div class="card text-center border-0">
-                                <a href="./assignments-home.html" class="text-decoration-none text-dark">
+                                <a href="./instructor-student.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/assignments.svg" alt="">
-                                        <p class="card-text pt-3">assignment</p>
+                                        <p class="card-text pt-3">assignments</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 4 File-Sharing -->
+                            <!-- drive -->
                             <div class="card text-center border-0">
                                 <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../../Assets/Images/icons/file-sharing.svg" alt="">
-                                        <p class="card-text pt-3">File-Sharing</p>
+                                        <img src="../../Assets/Images/icons/drive.svg" alt="">
+                                        <p class="card-text pt-3">Drive</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 5 Gradebook -->
+                            <!-- gradebook -->
                             <div class="card text-center border-0">
-                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
+                                <a href="./assignments-home.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/gradebook.svg" alt="">
                                         <p class="card-text pt-3">Gradebook</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 6 Alert System -->
+                            <!-- Alert System -->
                             <div class="card text-center border-0">
-                                <a href="./instructor-gradebook.html" class="text-decoration-none text-dark">
+                                <a href="./assignments-home.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/alert-system.svg" alt="">
                                         <p class="card-text pt-3">Alert System</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 7 Message -->
+                        </div>
+                        <!-- 3rd row -->
+                        <div class="row" id="courses-section">
+                            <!-- messages -->
                             <div class="card  text-center border-0">
                                 <a href="./white-board.html" class="text-decoration-none text-dark">
                                     <div class="card-body">
@@ -251,16 +241,16 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 8 Whiteboard -->
-                            <div class="card  text-center border-0">
-                                <a href="./white-board.html" class="text-decoration-none text-dark">
+                            <!-- whiteboard -->
+                            <div class="card text-center border-0">
+                                <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/white-board.svg" alt="">
                                         <p class="card-text pt-3">whiteboard</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 9 Presentation -->
+                            <!-- presentation -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
@@ -269,34 +259,25 @@
                                     </div>
                                 </a>
                             </div>
-                            <!-- 10 Byetalk -->
+                            <!-- byetalk -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
-                                        <img src="../../Assets/Images/icons/byetalk.svg" alt="">
-                                        <p class="card-text pt-3">byetalk</p>
+                                        <img src="../../Assets/Images/icons/Byetalk.svg" alt="">
+                                        <p class="card-text pt-3">Byetalk</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 11 eDoc Editor -->
+                            <!-- e-doc editor -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
                                         <img src="../../Assets/Images/icons/e-doc-editor.svg" alt="">
-                                        <p class="card-text pt-3">e-doc editor</p>
+                                        <p class="card-text pt-3">E-doc Editor</p>
                                     </div>
                                 </a>
                             </div>
-                            <!-- 12 Drive -->
-                            <div class="card text-center border-0">
-                                <a href="#" class="text-decoration-none text-dark">
-                                    <div class="card-body">
-                                        <img src="../../Assets/Images/icons/drive.svg" alt="">
-                                        <p class="card-text pt-3">drive</p>
-                                    </div>
-                                </a>
-                            </div>
-                            <!-- Add Application -->
+                            <!-- add app -->
                             <div class="card text-center border-0">
                                 <a href="#" class="text-decoration-none text-dark">
                                     <div class="card-body">
@@ -306,6 +287,7 @@
                                 </a>
                             </div>
                         </div>
+
                     </div>
                     <!-- right section -->
                     <div class="col-lg-4 col-xxl-3 mt-4 m-lg-0 p-lg-0  d-flex d-lg-block" id="right-calender-section">
@@ -342,7 +324,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="mt-3">
+                                <div class="mt-3 opacity-50">
                                     <h4 class="tomorrow-date">TOMORROW, Tuesday, August 31, 2022</h4>
                                     <div class="row classes-time m-0 py-3 justify-content-between">
                                         <div class="col-auto align-self-center fs-16">9:30 AM Understanding Buyers</div>
@@ -460,7 +442,6 @@
         }
         toDayField.textContent = `TODAY, ${LongDate(date)}`
         tomorrowDateField.textContent = `TOMORROW, ${LongDate(date.addDays(1))}`
-
     </script>
 </body>
 
