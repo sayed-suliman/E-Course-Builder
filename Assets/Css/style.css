@@ -53,12 +53,14 @@ button {
     color: var(--color-primary) !important;
     border: 1px solid var(--color-primary) !important;
 }
+
 .btn-green {
     background-color: var(--color-green-light) !important;
 }
+
 .btn-green:hover {
-    background-color: var(--color-green)!important;
-    color: var(--color-white)!important;
+    background-color: var(--color-green) !important;
+    color: var(--color-white) !important;
 }
 
 .bg-primary {
@@ -139,9 +141,11 @@ body {
 .fs-22 {
     font-size: 22px;
 }
+
 .fs-24 {
     font-size: 24px;
 }
+
 .fs-26 {
     font-size: 26px;
 }
@@ -288,6 +292,7 @@ input[type=checkbox]:checked {
     font-size: 56px;
     font-weight: var(--font-weight-regular);
 }
+
 .assignment-hero-section-subtext {
     font-size: 46px;
     font-weight: var(--font-weight-regular);
@@ -328,7 +333,8 @@ side bar in all pages
     padding-top: 60px;
     box-shadow: var(--box-shadow);
 }
-.sidebar.max-height{
+
+.sidebar.max-height {
     height: max-content;
 }
 
@@ -353,7 +359,8 @@ side bar in all pages
 .sidebar a:hover {
     color: var(--button-primary);
 }
-.right-slider{
+
+.right-slider {
     height: 160px;
     width: 400px;
     padding: 15px;
@@ -367,49 +374,55 @@ side bar in all pages
     overflow-x: hidden;
     transition: .5s;
 }
-.overflow-x-hidden{
+
+.overflow-x-hidden {
     overflow-x: hidden;
 }
 
 
 /* custom scrollbar start to righe slider-2 */
-.right-slider.slider-2{
-    top:200px;
+.right-slider.slider-2 {
+    top: 200px;
     height: 800px;
 }
-.right-slider.slider-2::-webkit-scrollbar{
+
+.right-slider.slider-2::-webkit-scrollbar {
     width: 20px;
 }
-.right-slider.slider-2::-webkit-scrollbar-thumb{
-    background:var(--border-color);
+
+.right-slider.slider-2::-webkit-scrollbar-thumb {
+    background: var(--border-color);
     border-radius: 130px;
 }
 
 /* scrollbar end */
 
 
-.slider-2 input[type="checkbox"]{
+.slider-2 input[type="checkbox"] {
     accent-color: var(--color-black);
 }
 
-.right-slider.hide{
+.right-slider.hide {
     right: -320px;
 }
-.right-slider .toggler{
+
+.right-slider .toggler {
     position: absolute;
     top: 50%;
     left: -25px;
     transform: translateY(-50%);
     border-radius: 30px;
-    box-shadow: var(--box-shadow)!important;
+    box-shadow: var(--box-shadow) !important;
     padding-top: 10px;
     padding-bottom: 10px;
     padding-right: 0;
     padding-left: 25px;
 }
-.right-slider .content{
+
+.right-slider .content {
     margin-left: 65px;
 }
+
 #nav-btn {
     background: var(--color-white);
     border: none;
@@ -449,7 +462,7 @@ side bar in all pages
 
 .btn-outline-primary:hover {
     background-color: var(--button-primary);
-    color: var(--color-white)!important;
+    color: var(--color-white) !important;
 }
 
 .btn-primary {
@@ -577,8 +590,10 @@ GLOBAL
 #login-form button[type=submit]:hover {
     background-color: var(--button-primary-hover);
 }
-#login-form .modal .suffix{
-    width: auto!important;;
+
+#login-form .modal .suffix {
+    width: auto !important;
+    ;
 }
 
 .navbar-nav a:hover {
@@ -591,8 +606,9 @@ GLOBAL
     color: var(--color-black);
 
 }
+
 #accessModal button {
-    font-size: medium!important;
+    font-size: medium !important;
 }
 
 /* *********** 
@@ -632,6 +648,7 @@ GLOBAL
     box-shadow: var(--box-shadow);
     transition: all 0.25s;
 }
+
 #courses-section .card:hover p {
     color: #fff !important;
 }
@@ -653,12 +670,14 @@ GLOBAL
     font-size: 16px;
     font-weight: var(--font-weight-regular);
 }
+
 /* ****************************************** */
 /*    Student Page --- Course Card section     */
 /* ****************************************** */
 .students #courses-section {
     width: 1070px;
 }
+
 .students #courses-section .card {
     margin-bottom: 30px;
 }
@@ -697,6 +716,7 @@ GLOBAL
     background: rgba(46, 124, 216, 0.5);
     border-radius: 8px;
 }
+
 /* At Student Dashboard */
 .students #calender .rd-day-selected {
     background: #4CBC9A;
@@ -958,17 +978,19 @@ student detail page
     background: var(--color-white);
     color: var(--color-black);
 }
+
 .dropdown .btn-outline-primary:focus,
-.dropdown .btn-outline-primary:hover{
-    color: #fff!important;
+.dropdown .btn-outline-primary:hover {
+    color: #fff !important;
 }
+
 /* present dropdown */
 #present-dropdown li {
     width: 350px;
 }
 
 #present-dropdown .disabled {
-    background: rgba(141, 141, 141,.22);
+    background: rgba(141, 141, 141, .22);
     border-radius: 12px;
 }
 
@@ -1296,8 +1318,9 @@ textarea {
     border-radius: 30px;
     padding-right: 80px;
 }
+
 #posts .add-a-comment button {
-    top:1px;
+    top: 1px;
     right: 1px;
     border-radius: 0 20px 20px 0;
 }
@@ -1353,7 +1376,28 @@ textarea {
     background-color: #1F71CE;
 }
 
+/* ************************************ 
 
+pages / admin / courses-tile-view
+
+ ******************************************************/
+ .cards-section .table-container::-webkit-scrollbar-thumb {
+    height: 20px;
+}
+ .cards-section .table-container{
+    overflow-x: auto;
+    padding-bottom: 20px;
+ }
+ #myTableBody .card{
+    width: 242px;
+ }
+ .course-tile-table{
+    border-collapse: separate;
+    border-spacing: 12px 0;
+ }
+ .three-dots-dropdown-btn{
+    width: 5px;
+}
 
 
 /* ****************************************************************************************************************** */
@@ -1452,6 +1496,13 @@ create assignments q1
 
 /* for tablets screen 1024px*/
 @media only screen and (max-width:1024px) {
+    h2 {
+        font-size: 22px;
+    }
+    .three-dots-dropdown-btn{
+        width: 5px;
+    }
+
 
     /* top bar */
     #avatar-right {
@@ -1461,7 +1512,6 @@ create assignments q1
     #avatar-left {
         display: block;
     }
-
     .instructor.courses .table-container,
     .instructor.students .table-container,
     .instructor.student-view .table-container,
@@ -1517,8 +1567,7 @@ create assignments q1
     create whiteboard
   *******************************  */
 
-
-
+    
     /* sidemenu */
     #white-board .side-menu {
         position: relative;
@@ -1584,7 +1633,7 @@ create assignments q1
     #student .col-auto {
         width: 220px !important;
     }
-    
+
 }
 
 /* ********************************************************* */
@@ -1600,10 +1649,12 @@ create assignments q1
     #posts {
         width: 100% !important;
     }
-    #login-form .modal .suffix{
-        width: 100%!important;
+
+    #login-form .modal .suffix {
+        width: 100% !important;
     }
-    .modal{
+
+    .modal {
         --bs-modal-width: calc(100% - 100px)
     }
 }
@@ -1654,7 +1705,7 @@ create assignments q1
     #login-form {
         padding: 50px 20px;
     }
-    
+
 
     /*&*********************** 
         Create whitebaord
@@ -1735,26 +1786,30 @@ create new assignment question no.1 page
     #assignment .create-assignment-btn {
         margin-top: -10px;
     }
-/* 
+
+    /* 
 +++++++++++++++++++++++
     Students/ assessment part 2
 ++++++++++++++++++++++++++++++++++++++++++++
 */
-/* right slider */
-.right-slider{
-    right: -55px;
-}
-.right-slider .content{
-    margin: 0;
-    align-items: center;
-}
-.assessment-part-2-body p{
-    font-size: 17px;
- text-align: justify;
-}
-.assessment-part-2-body h3{
-    font-size: 20px;
-}
+    /* right slider */
+    .right-slider {
+        right: -55px;
+    }
+
+    .right-slider .content {
+        margin: 0;
+        align-items: center;
+    }
+
+    .assessment-part-2-body p {
+        font-size: 17px;
+        text-align: justify;
+    }
+
+    .assessment-part-2-body h3 {
+        font-size: 20px;
+    }
 
 }
 
@@ -1778,12 +1833,15 @@ create new assignment question no.1 page
     .instructor.students .heading .title a {
         margin-top: 0px;
     }
-/* courses */
-.courses h2,a.btn-primary{
-    font-size: 18px;
-}
-.courses a.btn-primary{
-    padding: 5px 10px;
-    font-size: 16px;
-}
+
+    /* courses */
+    .courses h2,
+    a.btn-primary {
+        font-size: 18px;
+    }
+
+    .courses a.btn-primary {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
 }
