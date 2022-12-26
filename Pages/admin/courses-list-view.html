@@ -102,7 +102,8 @@
                 <a href="#">e-doc editor</a>
                 <a href="#">Drive</a>
             </div>
-            <div class="container-fluid  ps-2 ps-md-5">
+            <!-- top main section heading with back -->
+            <div class="container">
                 <!-- heading -->
                 <div class="heading">
                     <div class="back-btn ms-4 ms-md-0">
@@ -111,21 +112,43 @@
                     </div>
                 </div>
                 <!-- heading end -->
-                <div class="title mt-2 ms-md-2 ms-4">
-                    <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
-                    <div class="dropdown d-inline " style="top: -5px;">
-                        <button class="border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown"
-                            aria-expanded="false"><img src="../../Assets/Images/icons/ic_more_vert_36px.svg" alt="menu"
-                                class="img-fluid p-0 m-0 " style="width:18px;height: 18px;">
-                        </button>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="./my-courses-list-view.html">View by list</a></li>
-                            <li><a class="dropdown-item" href="./my-courses-tile-view.html">View by tile</a></li>
-                        </ul>
+                <div class="row">
+                    <div class="col-2">
+                        <div class="title mt-2 ms-md-2 ms-4">
+                            <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
+                            <div class="dropdown d-inline " style="top: -5px;">
+                                <button class="border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false"><img src="../../Assets/Images/icons/ic_more_vert_36px.svg"
+                                        alt="menu" class="img-fluid p-0 m-0 " style="width:18px;height: 18px;">
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="./my-courses-list-view.html">View by list</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="./my-courses-tile-view.html">View by tile</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">
+                    + Add Course</a> -->
+                        </div>
                     </div>
-                    <!-- <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">
-                        + Add Course</a> -->
+                    <div class="col-6">
+                        <form>
+                            <div class="w-100">
+                                <input class="form-control me-2 shadow-none" id="searchInput" type="search"
+                                    placeholder="Search for Class (by professor, course number, or course title)"
+                                    aria-label="Search">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-4">
+                        <a href="./create-a-course.html" class="btn btn-primary rounded-pill d-inline-block float-end">+
+                            Add
+                            Course</a>
+                    </div>
                 </div>
+            </div>
+            <div class="container-fluid  ps-2 ps-md-5">
                 <div class="bg-white mt-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
                     <table class="table" id="course-table">
                         <thead class="fs-18">
@@ -133,18 +156,20 @@
                                 <td scope="col">University</td>
                                 <td scope="col">Course Number</td>
                                 <td scope="col">Title</td>
-                                <td scope="col">Date Available</td>
+                                <td scope="col">professor</td>
+                                <td scope="col">Dates</td>
                                 <td scope="col">Time</td>
                                 <td scope="col">#Students Enrolled</td>
                                 <td scope="col">Status</td>
                                 <td scope="col"></td>
                             </tr>
                         </thead>
-                        <tbody class="fs-16">
+                        <tbody id="myTableBody" class="fs-16">
                             <tr>
                                 <td scope="row">UCLA</td>
-                                <td>000001</td>
-                                <td>History of Real Estate</td>
+                                <td class="searchTd">000001</td>
+                                <td class="searchTd">History of Real Estate</td>
+                                <td class="searchTd">Bina,Shaun</td>
                                 <td>MTF</td>
                                 <td>2:30 PM</td>
                                 <td>32</td>
@@ -153,8 +178,9 @@
                             </tr>
                             <tr>
                                 <td scope="row">UCLA</td>
-                                <td>000002</td>
-                                <td>History of Real Estate</td>
+                                <td class="searchTd">000002</td>
+                                <td class="searchTd">History of Real Estate</td>
+                                <td class="searchTd">Bina,Shaun</td>
                                 <td>MTF</td>
                                 <td>2:30 PM</td>
                                 <td>32</td>
@@ -163,8 +189,9 @@
                             </tr>
                             <tr>
                                 <td scope="row">UCLA</td>
-                                <td>000003</td>
-                                <td>History of Real Estate</td>
+                                <td class="searchTd">000003</td>
+                                <td class="searchTd">History of Real Estate</td>
+                                <td class="searchTd">Bina,Shaun</td>
                                 <td>MTF</td>
                                 <td>2:30 PM</td>
                                 <td>32</td>
@@ -184,21 +211,19 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <!-- ajax or jequery for search -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <!-- custom js -->
     <script src="../../Assets/Js/index.js"></script>
     <script>
         $(document).ready(function () {
-            $("#course-table").DataTable({
-                "responsive": true, "lengthChange": false, "autoWidth": false,
-            }).container().appendTo('#course-table_wrapper');
-            $('#course-table').DataTable({
-                paging: true,
-                ordering: false,
-                "searching": true
-            })
+            // search in table
+            $("#searchInput").on("keyup", function () {
+                var value = $(this).val().toLowerCase();
+                $("#myTableBody tr").filter(function () {
+                    $(this).toggle($(".searchTd").text().toLowerCase().indexOf(value) > -1)
+                });
+            });
         })
     </script>
 </body>
