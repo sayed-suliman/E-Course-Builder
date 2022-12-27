@@ -4,7 +4,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Courses</title>
+    <title>Teachers</title>
+    <!-- font-awesome icons cdn-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- bootstrap css cdn -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
@@ -116,16 +118,16 @@
                 <div class="row align-items-center px-3 px-md-0 g-3 g-md-0">
                     <div class="col-xxl-2 col-lg-3 col-md-3 col-6 order-1 order-md-1">
                         <div class="title ms-md-2 ms-4">
-                            <h2 class="text-uppercase d-inline-block mb-0">My Courses</h2>
+                            <h2 class="text-uppercase d-inline-block mb-0">Teachers</h2>
                             <div class="dropdown d-inline " style="top: -5px;">
                                 <button class="border-0 bg-transparent p-0" type="button" data-bs-toggle="dropdown"
                                     aria-expanded="false"><img src="../../Assets/Images/icons/ic_more_vert_36px.svg"
                                         alt="menu" class="img-fluid p-0 mt-1 mt-md-1 mt-xl-0 three-dots-dropdown-btn">
                                 </button>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./courses-list-view.html">View by list</a>
+                                    <li><a class="dropdown-item" href="#">View by list</a>
                                     </li>
-                                    <li><a class="dropdown-item" href="./courses-tile-view.html">View by tile</a>
+                                    <li><a class="dropdown-item" href="#">View by tile</a>
                                     </li>
                                 </ul>
                             </div>
@@ -137,76 +139,84 @@
                         <form>
                             <div class="w-100">
                                 <input class="form-control me-2 shadow-none" id="searchInput" type="search"
-                                    placeholder="Search for Class (by professor, course number, or course title)"
-                                    aria-label="Search">
+                                    placeholder="Search for Teachers (Professors)" aria-label="Search">
                             </div>
                         </form>
                     </div>
                     <div class="col-xxl-4 col-lg-3 col-md-3 col-6 order-2 order-md-3">
-                        <a href="../create-a-course.html"
-                            class="btn btn-primary rounded-pill d-inline-block float-end">+
+                        <a href="./add-teacher.html" class="btn btn-primary rounded-pill d-inline-block float-end">+
                             Add
-                            Course</a>
+                            Teacher</a>
                     </div>
                 </div>
             </div>
-            <div class="container-fluid  ps-2 ps-md-5">
+            <div class="container  ps-2 ps-md-5">
                 <div class="bg-white mt-4 ms-4 ms-md-0 p-2 table-responsive-md table-container">
                     <table class="table" id="course-table">
                         <thead class="fs-18">
                             <tr>
-                                <td scope="col">University</td>
-                                <td scope="col">Course Number</td>
-                                <td scope="col">Title</td>
-                                <td scope="col">professor</td>
-                                <td scope="col">Dates</td>
-                                <td scope="col">Time</td>
-                                <td scope="col">#Students Enrolled</td>
-                                <td scope="col">Status</td>
-                                <td scope="col"></td>
+                                <td style="cursor:pointer" onclick="sortTable(0)">Professor <i class="ms-5 fa-solid fa-sort"></i></td>
+                                <td style="cursor:pointer" onclick="sortTable(1)">Title <i class="ms-5 fa-solid fa-sort"></i></td>
+                                <td>Course Number</td>
+                                <td>College</td>
                             </tr>
                         </thead>
                         <tbody id="myTableBody" class="fs-16">
+
                             <tr>
-                                <td scope="row">UCLA</td>
-                                <td class="searchTd">000001</td>
-                                <td class="searchTd">History of Real Estate</td>
                                 <td class="searchTd">Bina,Shaun</td>
-                                <td>MTF</td>
-                                <td>2:30 PM</td>
-                                <td>32</td>
-                                <td><span class="text-green">Live</span></td>
-                                <td><a href="#"><img src="../../Assets/Images/icons/edit.svg" alt=""></a></td>
+                                <td class="">Negotiation 0101</td>
+                                <td class="">0000051</td>
+                                <td>UCLA</td>
                             </tr>
                             <tr>
-                                <td scope="row">UCLA</td>
-                                <td class="searchTd">000002</td>
-                                <td class="searchTd">History of Real Estate</td>
                                 <td class="searchTd">Bina,Shaun</td>
-                                <td>MTF</td>
-                                <td>2:30 PM</td>
-                                <td>32</td>
-                                <td><span class="text-green">Live</span></td>
-                                <td><a href="#"><img src="../../Assets/Images/icons/edit.svg" alt=""></a></td>
+                                <td class="">History of Real Estate</td>
+                                <td class="">0000021</td>
+                                <td>UCLA</td>
                             </tr>
                             <tr>
-                                <td scope="row">UCLA</td>
-                                <td class="searchTd">000003</td>
-                                <td class="searchTd">History of Real Estate</td>
                                 <td class="searchTd">Bina,Shaun</td>
-                                <td>MTF</td>
-                                <td>2:30 PM</td>
-                                <td>32</td>
-                                <td><span class="text-red">Closed</span></td>
-                                <td><a href="#"><img src="../../Assets/Images/icons/edit.svg" alt=""></a></td>
+                                <td class="">Understanding Buyers</td>
+                                <td class="">0000071</td>
+                                <td>UCLA</td>
+                            </tr>
+                            <tr>
+                                <td class="searchTd">Bina,Shaun</td>
+                                <td class="">Loans 101</td>
+                                <td class="">0000201</td>
+                                <td>UCLA</td>
+                            </tr>
+
+
+
+                            <tr>
+                                <td class="searchTd">Fuller, Devin</td>
+                                <td class="">Negotiation 0101</td>
+                                <td class="">0000051</td>
+                                <td>UCLA</td>
+                            </tr>
+                            <tr>
+                                <td class="searchTd">Fuller, Devin</td>
+                                <td class="">History of Real Estate</td>
+                                <td class="">0000021</td>
+                                <td>UCLA</td>
+                            </tr>
+                            <tr>
+                                <td class="searchTd">Fuller, Devin</td>
+                                <td class="">Understanding Buyers</td>
+                                <td class="">0000071</td>
+                                <td>UCLA</td>
+                            </tr>
+                            <tr>
+                                <td class="searchTd">Fuller, Devin</td>
+                                <td class="">Loans 101</td>
+                                <td class="">0000201</td>
+                                <td>UCLA</td>
                             </tr>
                         </tbody>
-                        <tfoot class="tFoot d-none text-center">
-                            <tr>
-                                <td colspan="9">No data found</td>
-                            </tr>
-                        </tfoot>
                     </table>
+                    <div class="text-center tFoot d-none">No data found</div>
                 </div>
             </div>
         </section>
@@ -227,16 +237,73 @@
             // search in table
             $("#searchInput").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
-                $("#myTableBody tr").filter(function () {
-                    if ($(this).children(".searchTd").text().toLowerCase().indexOf(value)  === -1) {
+                $("#myTableBody tr .searchTd").filter(function () {
+                    if ($(this).text().toLowerCase().indexOf(value) === -1) {
                         $(".tFoot").removeClass("d-none")
-                    }else{
+                    } else {
                         $(".tFoot").addClass("d-none")
                     }
-                    $(this).toggle($(this).children(".searchTd").text().toLowerCase().indexOf(value) > -1)
+                    $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
         })
+    </script>
+    <!-- sort table by columns-->
+    <script>
+        function sortTable(n) {
+            var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+            table = document.getElementById("course-table");
+            switching = true;
+            //Set the sorting direction to ascending:
+            dir = "asc";
+            /*Make a loop that will continue until
+            no switching has been done:*/
+            while (switching) {
+                //start by saying: no switching is done:
+                switching = false;
+                rows = table.rows;
+                /*Loop through all table rows (except the
+                first, which contains table headers):*/
+                for (i = 1; i < (rows.length - 1); i++) {
+                    //start by saying there should be no switching:
+                    shouldSwitch = false;
+                    /*Get the two elements you want to compare,
+                    one from current row and one from the next:*/
+                    x = rows[i].getElementsByTagName("TD")[n];
+                    y = rows[i + 1].getElementsByTagName("TD")[n];
+                    /*check if the two rows should switch place,
+                    based on the direction, asc or desc:*/
+                    if (dir == "asc") {
+                        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    } else if (dir == "desc") {
+                        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                            //if so, mark as a switch and break the loop:
+                            shouldSwitch = true;
+                            break;
+                        }
+                    }
+                }
+                if (shouldSwitch) {
+                    /*If a switch has been marked, make the switch
+                    and mark that a switch has been done:*/
+                    rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                    switching = true;
+                    //Each time a switch is done, increase this count by 1:
+                    switchcount++;
+                } else {
+                    /*If no switching has been done AND the direction is "asc",
+                    set the direction to "desc" and run the while loop again.*/
+                    if (switchcount == 0 && dir == "asc") {
+                        dir = "desc";
+                        switching = true;
+                    }
+                }
+            }
+        }
     </script>
 </body>
 
