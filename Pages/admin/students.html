@@ -245,7 +245,7 @@
             $("#searchInput").on("keyup", function () {
                 var value = $(this).val().toLowerCase();
                 $(".individualStudent .searchTd").filter(function () {
-                    $(this).parent().toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                    $(this).parents(".individualStudent").toggle($(this).text().toLowerCase().indexOf(value) > -1)
                 });
             });
         })
